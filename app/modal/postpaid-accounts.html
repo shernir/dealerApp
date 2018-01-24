@@ -1,0 +1,11 @@
+<div class="modal custom-dealer-modal postpaid-accounts">
+      <div class="flex end">
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+      </div>
+      <content has-header="true" padding="true">
+         <ion-checkbox ng-repeat="account in accounts" ng-class="{'active1':account.checked}" ng-model="account.checked" ng-click="updateSelection($index, accounts, account)">{{account.account}}</ion-checkbox>
+      </content>
+      <div class="bar bar-footer flex center">
+        <button ng-click="modal.hide()"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>
+      </div>
+  </div>

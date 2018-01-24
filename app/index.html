@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="retailer">
+<head>
+  <title></title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<meta charset="utf-8">
+  <link href="less/colors.less" type="text/css" rel="stylesheet/less">
+  <link href="app.less" type="text/css" rel="stylesheet/less">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+
+  <link href="bower_components/ionic/css/ionic.css" rel="stylesheet">
+  <link href="bower_components/ionicons-2.0.1/css/ionicons.min.css" rel="stylesheet" />
+  <!-- <link href="bower_components/angular-ui-select/dist/select.css" rel="stylesheet"> -->
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+  <link href="css/ionic.app.css" rel="stylesheet">
+  -->
+</head>
+<body ng-class="{'rtl':$root.lang.id =='ar'}">
+
+  <!-- Livereload script for development only (stripped during dist build) -->
+  <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
+
+  <!-- JS from Bower Components -->
+  <script src="bower_components/less.js/dist/less.js" data-concat="false"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <!-- ionic/angularjs js -->
+  <script src="bower_components/ionic/js/ionic.bundle.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <!-- <script src="bower_components/angular-ui-select/dist/select.js"></script> -->
+
+
+  <!-- Add New Bower Component JS Above -->
+
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="cordova.js"></script>
+  <script src="partial/master/master.js"></script>
+  <script src="partial/landing/landing.js"></script>
+  <script src="partial/master/home/home.js"></script>
+  <script src="partial/master/reports/reports.js"></script>
+  <script src="directive/header/header.js"></script>
+  <script src="partial/master/client-details/client-details.js"></script>
+  <script src="directive/navigation/navigation.js"></script>
+  <script src="partial/master/postpaid-type/postpaid-type.js"></script>
+  <script src="partial/master/hala-id-type/hala-id-type.js"></script>
+  <!-- Add New Component JS Above -->
+
+    <ion-nav-view></ion-nav-view>
+
+
+</body>
+</html>

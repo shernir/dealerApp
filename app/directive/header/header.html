@@ -1,0 +1,29 @@
+<div class="common-header">
+  <div class="dropdown" ng-show="$root.user">
+  <button  class="user-crtl dropbtn-el">
+      <img class="dropbtn-el" ng-src="img/user-avatar.svg"  />
+      <span class="dropbtn-el">{{'HEADER.HELLO' | translate}} , Sherif</span>
+  </button>
+    <div id="user-dropdown" class="dropdown-content">
+      <span class="arrow-up"></span>
+      <a >
+        {{'HEADER.LOGOUT' | translate}}
+      </a>
+    </div>
+  </div>
+  <div class="dropdown" >
+  <button  class="dropbtn dropbtn-el">
+      <img class="dropbtn-el" ng-src="{{$root.lang.flag}}"  />
+      <span class="dropbtn-el">{{$root.lang.name}}</span>
+  </button>
+    <div id="lang-dropdown" class="dropdown-content">
+      <span class="arrow-up"></span>
+      <a  ng-repeat="lang in $root.availableLangs" ng-if="lang.id != $root.lang.id" ng-click="changeLang(lang)">
+        <img ng-src="{{lang.flag}}"  />
+        <span>{{lang.name}}</span>
+      </a>
+
+    </div>
+  </div>
+
+</div>

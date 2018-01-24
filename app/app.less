@@ -1,0 +1,181 @@
+
+@grey-color:#f1f3f5;
+@primary-color:#ed1c24;
+/* Component LESS */
+@import "partial/master/master.less";
+@import "partial/landing/landing.less";
+@import "partial/master/home/home.less";
+@import "partial/master/reports/reports.less";
+@import "directive/header/header.less";
+@import "partial/master/client-details/client-details.less";
+@import "directive/navigation/navigation.less";
+@import "partial/master/postpaid-type/postpaid-type.less";
+@import "partial/master/hala-id-type/hala-id-type.less";
+/* Add Component LESS Above */
+
+/* Required for Angular UI Bootstrap */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+.full-height {
+  height: 100%;
+}
+.end {
+  justify-content: flex-end;
+}
+html , body {
+  background-color: #f1f3f5;
+}
+.custom-dealer-modal  {
+  border-radius: 15px;
+  // .item.active {
+  //   background: @primary-color;
+  //   color:#fff;
+  //   checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  //     background: #fff !important;
+  //     border-color: #fff !important;
+  //     color:@primary-color !important
+  //   }
+  // }
+  .ion-close {
+    color:@primary-color;
+  }
+  button {
+    min-width: 100px !important;
+  }
+  .item {
+    width: 90%;
+    border:1px solid @primary-color !important;
+    margin: 10px auto;
+  }
+}
+.rtl {
+  direction: rtl;
+}
+.seprator-line {
+  height: 1px ;
+  width: 80%;
+  background-color: #eee;
+  margin: 5px auto;
+}
+.img-responsive {
+  max-width: 100%;
+}
+
+/* start 'enter' transition on main view */
+.main.ng-enter {
+    /* transition on enter for .5s */
+    transition: 0.5s;
+
+    /* start with opacity 0 (invisible) */
+    opacity: 0;
+}
+.title-without-margin {
+  h4 {
+    margin-bottom: 0;
+  }
+}
+.margin-top-lg {
+  margin-top: 50px !important;
+}
+.margin-top-md {
+  margin-top: 20px;
+}
+.custom-input {
+  border: 1px solid #ddd !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+  margin-top: 5px !important;
+}
+.form-item {
+  margin-top: 10px!important;
+  padding: 0 10px;
+}
+.column {
+  flex-direction: column;
+}
+/* end 'enter' transition on main view */
+.main.ng-enter-active {
+    /* end with opacity 1 (fade in) */
+    opacity: 1;
+}
+
+.grey-text {
+  color: @grey-color;
+}
+.no-padd {
+  padding: 0 !important;
+}
+.border {
+  border: 1px solid #000;
+}
+.main {
+
+}
+.card-shadow {
+  box-shadow: 0 2px 30px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.full-height-without-header {
+  height: calc(100% ~"-" 50px);
+  position: relative;
+  overflow: hidden;
+}
+.vertical-align {
+  justify-content: center;
+
+}
+.main-container {
+  background-color:#f1f3f5 !important;
+  padding: 10px !important;
+}
+.white-bg{
+  background-color: #fff;
+}
+.middle {
+  align-items: center;
+}
+.center {
+  justify-content: center;
+}
+.full-width {
+  width: 100%;
+}
+.horizontal-align {
+  align-items:center;
+
+}
+.border {
+  border: 1px solid #000;
+}
+.white-bg {
+  background-color: #fff;
+}
+.grey-bg {
+  background-color: @grey-color;
+}
+.item {
+  border-width: 0 !important
+}
+.flex {
+  display: flex !important;
+}
+.text-center {
+  text-align: center;
+}
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before {
+  background: @primary-color !important;
+  border-color: @primary-color !important;
+}
+.button.button-assertive.active, .button.button-assertive.activated {
+  background-color: @primary-color !important;
+  border-color:@primary-color !important;
+}
+/* Personal preference for BS modal.  The LESS below makes the backdrop white and
+   causes the modal to fade in rather than slide in. */
+//@modal-backdrop-bg: white;
+//.modal {
+//	&.fade {
+//		.transition(opacity .3s);
+//	}
+//	&.fade .modal-dialog {
+//		.translate(0,0);
+//	}
+//}

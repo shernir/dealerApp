@@ -1,0 +1,82 @@
+
+<div class="main-container" ng-controller="ClientDetailsCtrl">
+ <div class="full-height    white-bg  title-without-margin" >
+   <navigation next="alert()" back="alerta()" is-next="true"></navigation>
+   <div class="row margin-top-lg client-details-ctrl " >
+     <div class="col-60" style="padding:0 20px;">
+         <img  src="img/packge.png" />
+     </div>
+     <div class="col-20 text-center">
+       <img  src="img/packge.png" />
+     </div>
+     <div class="col-20 text-center">
+       <img  src="img/packge.png" />
+     </div>
+   </div>
+   <form>
+   <div class="row margin-top-md " >
+     <div class="col-33 form-item">
+       <label class="item  item-input item-stacked-label" style="padding-left:0;">
+         <span class="input-label">{{"CLIENT_DETAILS.QID" | translate}}</span>
+         <input class="custom-input" type="text" >
+       </label>
+     </div>
+     <div class="col-33 form-item">
+       <label class="item  item-input item-stacked-label">
+         <span class="input-label">{{"CLIENT_DETAILS.NATIONALITY" | translate}}</span>
+         <input class="custom-input" type="text" >
+       </label>
+     </div>
+     <div class="col-33 form-item">
+       <label class="item  item-input item-stacked-label">
+         <span class="input-label">{{"CLIENT_DETAILS.BIRTH_DATE" | translate}}</span>
+         <input class="custom-input" type="text" >
+       </label>
+     </div>
+    </div>
+
+     <div class="row">
+       <div class="col-33 form-item">
+         <label class="item  item-input item-stacked-label" style="padding-left:0;">
+           <span class="input-label">{{"CLIENT_DETAILS.FIRST_NAME" | translate}}</span>
+           <input class="custom-input" type="text" >
+         </label>
+       </div>
+       <div class="col-33 form-item">
+         <label class="item  item-input item-stacked-label">
+           <span class="input-label">{{"CLIENT_DETAILS.MIDDLE_NAME" | translate}}</span>
+           <input class="custom-input" type="text" >
+         </label>
+       </div>
+       <div class="col-33 form-item">
+         <label class="item  item-input item-stacked-label">
+           <span class="input-label">{{"CLIENT_DETAILS.LAST_NAME" | translate}}</span>
+           <input class="custom-input" type="text" >
+         </label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-33 form-item">
+         <label class="item  item-input item-stacked-label" style="padding-left:0;">
+           <span class="input-label">{{"CLIENT_DETAILS.PO_BOX_OPTIONAL" | translate}}</span>
+           <input class="custom-input" type="text" >
+         </label>
+       </div>
+       <div class="col-33 form-item">
+         <label class="item  item-input item-stacked-label">
+           <span class="input-label">{{"CLIENT_DETAILS.EMAIL_OPTIONAL" | translate}}</span>
+           <input class="custom-input" type="text" >
+         </label>
+       </div>
+       <div class="col-33 form-item">
+         <label class="item  item-input item-stacked-label">
+           <span class="input-label">{{"CLIENT_DETAILS.ALTERNATIVE_NUMBER_OPTIONAL" | translate}}</span>
+           <input class="custom-input" type="text" >
+         </label>
+       </div>
+     </div>
+</form>
+
+
+ </div>
+</div>
