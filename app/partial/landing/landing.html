@@ -1,4 +1,4 @@
-<ion-pane class="landing">
+<ion-pane class="landing" ng-class="{'rtl':$root.lang.id =='ar'}">
     <ion-content>
       <!-- <div class="common-header">
 
@@ -39,8 +39,8 @@
                       <span class="input-label">{{"LANDING.PASSWORD" | translate}}</span>
                       <input type="text" placeholder="*********">
                     </label>
-                    <div class="padding">
-                    <button ng-click="login()" class="button button-block button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
+                    <div class="padding row center">
+                    <button ng-click="login()" class="button  button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
                   </div>
                   </div>
 

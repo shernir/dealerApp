@@ -1,6 +1,8 @@
 
 @grey-color:#f1f3f5;
 @primary-color:#ed1c24;
+@light-grey:#eee;
+@dark-grey:#666;
 /* Component LESS */
 @import "partial/master/master.less";
 @import "partial/landing/landing.less";
@@ -11,6 +13,9 @@
 @import "directive/navigation/navigation.less";
 @import "partial/master/postpaid-type/postpaid-type.less";
 @import "partial/master/hala-id-type/hala-id-type.less";
+@import "partial/master/scan-number/scan-number.less";
+@import "directive/cart-directive/cart-directive.less";
+@import "partial/master/signature/signature.less";
 /* Add Component LESS Above */
 
 /* Required for Angular UI Bootstrap */
@@ -23,9 +28,33 @@
 }
 html , body {
   background-color: #f1f3f5;
+  // color:#666 !important;
+}
+h4 {
+  font-weight: 400 !important;
+}
+.white-title {
+  padding: 10px;
+
+}
+.dark-grey {
+  color:@dark-grey;
+}
+.light-grey {
+  color:@light-grey;
+}
+button.button {
+  border-radius: 50px !important;
+  min-width: 100px;
 }
 .custom-dealer-modal  {
   border-radius: 15px;
+  width: 40% !important;
+  left:35% !important;
+  .item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   // .item.active {
   //   background: @primary-color;
   //   color:#fff;
@@ -124,7 +153,10 @@ html , body {
 }
 .main-container {
   background-color:#f1f3f5 !important;
-  padding: 10px !important;
+  padding: 20px !important;
+}
+.red-color {
+  color:@primary-color
 }
 .white-bg{
   background-color: #fff;

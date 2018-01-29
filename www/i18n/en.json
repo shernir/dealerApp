@@ -28,21 +28,5 @@
     "NATIONALITY":"Nationality",
     "PO_BOX_OPTIONAL":"PO Box (Optional)",
     "OK":"Ok"
-  },
-  "SCAN_NUMBER":{
-    "FREE_NUMBER":"Free Number",
-    "SIM_No":"SIM No.",
-    "NUMBER":"Number"
-  },
-  "CART":{
-    "YOUR_ORDER":"Your Order",
-    "TOTAL":"Total"
-  },
-  "SIGNATURE":{
-    "TERMS_CONDITION_1":"I have accepted to",
-    "TERMS_CONDITION_2":" in subscribing to Ooredoo services.",
-    "TERMS_AND_CONDITIONS":" Terms and Conditions",
-    "SIGN_AGAIN":"Sign Again",
-    "PREVIEW_FORM":"Preview Form"
   }
 }

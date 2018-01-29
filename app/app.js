@@ -49,6 +49,14 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
         url: '/hala-type',
         templateUrl: 'partial/master/hala-id-type/hala-id-type.html'
     });
+    $stateProvider.state('master.scan-number', {
+        url: '/scan-number',
+        templateUrl: 'partial/master/scan-number/scan-number.html'
+    });
+    $stateProvider.state('master.signature', {
+        url: '/signature',
+        templateUrl: 'partial/master/signature/signature.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/landing');
 

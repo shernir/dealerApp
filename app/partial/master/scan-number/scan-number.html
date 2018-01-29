@@ -1,0 +1,36 @@
+<div class="main-container scan-number " ng-controller="ScanNumberCtrl">
+   <div class="full-height   column title-without-margin" >
+     <navigation next="alert()" back="alerta()" is-next="true"></navigation>
+     <div class="row" style="padding-top:10px;">
+       <div class="col-60 ">
+         <div class="white-title white-bg">
+           <b>{{'SCAN_NUMBER.FREE_NUMBER' | translate}}</b>
+         </div>
+         <div class="form-container row white-bg">
+           <div class="col-20">
+             <img src="img/packge.png" class="img-responsive"  />
+           </div>
+           <div class="col-40">
+             <label class="item  item-input item-stacked-label">
+               <span class="input-label">{{"SCAN_NUMBER.SIM_No" | translate}}</span>
+               <input class="custom-input" type="text" >
+             </label>
+           </div>
+           <div class="col-40">
+             <label class="item  item-input item-stacked-label">
+               <span class="input-label">{{"SCAN_NUMBER.NUMBER" | translate}}</span>
+               <input class="custom-input" type="text" >
+             </label>
+           </div>
+
+         </div>
+
+       </div>
+       <div class="col-40">
+         <cart-directive cart="cart"></cart-directive>
+       </div>
+     </div>
+
+
+   </div>
+</div>
