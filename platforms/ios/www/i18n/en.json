@@ -1,0 +1,32 @@
+{
+  "LANDING":{
+    "USERNAME":"Username",
+    "PASSWORD":"Password",
+    "LOGIN":"Login"
+  },
+  "HEADER":{
+    "LOGOUT":"Logout",
+    "HELLO":"Hello"
+  },
+  "MASTER":{
+    "NEW_ACTIVAION":"New activation",
+    "REPORT":"Reports"
+  },
+  "HOME":{
+    "SELECT_ONE_OF_THE_BELOW":"Select one of the below",
+    "OPTION_FOR_NEW_SUPSCRIPTION":"options for the New Activation",
+    "POSTPAID_PRODUCTS":"Postpaid Products"
+  },
+  "CLIENT_DETAILS":{
+    "QID":"Qatar ID",
+    "BIRTH_DATE":"Birth Date",
+    "FIRST_NAME":"First Name",
+    "MIDDLE_NAME":"Middle Name",
+    "LAST_NAME":"Last Name",
+    "EMAIL_OPTIONAL":"Email (optional)",
+    "ALTERNATIVE_NUMBER_OPTIONAL":"Alternative Number (Optional)",
+    "NATIONALITY":"Nationality",
+    "PO_BOX_OPTIONAL":"PO Box (Optional)",
+    "OK":"Ok"
+  }
+}

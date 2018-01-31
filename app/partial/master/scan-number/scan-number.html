@@ -1,29 +1,30 @@
 <div class="main-container scan-number " ng-controller="ScanNumberCtrl">
    <div class="full-height   column title-without-margin" >
-     <navigation next="alert()" back="alerta()" is-next="true"></navigation>
+     <navigation next="alert()" back="alerta()" is-back="fasle" is-next="true"></navigation>
      <div class="row" style="padding-top:10px;">
        <div class="col-60 ">
          <div class="white-title white-bg">
            <b>{{'SCAN_NUMBER.FREE_NUMBER' | translate}}</b>
          </div>
-         <div class="form-container row white-bg">
-           <div class="col-20">
-             <img src="img/packge.png" class="img-responsive"  />
-           </div>
-           <div class="col-40">
-             <label class="item  item-input item-stacked-label">
-               <span class="input-label">{{"SCAN_NUMBER.SIM_No" | translate}}</span>
-               <input class="custom-input" type="text" >
-             </label>
-           </div>
-           <div class="col-40">
-             <label class="item  item-input item-stacked-label">
-               <span class="input-label">{{"SCAN_NUMBER.NUMBER" | translate}}</span>
-               <input class="custom-input" type="text" >
-             </label>
+         <div class="form-container  white-bg">
+           <div class="row center" style="margin-top:50px">
+             <div class="col-20 text-center">
+               <img src="img/packge.png" class="img-responsive"  />
+               <p>{{'SCAN_NUMBER.SCAN_SIM' | translate}}</p>
+             </div>
            </div>
 
+
+           <div class="row center">
+             <div class="col-60">
+               <label class="item  item-input item-stacked-label">
+                 <span class="input-label">{{"SCAN_NUMBER.SIM_No" | translate}}</span>
+                 <input class="custom-input" type="text" >
+               </label>
+             </div>
+           </div>
          </div>
+
 
        </div>
        <div class="col-40">

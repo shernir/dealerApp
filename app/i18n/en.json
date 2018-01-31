@@ -32,11 +32,15 @@
   "SCAN_NUMBER":{
     "FREE_NUMBER":"Free Number",
     "SIM_No":"SIM No.",
-    "NUMBER":"Number"
+    "NUMBER":"Number",
+    "SCAN_SIM":"Scan SIM"
   },
   "CART":{
     "YOUR_ORDER":"Your Order",
-    "TOTAL":"Total"
+    "TOTAL":"Total",
+    "QR":"QR",
+    "CREDIT_LIMIT":"Credit Limit",
+    "AVAILABLE_ACCOUNT_CREDIT":"Available Account Credit"
   },
   "SIGNATURE":{
     "TERMS_CONDITION_1":"I have accepted to",
@@ -44,5 +48,14 @@
     "TERMS_AND_CONDITIONS":" Terms and Conditions",
     "SIGN_AGAIN":"Sign Again",
     "PREVIEW_FORM":"Preview Form"
+  },
+  "CONFIRMATION":{
+    "CONGRATULATIONS":"Congratulations!",
+    "YOU_HAVE_SUCCESSFULLY_COMPELETED_YOUR_REGISTRATION":"You Have Successfully Completed Your Registration",
+    "YOUR_ACCOUNT_NO_IS":"Your Account No. is:",
+    "YOUR_NUMBER_IS":"Your Number is:",
+    "EMAIL_RECEIPT_TO_CUSTOMER":"Email receipt to customer (Optional)",
+    "SEND":"SEND"
+
   }
 }

@@ -118,6 +118,7 @@ module.exports = function (grunt) {
           remove: ['script[data-remove!="false"]','link[data-remove!="false"]'],
           append: [
             {selector:'body',html:'<script src="app.full.min.js"></script>'},
+            {selector:'body',html:'<script src="cordova.js"></script>'},
             {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
           ]
         },

@@ -1,4 +1,4 @@
-angular.module('retailer', ['ui.router','ngAnimate','ionic','ngSanitize','pascalprecht.translate']);
+angular.module('retailer', ['ui.router','ngAnimate','ionic','ngSanitize','pascalprecht.translate','ksSwiper']);
 
 angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$translateProvider) {
 
@@ -56,6 +56,14 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     $stateProvider.state('master.signature', {
         url: '/signature',
         templateUrl: 'partial/master/signature/signature.html'
+    });
+    $stateProvider.state('master.confirmation', {
+        url: '/confirmation',
+        templateUrl: 'partial/master/confirmation/confirmation.html'
+    });
+    $stateProvider.state('master.postpaid-products', {
+        url: '/products/:type',
+        templateUrl: 'partial/master/postpaid-products/postpaid-products.html'
     });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/landing');

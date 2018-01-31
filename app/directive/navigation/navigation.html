@@ -1,14 +1,14 @@
-<div class="row navigation">
-  <button ng-click="back()">
+<div class="row navigation" ng-class="{'without-back':!isBack}">
+  <button class="back" ng-click="back()" ng-if="isBack">
    <i ng-if="$root.lang.id != 'ar'" class="ion-chevron-left"></i>
    <i ng-if="$root.lang.id == 'ar'" class="ion-chevron-right"></i>
 
    BACK
   </button>
-  <button ng-click="next()" ng-if="isNext">
+  <button class="next" ng-click="next()" ng-if="isNext">
   NEXT
   <i ng-if="$root.lang.id != 'ar'" class="ion-chevron-right"></i>
-  <i ng-if="$root.lang.id == 'ar'" class="ion-chevron-left"></i> 
+  <i ng-if="$root.lang.id == 'ar'" class="ion-chevron-left"></i>
 
   </button>
 </div>

@@ -5,7 +5,8 @@ angular.module('retailer').directive('navigation', function() {
         scope: {
           next:"&",
           back:"&",
-          isNext:"="
+          isNext:"=",
+          isBack:"="
 
         },
         templateUrl: 'directive/navigation/navigation.html',
