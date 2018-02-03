@@ -1,4 +1,35 @@
-<div class="col-md-12 " ng-controller="ReportsCtrl">
+<div class="main-container reports" ng-controller="ReportsCtrl">
+ <div class="text-center full-height  white-bg column title-without-margin" >
+   <div class="row report-header-control">
+     <h4 ng-if="type==1">{{'REPORTS.NUMBER_OF_SUCCESSFUL_ORDERS' | translate}} XXX</h2>
+     <h4 ng-if="type==2">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} XXX</h2>
 
-<h1>reports</h1>
+     <button class="button  button-assertive activated">
+       <span ng-if="type==1">{{'REPORTS.SUCCESSFUL_ORDER' | translate}}</span>
+       <span ng-if="type==2">{{'REPORTS.FAILED_ORDER' | translate}}</span>
+
+     </button>
+   </div>
+   <div class="table successful" ng-if="type==1" >
+     <div class="row header no-padding">
+        <div class="col"><span translate>REPORTS.ORDER_ID</span></div>
+        <div class="col"><span translate>REPORTS.CUSTOMER_NAME</span></div>
+        <div class="col"><span translate>REPORTS.MOBILE_NO</span></div>
+        <div class="col"><span translate>REPORTS.PRODUCT_TYPE</span></div>
+        <div class="col"><span translate>REPORTS.SALESMAN_NO</span></div>
+        <div class="col"><span translate>REPORTS.STATUS</span></div>
+
+      </div>
+      <div class="row" >
+        <div class="col">AA</div>
+        <div class="col">BB</div>
+        <div class="col">CC</div>
+        <div class="col">DD</div>
+        <div class="col">EE</div>
+        <div class="col">TT</div>
+
+      </div>
+   </div>
+
+ </div>
 </div>

@@ -1,0 +1,28 @@
+<div class="full-height" >
+  <div ng-if="!isMaster" class="landing-side-menu flex  full-height vertical-align horizontal-align">
+    <img src="img/logo.svg"  />
+    <h2>Ooredoo B2C</h2>
+    <p>
+      OOB2CO10-HQ2
+    </p>
+  </div>
+  <div ng-if="isMaster" class="flex coulmn master-side-menu full-height">
+    <div class="logo-container">
+      <img src="img/logo.svg"  />
+      <p>Location</p>
+    </div>
+    <a style="margin-top:100px;" href="#">
+      <img src="img/sim.svg" />
+      <p>
+        {{'MASTER.NEW_ACTIVAION' | translate}}
+      </p>
+    </a>
+    <div class="seprator-line"></div>
+    <a href="#">
+      <img src="img/report.svg" />
+      <p>
+        {{'MASTER.REPORT' | translate}}
+      </p>
+    </a>
+  </div>
+</div>

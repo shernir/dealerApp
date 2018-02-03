@@ -95,8 +95,9 @@ module.exports = function (grunt) {
         files: [
           {src: ['img/**'], dest: '../www/'},
           {src: ['i18n/**'], dest: '../www/'},
+          // {src: ['bower_components/ionicons-2.0.1/fonts/*'], dest: '../www/fonts/',expand: true, flatten: true,},
           {src: ['bower_components/ionicons-2.0.1/**'], dest: '../www/',filter:'isFile',expand:true},
-          {src: ['bower_components/bootstrap/fonts/**'], dest: '../www/',filter:'isFile',expand:true}
+          // {src: ['bower_components/bootstrap/fonts/**'], dest: '../www/',filter:'isFile',expand:true}
           //{src: ['bower_components/angular-ui-utils/ui-utils-ieshiv.min.js'], dest: 'dist/'},
           //{src: ['bower_components/select2/*.png','bower_components/select2/*.gif'], dest:'dist/css/',flatten:true,expand:true},
           //{src: ['bower_components/angular-mocks/angular-mocks.js'], dest: 'dist/'}
@@ -119,7 +120,8 @@ module.exports = function (grunt) {
           append: [
             {selector:'body',html:'<script src="app.full.min.js"></script>'},
             {selector:'body',html:'<script src="cordova.js"></script>'},
-            {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'}
+            {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'},
+            {selector:'head',html:'<link rel="stylesheet" href="bower_components/ionicons-2.0.1/css/ionicons.min.css">'}
           ]
         },
         src:'index.html',
@@ -138,11 +140,21 @@ module.exports = function (grunt) {
         dest: 'temp/app.full.js'
       }
     },
+    // ngAnnotate: {
+    //   main: {
+    //     src:'temp/app.full.js',
+    //     dest: 'temp/app.full.js'
+    //   }
+    // },
     ngAnnotate: {
       main: {
         src:'temp/app.full.js',
         dest: 'temp/app.full.js'
-      }
+      },
+      dev: {
+      src: "temp/app.full.js",
+      dest: "../www/app.full.min.js"
+       }
     },
     uglify: {
       main: {
@@ -202,7 +214,17 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('build',['clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngAnnotate','uglify','copy','htmlmin','clean:after']);
+  // grunt.registerTask('build',['clean:before','less','dom_munger','ngtemplates','cssmin','concat','ngAnnotate','uglify','copy','htmlmin','clean:after']);
+  grunt.registerTask('build', function (env) {
+      var tasks;
+      if(env === 'dev') {
+          tasks = ['clean:before', 'less', 'dom_munger', 'ngtemplates', 'cssmin', 'concat', 'ngAnnotate:dev', 'copy', 'htmlmin', 'clean:after'];
+      }
+      else {
+          tasks = ['clean:before', 'less', 'dom_munger', 'ngtemplates', 'cssmin', 'concat', 'ngAnnotate:main', 'uglify', 'copy', 'htmlmin', 'clean:after'];
+      }
+      return grunt.task.run(tasks);
+  })
   grunt.registerTask('serve', ['dom_munger:read','connect', 'watch']);
   grunt.registerTask('test',['dom_munger:read','karma:all_tests']);
 

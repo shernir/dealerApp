@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ooredoo.cdcpPuplish" version="2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ooredoo.cdcpPublish" version="2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -33,6 +33,15 @@
     <feature name="Keyboard">
         <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
+    <feature name="DeviceName">
+        <param name="ios-package" value="CDVDeviceName" />
+    </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="ios-package" value="CDVBarcodeScanner" />
+    </feature>
     <name>E-Activation</name>
     <description>Retail App</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -44,6 +53,22 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference default="This app needs camera access" name="CAMERA_USAGE_DESCRIPTION" />
+    <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
+        <string />
+    </config-file>
+    <preference default="This app needs microphone access" name="MICROPHONE_USAGE_DESCRIPTION" />
+    <config-file parent="NSMicrophoneUsageDescription" target="*-Info.plist">
+        <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+    </config-file>
+    <preference default="This app needs write-access to photo library" name="PHOTOLIBRARY_ADD_USAGE_DESCRIPTION" />
+    <config-file parent="NSPhotoLibraryAddUsageDescription" target="*-Info.plist">
+        <string>$PHOTOLIBRARY_ADD_USAGE_DESCRIPTION</string>
+    </config-file>
+    <preference default="This app needs read/write-access photo library access" name="PHOTOLIBRARY_USAGE_DESCRIPTION" />
+    <config-file parent="NSPhotoLibraryUsageDescription" target="*-Info.plist">
+        <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
+    </config-file>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -92,6 +117,7 @@
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="CameraUsesGeolocation" value="false" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="SplashMaintainAspectRatio" value="true" />
@@ -99,4 +125,10 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarStyle" value="lightcontent" />
 </widget>

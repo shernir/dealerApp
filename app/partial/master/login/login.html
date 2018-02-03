@@ -1,0 +1,32 @@
+<ion-pane class="landing" ng-controller="LoginCtrl" ng-class="{'rtl':$root.lang.id =='ar'}">
+    <ion-content>
+      <div class="row full-height no-padd">
+          <div  class="full-height row vertical-align horizontal-align grey-bg">
+            <div  class=" col col-80 main-landing-container no-padd card-shadow " >
+              <div class="row full-height no-padd ">
+                <div class="col col-50 left-section-login grey-bg  full-height">
+                  <img src="img/login.png" />
+                  <h2>E-Activation APP</h2>
+                </div>
+                <div class="col col-50 full-height white-bg flex vertical-align horizontal-align">
+                  <div style="width:100%" >
+                    <h4 class="text-center">Location</h3>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">{{"LANDING.USERNAME" | translate}}</span>
+                      <input type="text" placeholder="John Smith">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                      <span class="input-label">{{"LANDING.PASSWORD" | translate}}</span>
+                      <input type="password" placeholder="*********">
+                    </label>
+                    <div class="padding row center">
+                    <button ng-click="login()" class="button  button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </ion-content>
+  </ion-pane>

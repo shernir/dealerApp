@@ -18,6 +18,8 @@
 @import "partial/master/signature/signature.less";
 @import "partial/master/confirmation/confirmation.less";
 @import "partial/master/postpaid-products/postpaid-products.less";
+@import "partial/master/login/login.less";
+@import "directive/side-menu/side-menu.less";
 /* Add Component LESS Above */
 
 /* Required for Angular UI Bootstrap */
@@ -29,7 +31,7 @@
   margin: 0
 }
 .no-padding{
-  padding: 0;
+  padding: 0 !important;
 }
 .space-between {
   justify-content: space-between;
@@ -59,6 +61,11 @@ h4 {
 }
 .coulmn {
   flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: inherit !important;
+
 }
 button.button {
   border-radius: 50px !important;
@@ -160,9 +167,13 @@ button.button {
   box-shadow: 0 2px 30px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .full-height-without-header {
-  height: calc(100% ~"-" 60px);
+  height: calc(100% ~"-" 60px) ;
   position: relative;
   overflow: hidden;
+}
+.full-height-without-nav {
+  height: calc(100% ~"-" 50px) ;
+
 }
 .vertical-align {
   justify-content: center;

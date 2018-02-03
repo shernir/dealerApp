@@ -15,7 +15,10 @@
   "HOME":{
     "SELECT_ONE_OF_THE_BELOW":"Select one of the below",
     "OPTION_FOR_NEW_SUPSCRIPTION":"options for the New Activation",
-    "POSTPAID_PRODUCTS":"Postpaid Products"
+    "POSTPAID_PRODUCTS":"Postpaid Products",
+    "POSTPAID":"Postpaid",
+    "PREPAID":"Prepaid",
+    "HALA_GO_MIGRATION":"Hala GO Migration"
   },
   "CLIENT_DETAILS":{
     "QID":"Qatar ID",
@@ -57,5 +60,19 @@
     "EMAIL_RECEIPT_TO_CUSTOMER":"Email receipt to customer (Optional)",
     "SEND":"SEND"
 
+  },
+  "REPORTS":{
+    "NUMBER_OF_SUCCESSFUL_ORDERS":"Number of Successful Orders:",
+    "NUMBER_OF_FAILED_ORDERS":"Number of Failed Orders:",
+    "CUSTOMER_NAME":"Customer Name",
+    "MOBILE_NO":"Mobile No.",
+    "PRODUCT_TYPE":"Product Type",
+    "SALESMAN_NO":"Salesman's No.",
+    "ERROR_MESSAGE":"Error Message",
+    "FAILED_REASEON":"Failed Reaseon",
+    "STATUS":"Status",
+    "ORDER_ID":"Order ID",
+    "SUCCESSFUL_ORDER":"Successful Order",
+    "FAILED_ORDER":"Failed Order"
   }
 }

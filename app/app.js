@@ -65,8 +65,12 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
         url: '/products/:type',
         templateUrl: 'partial/master/postpaid-products/postpaid-products.html'
     });
+    $stateProvider.state('master.login', {
+        url: '/login',
+        templateUrl: 'partial/master/login/login.html'
+    });
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/landing');
+    $urlRouterProvider.otherwise('/login');
 
 });
 

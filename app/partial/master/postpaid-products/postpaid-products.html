@@ -4,20 +4,20 @@
      <div class="row" style="padding-top:10px;">
        <div class="col-60 ">
          <div class="white-title white-bg row tab-container">
-           <div class="tab active col-20 text-center">
+           <div class="tab active col-33 text-center">
              Shahry Smart
            </div>
-           <div class="tab col-20 text-center">
+           <div class="tab col-33 text-center">
              Qatarna
            </div>
-           <div class="tab col-20 text-center">
+           <div class="tab col-33 text-center">
              Label
            </div>
          </div>
          <div class="products-container ">
            <div class="pack-container">
-             <ks-swiper-container initial-slide="0" slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
-                <ks-swiper-slide class="product-card " ng-repeat="s in array">
+             <ks-swiper-container initial-slide="0"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
+                <ks-swiper-slide class="product-card "  ng-repeat="s in array" ng-class="{'active':s==1}">
                   <h4 class="text-center">
                     Qatarna<br />
                     <b>600</b>

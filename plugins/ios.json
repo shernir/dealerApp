@@ -21,6 +21,19 @@
     },
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPuplish"
+    },
+    "cordova-plugin-device-name": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     }
   },
   "dependent_plugins": {}
