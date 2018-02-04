@@ -67,11 +67,36 @@ a {
   color: inherit !important;
 
 }
+ion-spinner * {
+  width: 28px;
+  height: 28px;
+  stroke: @primary-color;
+  fill: #222;
+}
 button.button {
   border-radius: 50px !important;
   min-width: 100px;
 }
 .custom-dealer-modal  {
+  h4 {
+    position: absolute;
+    top:10px;
+    left: 0;
+    width: 60%;
+    right:0;
+    margin: 0 auto;
+  }
+  .product-price-end {
+    position: absolute;
+    right: 15px;
+  }
+  .item-checkbox {
+    padding-left: 60px !important;
+  }
+  .rtl .item-checkbox {
+    padding-right: 60px;
+    padding-left:0 !important;
+  }
   border-radius: 15px;
   width: 40% !important;
   left:35% !important;
@@ -111,6 +136,19 @@ button.button {
 }
 .img-responsive {
   max-width: 100%;
+}
+.margin-top-lg  {
+  .col-20 {
+    img {
+      margin-bottom: 10px;
+      width: 130px !important;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+  }
 }
 
 /* start 'enter' transition on main view */

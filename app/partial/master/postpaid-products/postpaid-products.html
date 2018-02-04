@@ -16,7 +16,7 @@
          </div>
          <div class="products-container ">
            <div class="pack-container">
-             <ks-swiper-container initial-slide="0"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
+             <ks-swiper-container initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
                 <ks-swiper-slide class="product-card "  ng-repeat="s in array" ng-class="{'active':s==1}">
                   <h4 class="text-center">
                     Qatarna<br />
@@ -51,8 +51,8 @@
             </ks-swiper-container>
            </div>
            <div class="add-ons-container">
-             <ks-swiper-container initial-slide="0" slides-per-view="2" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
-                <ks-swiper-slide class="add-ons-card flex middle center coulmn" ng-repeat="s in array1">
+             <ks-swiper-container initial-slide="0" dir="{{$root.dir}}" slides-per-view="2" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
+                <ks-swiper-slide class="add-ons-card flex middle center coulmn" ng-repeat="s in array1" ng-click="showProductModal('check','international key')">
                   <h1 class="red-color"><i class="ion-ios-plus-outline"></i></h1>
                   <h4>Shahry Data Pack</h4>
                 </ks-swiper-slide>

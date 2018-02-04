@@ -2,6 +2,7 @@
       <div class="flex end">
         <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
       </div>
+      <h4 class="text-center">{{'CLIENT_DETAILS.CUSTOMER_ACCOUNTS' | translate}}</h4>
       <content has-header="true" padding="true">
          <ion-checkbox ng-repeat="account in accounts" ng-class="{'active1':account.checked}" ng-model="account.checked" ng-click="updateSelection($index, accounts, account)">{{account.account}}</ion-checkbox>
       </content>

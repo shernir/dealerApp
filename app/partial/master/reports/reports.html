@@ -4,7 +4,7 @@
      <h4 ng-if="type==1">{{'REPORTS.NUMBER_OF_SUCCESSFUL_ORDERS' | translate}} XXX</h2>
      <h4 ng-if="type==2">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} XXX</h2>
 
-     <button class="button  button-assertive activated">
+     <button class="button  button-assertive activated" ng-click="toggleView()">
        <span ng-if="type==1">{{'REPORTS.SUCCESSFUL_ORDER' | translate}}</span>
        <span ng-if="type==2">{{'REPORTS.FAILED_ORDER' | translate}}</span>
 
@@ -27,6 +27,30 @@
         <div class="col">DD</div>
         <div class="col">EE</div>
         <div class="col">TT</div>
+
+      </div>
+   </div>
+   <div class="table successful" ng-if="type==2" >
+     <div class="row header no-padding">
+       <div class="col"><span translate>REPORTS.CUSTOMER_NAME</span></div>
+       <div class="col"><span translate>REPORTS.MOBILE_NO</span></div>
+        <div class="col"><span translate>REPORTS.PRODUCT_TYPE</span></div>
+        <div class="col"><span translate>REPORTS.SALESMAN_NO</span></div>
+        <div class="col"><span translate>REPORTS.ERROR_MESSAGE</span></div>
+        <div class="col"><span translate>REPORTS.FAILED_REASEON</span></div>
+        <div class="col"><span translate>REPORTS.STATUS</span></div>
+
+
+      </div>
+      <div class="row" >
+        <div class="col">AA</div>
+        <div class="col">BB</div>
+        <div class="col">CC</div>
+        <div class="col">DD</div>
+        <div class="col">EE</div>
+        <div class="col">TT</div>
+        <div class="col">TT</div>
+
 
       </div>
    </div>

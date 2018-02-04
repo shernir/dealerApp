@@ -102,7 +102,7 @@
     <plugin name="phonegap-plugin-barcodescanner" spec="^7.0.2">
         <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
     </plugin>
+    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <engine name="android" spec="7.0.0" />
     <engine name="ios" spec="^4.5.4" />
-    <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
 </widget>

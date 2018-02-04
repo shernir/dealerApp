@@ -10,6 +10,12 @@ angular.module('retailer').directive('header', function($rootScope,$translate) {
 
 
           scope.changeLang = function (lang) {
+            if (lang == 'ar') {
+              $rootScope.dir = "rtl";
+            } else {
+              $rootScope.dir = "ltr";
+            }
+
             $rootScope.lang = lang;
             $translate.use(lang.id);
           };

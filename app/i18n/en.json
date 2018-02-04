@@ -30,7 +30,8 @@
     "ALTERNATIVE_NUMBER_OPTIONAL":"Alternative Number (Optional)",
     "NATIONALITY":"Nationality",
     "PO_BOX_OPTIONAL":"PO Box (Optional)",
-    "OK":"Ok"
+    "OK":"Ok",
+    "CUSTOMER_ACCOUNTS":"Customer Accounts"
   },
   "SCAN_NUMBER":{
     "FREE_NUMBER":"Free Number",
@@ -73,6 +74,10 @@
     "STATUS":"Status",
     "ORDER_ID":"Order ID",
     "SUCCESSFUL_ORDER":"Successful Order",
-    "FAILED_ORDER":"Failed Order"
+    "FAILED_ORDER":"Failed Order",
+    "ERROR_MESSAGE":"Error Message",
+    "FAILED_REASEON":"Failed Reason",
+    "STATUS":"Status"
+
   }
 }

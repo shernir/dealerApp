@@ -1,4 +1,4 @@
-angular.module('retailer', ['ui.router','ngAnimate','ionic','ngSanitize','pascalprecht.translate','ksSwiper']);
+angular.module('retailer', ['ui.router','ngAnimate','ngCookies','ionic','ngSanitize','pascalprecht.translate','ksSwiper']);
 
 angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$translateProvider) {
 
@@ -113,6 +113,7 @@ angular.module('retailer').run(function($rootScope,$ionicPlatform) {
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
+      StatusBar.overlaysWebView(false);
       StatusBar.styleDefault();
     }
   });

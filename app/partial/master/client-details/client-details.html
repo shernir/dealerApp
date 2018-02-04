@@ -1,18 +1,18 @@
 <ion-pane class="main-container client-details" ng-controller="ClientDetailsCtrl">
   <ion-content class="full-height  no-padding white-bg  title-without-margin">
 
-       <navigation next="alert()" is-back="true" back="alert()" is-next="true"></navigation>
+       <navigation next="openModal()" is-back="true" back="alert()" is-next="true"></navigation>
        <div class="row margin-top-lg client-details-ctrl " >
          <div class="col-60" style="padding:0 20px;">
-             <img  src="img/packge.png" ng-click="scan()" />
+             <img  src="img/scan-qid.svg" ng-click="scan()" />
          </div>
          <div class="col-20 text-center" ng-click="takePicture('front')">
-           <img ng-if="!$parent.client.frontQID"  src="img/packge.png" />
+           <img ng-if="!$parent.client.frontQID"  src="img/front-id.svg" />
            <img ng-if="$parent.client.frontQID"  ng-src="{{$parent.client.frontQID}}" />
 
          </div>
          <div class="col-20 text-center" ng-click="takePicture('back')">
-           <img ng-if="!$parent.client.backQID"  src="img/packge.png" />
+           <img ng-if="!$parent.client.backQID"  src="img/back-id.svg" />
            <img ng-if="$parent.client.backQID"  ng-src="{{$parent.client.backQID}}" />
          </div>
        </div>

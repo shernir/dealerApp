@@ -1,0 +1,23 @@
+<div class="modal custom-dealer-modal postpaid-accounts">
+      <div class="flex end">
+        <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
+      </div>
+      <h4 class="text-center">{{productModalTitle}}</h4>
+      <content ng-if="productType=='radio'" has-header="true" padding="true">
+         <ion-checkbox  ng-repeat="account in accounts" ng-class="{'active1':account.checked}" ng-model="account.checked" ng-click="updateSelection($index, accounts, account)">
+           {{account.account}}
+           <span class="product-price-end">250 MB /{{account.price}}</span>
+         </ion-checkbox>
+      </content>
+      <content ng-if="productType=='check'" has-header="true" padding="true">
+        <div class="item" ng-repeat="account in accounts">
+          <label  >
+            <input type="checkbox"  />
+            {{account.account}}
+          </label>
+        </div>
+      </content>
+      <div class="bar bar-footer flex center">
+        <button ng-click="modal.hide()"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>
+      </div>
+  </div>

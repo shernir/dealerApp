@@ -64,9 +64,10 @@ $scope.scan = function () {
   }).then(function(modal) {
     $scope.modal = modal;
   });
- $timeout(function () {
-  $scope.modal.show();
- }, 500);
 
+
+$scope.openModal = function () {
+  $scope.modal.show();
+};
 
 });

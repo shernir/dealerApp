@@ -11,15 +11,15 @@
       <img src="img/logo.svg"  />
       <p>Location</p>
     </div>
-    <a style="margin-top:100px;" href="#">
-      <img src="img/sim.svg" />
+    <a  style="margin-top:100px;" class="active" id="home" ng-click="active('home')" href="#/home">
+      <img src="img/new-activation.svg" />
       <p>
         {{'MASTER.NEW_ACTIVAION' | translate}}
       </p>
     </a>
     <div class="seprator-line"></div>
-    <a href="#">
-      <img src="img/report.svg" />
+    <a  href="#/reports" id="report" ng-click="active('report')">
+      <img src="img/reports.svg" />
       <p>
         {{'MASTER.REPORT' | translate}}
       </p>
