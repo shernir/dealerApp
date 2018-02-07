@@ -1,12 +1,22 @@
-angular.module('retailer').controller('HomeCtrl',function($scope,$rootScope,$cookies,utility,loading,$timeout){
+angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootScope,utility,loading,$timeout,$cookies){
 
   $rootScope.user = {name:"sherif"};
-  loading.show();
+  //TODO: Set view persmissions
+  if($cookies.get('persmissions')) {
+    $scope.persmissions = JSON.parse($cookies.get('permissions'));
+  }
+  $scope.goToEntity = function (entity) {
+    $scope.$parent.client.entity = entity;
+    if(entity === "postpaid"){
+      $state.go('master.client-details');
+    }
+    else if (entity === "prepaid"){
+      $state.go('master.hala-id-type');
+    }
+    else if (entity === "hala-go"){
+      $state.go('master.hala-go');
 
-  $cookies.put('cookie',JSON.stringify($rootScope.user));
-  $timeout(function(){
-    loading.hide();
-  },2000);
-console.log(JSON.parse($cookies.get('cookie')));
+    }
+  };
 
 });

@@ -3,18 +3,27 @@
     <navigation is-next="true" is-back="true">
 
     </navigation>
-     <h4 style="padding-top:270px">{{'HOME.SELECT_ONE_OF_THE_BELOW' | translate}}</h4>
-     <h4>{{'HOME.OPTION_FOR_NEW_SUPSCRIPTION' | translate}}</h4>
+     <h4 style="padding-top:150px">{{'HALA_TYPE.SELECT_ONE_OF_THE_BELOW' | translate}}</h4>
+     <h4>{{'HALA_TYPE.ID_TYPE' | translate}}</h4>
      <div class="row margin-top-lg center">
-        <div class="col-20 ">
-            <img class="img-responsive" src="img/packge.png" />
-        </div>
-        <div class="col-20">
-            <img class="img-responsive" src="img/packge.png" />
-        </div>
-        <div class="col-20">
-            <img class="img-responsive" src="img/packge.png" />
-        </div>
+        <a class="col-20 text-center " href="#/client-details">
+            <img class="img-responsive" src="img/qid.svg" />
+            <p>
+              {{'HALA_TYPE.QID' | translate}}
+            </p>
+        </a>
+        <a class="col-20 text-center"  href="#/client-details?idType=passport">
+            <img class="img-responsive" src="img/passport.svg" />
+            <p>
+              {{'HALA_TYPE.PASSPORT' | translate}}
+            </p>
+        </a>
+        <a class="col-20"  href="#/client-details?idType=gcc">
+            <img class="img-responsive" src="img/gcc.svg" />
+            <p>
+              {{'HALA_TYPE.GCC' | translate}}
+            </p>
+        </a>
      </div>
  </div>
 </div>

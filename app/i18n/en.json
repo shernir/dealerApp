@@ -20,12 +20,25 @@
     "PREPAID":"Prepaid",
     "HALA_GO_MIGRATION":"Hala GO Migration"
   },
+  "HALA_TYPE":{
+    "SELECT_ONE_OF_THE_BELOW":"Select one of the below",
+    "ID_TYPE":"ID types",
+    "QID":"QID",
+    "PASSPORT":"Passport",
+    "GCC":"GCC"
+  },
   "CLIENT_DETAILS":{
     "QID":"Qatar ID",
     "BIRTH_DATE":"Birth Date",
     "FIRST_NAME":"First Name",
     "MIDDLE_NAME":"Middle Name",
     "LAST_NAME":"Last Name",
+    "FRONT_ID":"ID Front",
+    "BACK_ID":"ID Back",
+    "SCAN_PASSPORT":"Scan Passport",
+    "SCAN_GCC":"Scan GCC ID",
+    "SCAN_QID":"Scan QID",
+    "ID_NUMBER":"ID Number",
     "EMAIL_OPTIONAL":"Email (optional)",
     "ALTERNATIVE_NUMBER_OPTIONAL":"Alternative Number (Optional)",
     "NATIONALITY":"Nationality",
@@ -78,6 +91,11 @@
     "ERROR_MESSAGE":"Error Message",
     "FAILED_REASEON":"Failed Reason",
     "STATUS":"Status"
+  },
+  "HALA_GO":{
+    "PLEASE_ENTER_CUSTOMER_MOBILE":"Please enter the customer mobile number in the field below:",
+    "CUSTOMER_ID":"Customer ID",
+    "ENTER_CUSTOMER_NUMBER":"Enter Customer Mobile Number"
 
   }
 }

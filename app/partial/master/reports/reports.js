@@ -1,4 +1,4 @@
-angular.module('retailer').controller('ReportsCtrl',function($scope){
+angular.module('retailer').controller('ReportsCtrl',function($scope,xhrService){
   $scope.type = 1;
   $scope.toggleView = function () {
     if($scope.type === 1) {
@@ -7,4 +7,15 @@ angular.module('retailer').controller('ReportsCtrl',function($scope){
       $scope.type = 1;
     }
   };
+
+  xhrService.call({
+      url: 'report/get',
+      method: 'GET',
+
+  }, true).then(function(data){
+
+  }).catch(function(err){
+
+  });
+
 });

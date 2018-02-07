@@ -1,0 +1,29 @@
+ <ion-pane class="main-container client-details" ng-controller="HalaGoCtrl">
+     <ion-content class="full-height  no-padding white-bg  title-without-margin">
+
+          <navigation next="next()" is-back="true" back="alert()" is-next="true"></navigation>
+          <div class="hala-go-item">
+            <div class="row ">
+              <h4 style="padding:10px 0;">{{'HALA_GO.PLEASE_ENTER_CUSTOMER_MOBILE' | translate}}</h4>
+            </div>
+            <div class="row ">
+              <div class="col-33">
+                <label class="item  item-input item-stacked-label" style="padding-left:0;">
+                  <span class="input-label">{{'HALA_GO.CUSTOMER_ID' | translate}}</span>
+                  <input class="custom-input"  type="text" >
+                </label>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-33">
+                <label class="item  item-input item-stacked-label" style="padding-left:0;">
+                  <span class="input-label">{{"HALA_GO.ENTER_CUSTOMER_NUMBER" | translate}}</span>
+                  <input class="custom-input"  type="text" >
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+     </ion-content>
+   </ion-pane>

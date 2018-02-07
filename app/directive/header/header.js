@@ -1,4 +1,4 @@
-angular.module('retailer').directive('header', function($rootScope,$translate) {
+angular.module('retailer').directive('header', function($rootScope,$translate,$state) {
     return {
         restrict: 'E',
         replace: true,
@@ -8,9 +8,12 @@ angular.module('retailer').directive('header', function($rootScope,$translate) {
         templateUrl: 'directive/header/header.html',
         link: function(scope, element, attrs, fn) {
 
-
+          scope.logout = function () {
+            $rootScope.user = null ;
+            $state.go('master.login')
+          };
           scope.changeLang = function (lang) {
-            if (lang == 'ar') {
+            if (lang === 'ar') {
               $rootScope.dir = "rtl";
             } else {
               $rootScope.dir = "ltr";
@@ -40,14 +43,14 @@ angular.module('retailer').directive('header', function($rootScope,$translate) {
               var i;
               for (i = 0; i < dropdowns.length; i++) {
                 var openDropdown = dropdowns[i];
-                $(openDropdown).slideUp('fast')
+                $(openDropdown).slideUp('fast');
                 // var openDropdown = dropdowns[i];
                 // if (openDropdown.classList.contains('show')) {
                 //   openDropdown.classList.remove('show');
                 // }
               }
             }
-          }
+          };
 
 
         }

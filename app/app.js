@@ -7,18 +7,8 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     prefix: 'i18n/',
     suffix: '.json'
   });
-  // $translateProvider.useSanitizeValueStrategy(['escaped']);
-  // $translateProvider.useSanitizeValueStrategy('escaped');
-  // $translateProvider.useSanitizeValueStrategy('sanitize');
+
   $translateProvider.preferredLanguage('en');
-
-  // tmhDynamicLocaleProvider.localeLocationPattern('i18n/angular-locale_{{locale}}.js');
-  //
-  // tmhDynamicLocaleProvider.defaultLocale('en');
-
-
-
-  //$ionicConfigProvider.views.transition('fade-in-out');
     $stateProvider.state('master', {
         abstract: true,
         templateUrl: 'partial/master/master.html',
@@ -38,7 +28,7 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
         templateUrl: 'partial/master/reports/reports.html'
     });
     $stateProvider.state('master.client-details', {
-        url: '/client-details/:idType',
+        url: '/client-details?:idType',
         templateUrl: 'partial/master/client-details/client-details.html'
     });
     $stateProvider.state('master.postpaid-type', {
@@ -69,20 +59,22 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
         url: '/login',
         templateUrl: 'partial/master/login/login.html'
     });
+    $stateProvider.state('master.hala-go', {
+        url: '/hala-go',
+        templateUrl: 'partial/master/hala-go/hala-go.html'
+    });
     /* Add New States Above */
     $urlRouterProvider.otherwise('/login');
 
 });
 
-angular.module('retailer').run(function($rootScope,$ionicPlatform) {
-
-
+angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies) {
 
   $rootScope.lang = {
       name:"English",
       id:"en",
       flag:"img/en.svg"
-    }
+    };
     $rootScope.availableLangs = [
       {
         name:"English",

@@ -1,4 +1,4 @@
-angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,$ionicModal){
+angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,$state,$ionicModal){
   $scope.array = [1,2,3,4,5,6];
   $scope.array1=[1,2];
   $scope.accounts= [{
@@ -17,6 +17,10 @@ angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,$io
     checked:false
   }
 ];
+console.log($scope.$parent.client);
+$scope.next = function () {
+  $state.go('master.scan-number')
+}
   $scope.updateSelection = function(position, items, title) {
         angular.forEach(items, function(subscription, index) {
             if (position != index)

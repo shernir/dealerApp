@@ -3,17 +3,18 @@ angular.module('retailer').directive('sideMenu', function() {
         restrict: 'E',
         replace: true,
         scope: {
-          isMaster:"="
+          isMaster:"=",
+          location:"="
         },
         templateUrl: 'directive/side-menu/side-menu.html',
         link: function(scope, element, attrs, fn) {
 
           scope.active = function (type) {
             if(type === 'home'){
-              $('#report').removeClass('active')
+              $('#report').removeClass('active');
               $('#home').addClass('active');
             }else {
-              $('#home').removeClass('active')
+              $('#home').removeClass('active');
               $('#report').addClass('active');
             }
           };

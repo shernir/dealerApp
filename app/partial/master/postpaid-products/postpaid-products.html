@@ -1,6 +1,6 @@
 <div class="main-container postpaid-products" ng-controller="PostpaidProductsCtrl">
    <div class="full-height   column title-without-margin" >
-     <navigation next="alert()" back="alerta()" is-back="fasle" is-next="true"></navigation>
+     <navigation next="next()" back="alerta()" is-back="true" is-next="true"></navigation>
      <div class="row" style="padding-top:10px;">
        <div class="col-60 ">
          <div class="white-title white-bg row tab-container">
@@ -18,6 +18,9 @@
            <div class="pack-container">
              <ks-swiper-container initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
                 <ks-swiper-slide class="product-card "  ng-repeat="s in array" ng-class="{'active':s==1}">
+                  <div class="info-ribbon">
+                    <i class="ion-information"></i>
+                  </div>
                   <h4 class="text-center">
                     Qatarna<br />
                     <b>600</b>

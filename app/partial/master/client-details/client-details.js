@@ -1,5 +1,5 @@
-angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$ionicModal,$timeout,utility){
-
+angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility){
+  $scope.idType = $stateParams.idType;
   console.log($scope.$parent.client);
   $scope.alert = function () {
     alert("next");
@@ -66,8 +66,17 @@ $scope.scan = function () {
   });
 
 
-$scope.openModal = function () {
-  $scope.modal.show();
+$scope.next = function () {
+  if ($scope.$parent.client.entity === 'postpaid') {
+    $scope.modal.show();
+  }
+  if ($scope.$parent.client.entity === 'prepaid') {
+    $state.go('master.scan-number');
+  }
+  else if ($scope.$parent.client.entity === 'hala-go') {
+      $state.go('master.scan-number');
+  }
+
 };
 
 });

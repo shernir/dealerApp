@@ -1,4 +1,4 @@
-<ion-pane class="landing" ng-controller="LoginCtrl" ng-class="{'rtl':$root.lang.id =='ar'}">
+<ion-pane class="landing login" ng-controller="LoginCtrl" ng-class="{'rtl':$root.lang.id =='ar'}">
     <ion-content>
       <div class="row full-height no-padd">
           <div  class="full-height row vertical-align horizontal-align grey-bg">
@@ -8,19 +8,22 @@
                   <img src="img/app-logo.svg" />
                   <h2>E-Activation APP</h2>
                 </div>
-                <div class="col col-50 full-height white-bg flex vertical-align horizontal-align">
+                <div style="position:relative" class="col col-50 full-height white-bg flex vertical-align horizontal-align">
+                  <div class="refresh-btn red-color" ng-if="isFail" ng-click="init()">
+                    <i class="ion-ios-refresh-empty"></i>
+                  </div>
                   <div style="width:100%" >
-                    <h4 class="text-center">Location</h3>
+                    <h4 class="text-center">{{store.location}}</h4>
                     <label class="item item-input item-stacked-label">
                       <span class="input-label">{{"LANDING.USERNAME" | translate}}</span>
-                      <input type="text" placeholder="John Smith">
+                      <input type="text" ng-model="user.username" placeholder="John Smith">
                     </label>
                     <label class="item item-input item-stacked-label">
                       <span class="input-label">{{"LANDING.PASSWORD" | translate}}</span>
-                      <input type="password" placeholder="*********">
+                      <input type="password" ng-model="user.password" placeholder="*********">
                     </label>
                     <div class="padding row center">
-                    <button ng-click="login()" class="button  button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
+                    <button ng-click="login(user.username,user.password)" ng-disabled="!store.location" class="button  button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
                   </div>
                   </div>
                 </div>

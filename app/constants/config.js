@@ -18,7 +18,7 @@ angular.module('retailer').constant('CONFIG', {
     LANG_LIST: ['en', 'ar'], //Used in localeService
     APP_VERSION: '0.0.1',
     ENVIRONMENTS : {
-        'dev': { name: 'Development', backendUrl: 'http://ooredoo-task.getsandbox.com/' },
+        'dev': { name: 'Development', backendUrl: 'http://172.16.225.182:8005/api/' },
         'staging': { name: 'Staging & QA', backendUrl: 'http://mmsdemo.cloudapp.net:5050/' },
         'live': { name: 'Live', backendUrl: 'http://mmsdemo.cloudapp.net:8888/' }
     },

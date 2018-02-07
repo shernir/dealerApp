@@ -1,39 +1,56 @@
 <ion-pane class="main-container client-details" ng-controller="ClientDetailsCtrl">
   <ion-content class="full-height  no-padding white-bg  title-without-margin">
 
-       <navigation next="openModal()" is-back="true" back="alert()" is-next="true"></navigation>
+       <navigation next="next()" is-back="true" back="alert()" is-next="true"></navigation>
        <div class="row margin-top-lg client-details-ctrl " >
-         <div class="col-60" style="padding:0 20px;">
-             <img  src="img/scan-qid.svg" ng-click="scan()" />
+         <div class="col-60" style="padding:10px 20px;">
+             <img ng-if="!idType" src="img/scan-qid.svg" ng-click="scan()" />
+             <img ng-if="idType==='passport'" src="img/scan-passport.svg" ng-click="scan()" />
+             <img ng-if="idType==='gcc'" src="img/scan-gcc.svg" ng-click="scan()" />
+             <p style="padding:10px 25px;">
+               <span ng-show="!idType">{{"CLIENT_DETAILS.SCAN_QID" | translate}}</span>
+               <span ng-show="idType==='passport'">{{"CLIENT_DETAILS.SCAN_PASSPORT" | translate}}</span>
+               <span ng-show="idType==='gcc'">{{"CLIENT_DETAILS.SCAN_GCC" | translate}}</span>
+             </p>
          </div>
          <div class="col-20 text-center" ng-click="takePicture('front')">
            <img ng-if="!$parent.client.frontQID"  src="img/front-id.svg" />
            <img ng-if="$parent.client.frontQID"  ng-src="{{$parent.client.frontQID}}" />
-
+           <p>
+             {{"CLIENT_DETAILS.FRONT_ID" | translate}}
+           </p>
          </div>
          <div class="col-20 text-center" ng-click="takePicture('back')">
            <img ng-if="!$parent.client.backQID"  src="img/back-id.svg" />
            <img ng-if="$parent.client.backQID"  ng-src="{{$parent.client.backQID}}" />
+           <p>
+             {{"CLIENT_DETAILS.BACK_ID" | translate}}
+           </p>
          </div>
        </div>
        <form>
        <div class="row margin-top-md " >
          <div class="col-33 form-item">
            <label class="item  item-input item-stacked-label" style="padding-left:0;">
-             <span class="input-label">{{"CLIENT_DETAILS.QID" | translate}}</span>
+             <span ng-if="!idType" class="input-label">
+               {{"CLIENT_DETAILS.QID" | translate}}
+             </span>
+             <span ng-if="idType" class="input-label">
+               {{"CLIENT_DETAILS.ID_Number" | translate}}
+             </span>
              <input class="custom-input" ng-model="$parent.client.QID" type="text" >
            </label>
          </div>
          <div class="col-33 form-item">
            <label class="item  item-input item-stacked-label">
              <span class="input-label">{{"CLIENT_DETAILS.NATIONALITY" | translate}}</span>
-             <input class="custom-input" type="text" >
+             <input class="custom-input" ng-model="$parent.client.nationality"  type="text" >
            </label>
          </div>
          <div class="col-33 form-item">
            <label class="item  item-input item-stacked-label">
              <span class="input-label">{{"CLIENT_DETAILS.BIRTH_DATE" | translate}}</span>
-             <input class="custom-input" type="text" >
+             <input class="custom-input" ng-model="$parent.client.birthdate" type="text" >
            </label>
          </div>
         </div>
@@ -42,19 +59,19 @@
            <div class="col-33 form-item">
              <label class="item  item-input item-stacked-label" style="padding-left:0;">
                <span class="input-label">{{"CLIENT_DETAILS.FIRST_NAME" | translate}}</span>
-               <input class="custom-input" type="text" >
+               <input class="custom-input" ng-model="$parent.client.firstName" type="text" >
              </label>
            </div>
            <div class="col-33 form-item">
              <label class="item  item-input item-stacked-label">
                <span class="input-label">{{"CLIENT_DETAILS.MIDDLE_NAME" | translate}}</span>
-               <input class="custom-input" type="text" >
+               <input class="custom-input" ng-model="$parent.client.middleName" type="text" >
              </label>
            </div>
            <div class="col-33 form-item">
              <label class="item  item-input item-stacked-label">
                <span class="input-label">{{"CLIENT_DETAILS.LAST_NAME" | translate}}</span>
-               <input class="custom-input" type="text" >
+               <input class="custom-input" ng-model="$parent.client.lastName" type="text" >
              </label>
            </div>
          </div>
@@ -62,19 +79,19 @@
            <div class="col-33 form-item">
              <label class="item  item-input item-stacked-label" style="padding-left:0;">
                <span class="input-label">{{"CLIENT_DETAILS.PO_BOX_OPTIONAL" | translate}}</span>
-               <input class="custom-input" type="text" >
+               <input class="custom-input" ng-model="$parent.client.poBox" type="text" >
              </label>
            </div>
            <div class="col-33 form-item">
              <label class="item  item-input item-stacked-label">
                <span class="input-label">{{"CLIENT_DETAILS.EMAIL_OPTIONAL" | translate}}</span>
-               <input class="custom-input" type="text" >
+               <input class="custom-input" ng-model="$parent.client.email" type="text" >
              </label>
            </div>
            <div class="col-33 form-item">
              <label class="item  item-input item-stacked-label">
                <span class="input-label">{{"CLIENT_DETAILS.ALTERNATIVE_NUMBER_OPTIONAL" | translate}}</span>
-               <input class="custom-input" type="text" >
+               <input class="custom-input" ng-model="$parent.client.altNumber" type="text" >
              </label>
            </div>
          </div>

@@ -1,12 +1,12 @@
-angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window) {
+angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,$cookies) {
 
     var xhrService = {};
-
+    var token = $cookies.get('token');
     // Default options of any HTTP request
     function getDefaultOptions() {
         return {
             method: 'GET',
-            headers: { 'Authorization': 'Bearer ' + $window.localStorage['token'] },
+            headers: { 'Authorization': "Bearer "+localStorage.getItem('token') },
             timeout: CONFIG.TIMEOUT,
             cache: false,
             data: null,
@@ -46,7 +46,7 @@ angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$wi
 
             return $q.reject(error);
         } else {
-            
+
             return $q.reject(error);
         }
     }
