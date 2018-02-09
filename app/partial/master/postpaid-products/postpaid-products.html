@@ -4,45 +4,29 @@
      <div class="row" style="padding-top:10px;">
        <div class="col-60 ">
          <div class="white-title white-bg row tab-container">
-           <div class="tab active col-33 text-center">
-             Shahry Smart
-           </div>
-           <div class="tab col-33 text-center">
-             Qatarna
-           </div>
-           <div class="tab col-33 text-center">
-             Label
+           <div ng-repeat="tarrif in ::tarrifs track by $index" ng-class="{'active':tarrif.CategoryName == selectedCategory}" ng-click="changeTab(tarrif.CategoryName)" class="tab col-33 text-center">
+             {{::tarrif.CategoryName}}
            </div>
          </div>
          <div class="products-container ">
            <div class="pack-container">
-             <ks-swiper-container initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
-                <ks-swiper-slide class="product-card "  ng-repeat="s in array" ng-class="{'active':s==1}">
+             <ks-swiper-container ng-repeat="tarrif in ::tarrifs track by $index" ng-if="tarrif.CategoryName == selectedCategory" initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
+                <ks-swiper-slide class="product-card "  ng-repeat="entity in ::tarrif.tarrifs track by $index" >
                   <div class="info-ribbon">
                     <i class="ion-information"></i>
                   </div>
                   <h4 class="text-center">
-                    Qatarna<br />
-                    <b>600</b>
+                    {{::entity.Name}}<br />
                   </h4>
                   <div class="benfits-container">
-                    <p class="text-center">
-                      XXX <br />
-                      Units
-                    </p>
-                    <p class="text-center">
-                      XXX <br />
-                      Mobile Internet
-                    </p>
-                    <p class="text-center">
-                      XXX <br />
-                      Free Number
+                    <p class="text-center" ng-repeat="benfit in ::entity.Details | limitTo:3">
+                    {{::benfit}}
                     </p>
                   </div>
-                  <p class="text-center">
+                  <p class="text-center" ng-click="showDeatils(entity)">
                     <a class="red-color " > More Details</a>
                   </p>
-                  <div class="select-indicator-container text-center">
+                  <div ng-click="addToCart(entity,0,true)" class="select-indicator-container text-center">
                     <span class="custom-radio">
                       <i></i>
                     </span>
@@ -54,10 +38,10 @@
             </ks-swiper-container>
            </div>
            <div class="add-ons-container">
-             <ks-swiper-container initial-slide="0" dir="{{$root.dir}}" slides-per-view="2" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
-                <ks-swiper-slide class="add-ons-card flex middle center coulmn" ng-repeat="s in array1" ng-click="showProductModal('check','international key')">
+             <ks-swiper-container ng-if="addons"  initial-slide="0" dir="{{$root.dir}}" slides-per-view="2" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
+                <ks-swiper-slide class="add-ons-card flex middle center coulmn" ng-repeat="addon in addons" ng-click="showProductModal(addon.IsMultiple,addon.CategoryName,addon.tarrifs)">
                   <h1 class="red-color"><i class="ion-ios-plus-outline"></i></h1>
-                  <h4>Shahry Data Pack</h4>
+                  <h4>{{addon.CategoryName}}</h4>
                 </ks-swiper-slide>
             </ks-swiper-container>
            </div>
@@ -65,7 +49,7 @@
 
        </div>
        <div class="col-40">
-         <cart-directive cart="cart"></cart-directive>
+         <cart-directive available-credit-limit="$parent.client.availableCreditLimit" credit-limit="$parent.client.creditLimit" cart="$parent.client.cart"></cart-directive>
        </div>
      </div>
 

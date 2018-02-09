@@ -1,0 +1,14 @@
+<div class="modal custom-dealer-modal tarrif-details">
+      <div class="flex end">
+        <div class="button button-clear" ng-click="Detailsmodal.hide()"><span class="icon ion-close"></span></div>
+      </div>
+      <h4 class="text-center">{{tarrifDetails.Name}}</h4>
+      <div class="modal-product-container"  has-header="true" padding="true">
+        <p class="text-center" ng-repeat="detail in tarrifDetails.Details">
+          {{detail}}
+        </p>
+      </div>
+      <div class="bar bar-footer flex center">
+        <button ng-click="Detailsmodal.hide();tarrifDeatils={}"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>
+      </div>
+  </div>

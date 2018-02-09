@@ -3,11 +3,12 @@ angular.module('retailer').directive('cartDirective', function() {
         restrict: 'E',
         replace: true,
         scope: {
-          cart:"="
+          cart:"=",
+          creditLimit:"=",
+          availableCreditLimit:"=",
         },
         templateUrl: 'directive/cart-directive/cart-directive.html',
         link: function(scope, element, attrs, fn) {
-          console.log(scope.cart);
 
         }
     };

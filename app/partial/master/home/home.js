@@ -14,7 +14,7 @@ angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootSco
       $state.go('master.hala-id-type');
     }
     else if (entity === "hala-go"){
-      $state.go('master.hala-go');
+      $state.go('master.client-details');
 
     }
   };

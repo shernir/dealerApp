@@ -1,4 +1,4 @@
-angular.module('retailer').controller('SignatureCtrl',function($scope){
+angular.module('retailer').controller('SignatureCtrl',function($scope,$state){
 
   var signaturePad;
   $scope.signAgain = function (){
@@ -8,7 +8,9 @@ angular.module('retailer').controller('SignatureCtrl',function($scope){
     a = signaturePad.isEmpty();
     var data = signaturePad.toDataURL('image/png');
   };
-
+  $scope.next = function () {
+    $state.go('master.confirmation')
+  };
   $scope.$on('$ionicView.enter', function(){
     if (signaturePad) {
       signaturePad.clear();

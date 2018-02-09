@@ -15,7 +15,47 @@ angular.module('retailer').factory('utility',function($q,$timeout) {
 
       return deferred.promise;
     };
+    utility.getListOfCategory = function (array) {
+      var categories = [];
+      for (var i = 0; i < array.length; i++) {
+        var index = _.findIndex(categories, function(o) { return o.CategoryId == array[i].CategoryId; })
+         if (index == -1) {
+           categories.push({
+             CategoryName:array[i].CategoryName,
+             CategoryId:array[i].CategoryId,
+             "IsMultiple": array[i].IsMultiple,
+             tarrifs:[{
+                       "Name": array[i].Name,
+                        "Id": array[i].Id,
+                        "Price": array[i].Price,
+                        "CategoryName": array[i].CategoryName,
+                        "CategoryId": array[i].CategoryId,
+                        "PormotionName": array[i].PormotionName,
+                        "PromotionId": array[i].PromotionId,
+                        "PromotionDiscount": array[i].PromotionDiscount,
+                        "Details": array[i].Details,
+                        "Detail": array[i].Detail,
 
+         }]
+       })
+     } else {
+       categories[index].tarrifs.push({
+                   "Name": array[i].Name,
+                    "Id": array[i].Id,
+                    "Price": array[i].Price,
+                    "CategoryName": array[i].CategoryName,
+                    "CategoryId": array[i].CategoryId,
+                    "PormotionName": array[i].PormotionName,
+                    "PromotionId": array[i].PromotionId,
+                    "PromotionDiscount": array[i].PromotionDiscount,
+                    "Details": array[i].Details,
+                    "Detail": array[i].Detail,
+
+                  });
+     }
+    }
+      return categories;
+    };
     utility.getCode = function () {
       var deferred = $q.defer();
       cordova.plugins.barcodeScanner.scan(

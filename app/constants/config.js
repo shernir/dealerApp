@@ -18,11 +18,11 @@ angular.module('retailer').constant('CONFIG', {
     LANG_LIST: ['en', 'ar'], //Used in localeService
     APP_VERSION: '0.0.1',
     ENVIRONMENTS : {
-        'dev': { name: 'Development', backendUrl: 'http://172.16.225.182:8005/api/' },
-        'staging': { name: 'Staging & QA', backendUrl: 'http://mmsdemo.cloudapp.net:5050/' },
-        'live': { name: 'Live', backendUrl: 'http://mmsdemo.cloudapp.net:8888/' }
+        'dev': { name: 'Development', backendUrl: 'http://simple-mock-example.getsandbox.com/api/' },
+        'staging': { name: 'Staging & QA', backendUrl: 'http://172.16.225.182:8005/api/' },
+        'live': { name: 'Live', backendUrl: '' }
     },
-    ACTIVE_ENVIRONMENT: 'dev',
+    ACTIVE_ENVIRONMENT: 'live',
     TIMEOUT: 200000,
     GET_BACKEND_URL: function () {
         return this.ENVIRONMENTS[this.ACTIVE_ENVIRONMENT].backendUrl;

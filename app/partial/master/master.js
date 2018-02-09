@@ -13,7 +13,11 @@ angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,$i
     poBox:"",
     email:"",
     simNumber:"",
-    altNumber:""
+    altNumber:"",
+    creditLimit:1000,
+    availableCreditLimit:700,
+    cart:[]
+
   };
   $ionicModal.fromTemplateUrl('modal/alert-modal.html', {
     scope: $scope,

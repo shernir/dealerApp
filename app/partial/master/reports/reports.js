@@ -9,7 +9,7 @@ angular.module('retailer').controller('ReportsCtrl',function($scope,xhrService){
   };
 
   xhrService.call({
-      url: 'report/get',
+      url: 'report/get?Mode=2',
       method: 'GET',
 
   }, true).then(function(data){

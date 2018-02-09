@@ -9,11 +9,11 @@
                   <h2>E-Activation APP</h2>
                 </div>
                 <div style="position:relative" class="col col-50 full-height white-bg flex vertical-align horizontal-align">
-                  <div class="refresh-btn red-color" ng-if="isFail" ng-click="init()">
+                  <!-- <div class="refresh-btn red-color" ng-if="isFail" ng-click="init()">
                     <i class="ion-ios-refresh-empty"></i>
-                  </div>
+                  </div> -->
                   <div style="width:100%" >
-                    <h4 class="text-center">{{store.location}}</h4>
+                    <h4 class="text-center">{{store.location || 'Location'}}</h4>
                     <label class="item item-input item-stacked-label">
                       <span class="input-label">{{"LANDING.USERNAME" | translate}}</span>
                       <input type="text" ng-model="user.username" placeholder="John Smith">

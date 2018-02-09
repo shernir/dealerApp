@@ -74,7 +74,8 @@ $scope.next = function () {
     $state.go('master.scan-number');
   }
   else if ($scope.$parent.client.entity === 'hala-go') {
-      $state.go('master.scan-number');
+    $state.go('master.hala-go');
+
   }
 
 };

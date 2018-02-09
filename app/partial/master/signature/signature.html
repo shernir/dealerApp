@@ -1,6 +1,6 @@
 <div class="main-container signature" ng-controller="SignatureCtrl">
  <div class="full-height  white-bg column title-without-margin" >
-   <navigation next="alert()" back="alerta()" is-back="true" is-next="true"></navigation>
+   <navigation next="next()" back="alerta()" is-back="true" is-next="true"></navigation>
    <div class="preview-link flex middle" >
 
       <i class="ion-ios-list-outline"></i>
@@ -14,8 +14,11 @@
    <div class="signature-container text-center">
      <canvas id="signature-pad" class="signature-pad" width=700 height=400></canvas>
    </div>
-   <div class="sign-again-button text-center" >
-     <button ng-click="signAgain()"  class="button  button-assertive activated">{{"SIGNATURE.SIGN_AGAIN" | translate}}</button>
+   <div style="margin:20px" class="sign-again-button flex end text-center" >
+     <button class="clearbtn button" ng-click="signAgain()">
+       <i class="ion-ios-refresh-empty"></i>
+       Clear
+     </button>
    </div>
  </div>
 </div>

@@ -24,14 +24,13 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
    }).catch(function(err){
      $scope.isFail = true;
    });
-  }
+ };
 
   $scope.login = function (user,password) {
     //TODO: static login  parameter
 
-    loading.show();
     xhrService.call({
-        url: '/device/login',
+        url: 'device/login',
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         contentType: 'application/json',
@@ -39,6 +38,7 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
           "DealerCode":"1",
           "DealerName":"Qatar Telecom",
           "Location":"Airport HQ2",
+          "DeviceId":"77360bc7-efb9-47f1-9e6f-65adb465f4cd",
           "UserName":user,
           "Password":password,
         }
