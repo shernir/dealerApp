@@ -1,4 +1,4 @@
-angular.module('retailer').directive('header', function($rootScope,$translate,$state) {
+angular.module('retailer').directive('headerDirective', function($rootScope,$translate,$state) {
     return {
         restrict: 'E',
         replace: true,

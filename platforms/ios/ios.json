@@ -72,7 +72,7 @@
             },
             {
               "xml": "<string />",
-              "count": 13
+              "count": 17
             },
             {
               "xml": "<string> </string>",
@@ -82,19 +82,19 @@
           "NSMicrophoneUsageDescription": [
             {
               "xml": "<string>$MICROPHONE_USAGE_DESCRIPTION</string>",
-              "count": 14
+              "count": 18
             }
           ],
           "NSPhotoLibraryAddUsageDescription": [
             {
               "xml": "<string>$PHOTOLIBRARY_ADD_USAGE_DESCRIPTION</string>",
-              "count": 14
+              "count": 18
             }
           ],
           "NSPhotoLibraryUsageDescription": [
             {
               "xml": "<string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>",
-              "count": 14
+              "count": 18
             }
           ]
         }

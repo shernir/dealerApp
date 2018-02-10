@@ -1,13 +1,12 @@
 <div class="main-container reports" ng-controller="ReportsCtrl">
  <div class="text-center full-height  white-bg column title-without-margin" >
    <div class="row report-header-control">
-     <h4 ng-if="type==1">{{'REPORTS.NUMBER_OF_SUCCESSFUL_ORDERS' | translate}} XXX</h2>
-     <h4 ng-if="type==2">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} XXX</h2>
+     <h4 ng-if="type==1">{{'REPORTS.NUMBER_OF_SUCCESSFUL_ORDERS' | translate}} {{reports.length}}</h2>
+     <h4 ng-if="type==4">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} {{reports.length}}</h2>
 
      <button class="button  button-assertive activated" ng-click="toggleView()">
        <span ng-if="type==1">{{'REPORTS.SUCCESSFUL_ORDER' | translate}}</span>
-       <span ng-if="type==2">{{'REPORTS.FAILED_ORDER' | translate}}</span>
-
+       <span ng-if="type==4">{{'REPORTS.FAILED_ORDER' | translate}}</span>
      </button>
    </div>
    <div class="table successful" ng-if="type==1" >
@@ -20,17 +19,17 @@
         <div class="col"><span translate>REPORTS.STATUS</span></div>
 
       </div>
-      <div class="row" >
-        <div class="col">AA</div>
-        <div class="col">BB</div>
-        <div class="col">CC</div>
-        <div class="col">DD</div>
-        <div class="col">EE</div>
-        <div class="col">TT</div>
+      <div class="row" ng-repeat='report in reports' >
+        <div class="col">{{report.Id}}</div>
+        <div class="col">{{report.CustomerName}}</div>
+        <div class="col">{{report.MSISDNNo}}</div>
+        <div class="col">{{report.ProductType}}</div>
+        <div class="col">{{report.SalesManNo}}</div>
+        <div class="col">{{report.Status}}</div>
 
       </div>
    </div>
-   <div class="table successful" ng-if="type==2" >
+   <div class="table successful" ng-if="type==4" >
      <div class="row header no-padding">
        <div class="col"><span translate>REPORTS.CUSTOMER_NAME</span></div>
        <div class="col"><span translate>REPORTS.MOBILE_NO</span></div>
@@ -42,14 +41,14 @@
 
 
       </div>
-      <div class="row" >
-        <div class="col">AA</div>
-        <div class="col">BB</div>
-        <div class="col">CC</div>
-        <div class="col">DD</div>
-        <div class="col">EE</div>
-        <div class="col">TT</div>
-        <div class="col">TT</div>
+      <div class="row" ng-repeat='report in reports' >
+        <div class="col">{{report.CustomerName}}</div>
+        <div class="col">{{report.MSISDNNo}}</div>
+        <div class="col">{{report.ProductType}}</div>
+        <div class="col">{{report.SalesManNo}}</div>
+        <div class="col">{{report.FailedErrorMessg}}</div>
+        <div class="col">{{report.FailedEvent}}</div>
+        <div class="col">{{report.Status}}</div>
 
 
       </div>

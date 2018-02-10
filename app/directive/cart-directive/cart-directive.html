@@ -1,30 +1,25 @@
-<div class="cart-container ">
+<div class="cart-container " style="position:relative">
   <div class="white-title white-bg">
     <b>{{'CART.YOUR_ORDER' | translate}}</b>
     <p class="row space-between" style="margin-top:5px;"><span class="red-color">{{'CART.CREDIT_LIMIT' | translate}}</span> <span class="dark-grey">QR {{creditLimit}}</span></p>
     <p class="row space-between no-margin"><span class="red-color">{{'CART.AVAILABLE_ACCOUNT_CREDIT' | translate}}</span> <span class="dark-grey">QR {{availableCreditLimit}}</span></p>
 
   </div>
-  <div class="item-container">
-    <div class="cart-item" ng-repeat="cartItem in cart">
+  <ion-content class="item-container">
+    <div class="cart-item" ng-repeat="cartItem in cart track by $index" ng-init="getTotal()">
       <div class="">
         <p class="row "><span class="red-color">{{cartItem.Name}}</span> <span class="dark-grey">{{'CART.QR' | translate}} {{cartItem.Price}}</span></p>
-        <p class="row second end"><span class="dark-grey"> <ion-icon class="ion-ios-trash" ng-if="cartItem.canDelete"></ion-icon></span></p>
+        <p class="row second" ng-if="cartItem.PormotionName"><span class="dark-grey">{{'CART.DISCOUNT' | translate}}</span> <span class="dark-grey "> {{cartItem.PromotionDiscount}}</span></p>
+        <p class="row second"><span class="dark-grey">{{cartItem.Detail}}</span> <span class="dark-grey button" ng-click="removeFromCart(cart,$index)"  ng-if="cartItem.canDelete"> <ion-icon class="ion-ios-trash"></ion-icon></span></p>
+
       </div>
     </div>
+  </ion-content>
 
-
-
-
-
-
-
-  </div>
-
-  <div class="total-cart">
+  <div class="total-cart total-cart-footer">
     <p class="row ">
       <span class=" dark-grey">{{'CART.TOTAL' | translate}}</span>
-      <span class="cart-value red-color">{{'CART.QR' | translate}} 250</span>
+      <span class="cart-value red-color">{{'CART.QR' | translate}} {{$root.total}}</span>
     </p>
   </div>
 

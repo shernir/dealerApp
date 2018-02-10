@@ -262,7 +262,7 @@
             "Detail": "20 GB",
             "Id":"5",
             "Price": 200,
-            "CategoryName": "MIP",
+            "Category": "MIP",
             "IsMultiple": 0
         }, {
             "Name": "Data Pack 250",
@@ -328,24 +328,5 @@
             "Price": 35,
             "CategoryName": "IPACK",
             "IsMultiple": 1
-        },
-        {
-           "Name": "Sri ",
-           "CategoryId": "2",
-           "Id":"14",
-           "Detail": "160 mins",
-           "Price": 35,
-           "CategoryName": "IPACK",
-           "IsMultiple": 1
-       },
-       {
-          "Name": "Follow",
-          "CategoryId": "2",
-          "Id":"17",
-          "Detail": "160 mins",
-          "Price": 35,
-          "CategoryName": "IPACK",
-          "IsMultiple": 1
-      }
-      ]
+        }]
 }

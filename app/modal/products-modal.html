@@ -1,23 +1,26 @@
-<div class="modal custom-dealer-modal postpaid-accounts">
-      <div class="flex end">
+
+  <ion-modal-view class="modal custom-dealer-modal postpaid-accounts">
+      <ion-header-bar>
+        <h1 class="title">{{productModalTitle}}</h1>
         <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
-      </div>
-      <h4 class="text-center">{{productModalTitle}}</h4>
-      <div class="modal-product-container" ng-if="isMultiple == 0" has-header="true" padding="true">
-         <ion-checkbox  ng-repeat="product in addOnsProducts" ng-class="{'active1':product.checked}" ng-model="product.checked" ng-click="updateSelection($index, addOnsProducts, product)">
-           {{product.Name}}
-           <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
-         </ion-checkbox>
-      </div>
-      <div class="modal-product-container" ng-if="isMultiple == 1" has-header="true" padding="true">
-        <div class="item" ng-repeat="product in addOnsProducts">
-          <label  >
-            <input type="checkbox"  />
+      </ion-header-bar>
+      <ion-content class="has-footer">
+        <div ng-if="isMultiple == 0">
+          <ion-checkbox  ng-repeat="product in ::addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,0,true,product.CategoryName)">
             {{product.Name}}
-          </label>
+            <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
+          </ion-checkbox>
         </div>
-      </div>
+        <div ng-if="isMultiple == 1" >
+          <ion-checkbox  ng-repeat="product in ::addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,1,true,product.CategoryName)">
+            {{product.Name}}
+            <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
+          </ion-checkbox>
+        </div>
+
+      </ion-content>
       <div class="bar bar-footer flex center">
         <button ng-click="modal.hide()"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>
       </div>
-  </div>
+    </div>
+  </ion-modal-view>

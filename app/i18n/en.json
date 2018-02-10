@@ -57,7 +57,8 @@
     "TOTAL":"Total",
     "QR":"QR",
     "CREDIT_LIMIT":"Credit Limit",
-    "AVAILABLE_ACCOUNT_CREDIT":"Available Account Credit"
+    "AVAILABLE_ACCOUNT_CREDIT":"Available Account Credit",
+    "DISCOUNT":"Discount"
   },
   "SIGNATURE":{
     "TERMS_CONDITION_1":"I have accepted to",

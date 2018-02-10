@@ -3,6 +3,8 @@
   .item-container {
     height: 430px;
     overflow: auto;
+    margin: 0 auto;
+    margin-top: 100px;
   }
   .total-cart {
     margin-top: 15px;
@@ -16,11 +18,14 @@
     }
   }
   .cart-item {
+    .button {
+      background: #fff;
+    }
     p {
       justify-content: space-between;
     }
     p.second {
-      margin-top: 10px;
+      margin-top: 5px;
       margin-bottom: 0;
       ion-icon{
         font-size: 25px !important;
@@ -32,7 +37,26 @@
     border-radius: 20px;
     padding: 10px;
     margin-top: 15px;
+    .button {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    p.row {
+      margin-bottom: 3px;
+    }
   }
+  .total-cart-footer {
+    position: absolute;
+    width: 100%;
+    top:550px;
+  }
+  .item-container {
+    padding-left: 15px;
+  }
+}
+.rtl .item-container {
+  padding-left: 0;
+  padding-right: 15px;
 }
 .rtl .cart-container {
   padding-right: 15px;

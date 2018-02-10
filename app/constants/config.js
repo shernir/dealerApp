@@ -22,7 +22,7 @@ angular.module('retailer').constant('CONFIG', {
         'staging': { name: 'Staging & QA', backendUrl: 'http://172.16.225.182:8005/api/' },
         'live': { name: 'Live', backendUrl: '' }
     },
-    ACTIVE_ENVIRONMENT: 'live',
+    ACTIVE_ENVIRONMENT: 'dev',
     TIMEOUT: 200000,
     GET_BACKEND_URL: function () {
         return this.ENVIRONMENTS[this.ACTIVE_ENVIRONMENT].backendUrl;

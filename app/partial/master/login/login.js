@@ -28,6 +28,7 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
 
   $scope.login = function (user,password) {
     //TODO: static login  parameter
+    $state.go('master.home');
 
     xhrService.call({
         url: 'device/login',

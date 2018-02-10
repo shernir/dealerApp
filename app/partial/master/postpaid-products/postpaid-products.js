@@ -3,13 +3,22 @@ angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,car
   $scope.array1=[1,2];
   $scope.selectedCategory = "Shahry Super";
   $scope.tarrifDetails = {};
-$scope.addToCart = function (entity,isMultiple,canDelete) {
+$scope.addToCart = function (entity,isMultiple,canDelete,type) {
   entity.isMultiple = isMultiple;
   entity.canDelete = canDelete;
-  cart.add($scope.$parent.client.cart,entity);
+  entity.type = type;
+  cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.availableCreditLimit);
 };
 $scope.getProducts = function () {
-  var entityType = $scope.$parent.client.entityType;
+  var entityType ;
+  if ($scope.$parent.client.entityType === 'without-pormotion') {
+    entityType = 0;
+  }else if ($scope.$parent.client.entityType === 'with-pormotion') {
+    entityType = 1;
+
+  }else if ($scope.$parent.client.entityType === 'mbb'){
+    entityType = 2;
+  }
   loading.show();
   xhrService.call({
       url: 'i18n/products.json',
@@ -75,6 +84,10 @@ $scope.next = function () {
   }).then(function(modal) {
     $scope.Detailsmodal = modal;
   });
+  $scope.activeEntity = function (item) {
+    var index = _.findIndex($scope.$parent.client.cart,{ 'Id': item.Id, 'CategoryId': item.CategoryId });
+    return index === -1 ? false : true;
+  };
   $scope.showDeatils = function (tarrif) {
     $scope.tarrifDetails = tarrif;
     $scope.Detailsmodal.show();

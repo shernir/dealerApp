@@ -11,7 +11,8 @@
          <div class="products-container ">
            <div class="pack-container">
              <ks-swiper-container ng-repeat="tarrif in ::tarrifs track by $index" ng-if="tarrif.CategoryName == selectedCategory" initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
-                <ks-swiper-slide class="product-card "  ng-repeat="entity in ::tarrif.tarrifs track by $index" >
+                <ks-swiper-slide class="product-card "  ng-repeat="entity in ::tarrif.tarrifs track by $index" ng-class="{'active' : activeEntity(entity)}" >
+                  <i class="ion-information info-icon"></i>
                   <div class="info-ribbon">
                     <i class="ion-information"></i>
                   </div>
@@ -26,7 +27,7 @@
                   <p class="text-center" ng-click="showDeatils(entity)">
                     <a class="red-color " > More Details</a>
                   </p>
-                  <div ng-click="addToCart(entity,0,true)" class="select-indicator-container text-center">
+                  <div ng-click="addToCart(entity,0,true,'shahryTarrif')" class="select-indicator-container text-center">
                     <span class="custom-radio">
                       <i></i>
                     </span>
