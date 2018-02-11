@@ -1,7 +1,7 @@
 angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,$ionicModal){
   $scope.client = {
-    frontQID:"",
-    backQID:"",
+    frontQID:"s",
+    backQID:"a",
     QID:"",
     entity:"",
     entityType:"",
@@ -14,8 +14,8 @@ angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,$i
     email:"",
     simNumber:"",
     altNumber:"",
-    creditLimit:1000,
-    availableCreditLimit:700,
+    account:{},
+    customerRef:"",
     cart:[]
 
   };

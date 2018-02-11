@@ -1,4 +1,4 @@
-angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state,xhrService,$rootScope,$cookies){
+angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state,xhrService,$rootScope,$cookies,alertService){
   $scope.store = {
     location:"",
     dealerName :"",
@@ -28,7 +28,8 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
 
   $scope.login = function (user,password) {
     //TODO: static login  parameter
-    $state.go('master.home');
+    //$state.go('master.home');
+    loading.show();
 
     xhrService.call({
         url: 'device/login',
@@ -52,7 +53,7 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
         $cookies.put('persmissions',JSON.stringify(data.Permissions));
 
       }else {
-        $scope.$parent.alertMsg(data.Message);
+        alertService.alert('error',data.Message);
       }
     }).catch(function(err){
       loading.hide();

@@ -7,7 +7,9 @@ $scope.addToCart = function (entity,isMultiple,canDelete,type) {
   entity.isMultiple = isMultiple;
   entity.canDelete = canDelete;
   entity.type = type;
-  cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.availableCreditLimit);
+  //TODO add actual ACL
+  //cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
+  cart.add($scope.$parent.client.cart,entity,1000);
 };
 $scope.getProducts = function () {
   var entityType ;
@@ -21,8 +23,8 @@ $scope.getProducts = function () {
   }
   loading.show();
   xhrService.call({
-      url: 'i18n/products.json',
-      method: 'GET',
+      url: 'order/getProducts',
+      method: 'POST',
       data:{"Type":entityType}
   }, true).then(function(data){
     $scope.tarrifs = utility.getListOfCategory(data.Tariffs);
@@ -38,22 +40,6 @@ $scope.changeTab = function (category) {
   $scope.selectedCategory = category;
 };
 
-  $scope.accounts= [{
-    account:"Data Pack 20",
-    price:"20",
-    checked:false
-  },
-  {
-    account:"Data Pack 70",
-    price:"70",
-    checked:false
-  },
-  {
-    account:"Data Pack 200",
-    price:"200",
-    checked:false
-  }
-];
 console.log($scope.$parent.client);
 $scope.next = function () {
   $state.go('master.scan-number')

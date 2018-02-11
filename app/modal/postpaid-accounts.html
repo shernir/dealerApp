@@ -4,7 +4,7 @@
       </div>
       <h4 class="text-center">{{'CLIENT_DETAILS.CUSTOMER_ACCOUNTS' | translate}}</h4>
       <content has-header="true" padding="true">
-         <ion-checkbox ng-repeat="account in accounts" ng-class="{'active1':account.checked}" ng-model="account.checked" ng-click="updateSelection($index, accounts, account)">{{account.account}}</ion-checkbox>
+         <ion-checkbox ng-repeat="account in accounts" ng-class="{'active1':account.checked}" ng-model="account.checked" ng-click="updateSelection($index, accounts, account)">{{account.AccountNumber}}</ion-checkbox>
       </content>
       <div class="bar bar-footer flex center">
         <button ui-sref="master.postpaid-type" ng-click="modal.hide()"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>

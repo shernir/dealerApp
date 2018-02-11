@@ -1,4 +1,4 @@
-angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility){
+angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility,xhrService,alertService,loading){
   $scope.idType = $stateParams.idType;
   console.log($scope.$parent.client);
   $scope.alert = function () {
@@ -7,23 +7,7 @@ angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state
   $scope.alerta = function () {
     alert("back");
   };
-  $scope.accounts= [{
-    account:"1007347198",
-    checked:false
-  },
-  {
-    account:"1007347193",
-    checked:false
-  },
-  {
-    account:"100734123",
-    checked:false
-  },
-  {
-    account:"NEW ACCOUNT",
-    checked:false
-  }
-];
+$scope.accounts= [];
 $scope.takePicture = function (type) {
   utility.takeImage().then(function(data){
     console.log(data);
@@ -54,7 +38,7 @@ $scope.scan = function () {
         angular.forEach(items, function(subscription, index) {
             if (position != index)
                 subscription.checked = false;
-                $scope.selected = title;
+                $scope.$parent.client.account = title;
             }
         );
     }
@@ -65,19 +49,53 @@ $scope.scan = function () {
     $scope.modal = modal;
   });
 
+$scope.validateId = function (id) {
+  var serviceType = $scope.$parent.client.entity === 'prepaid' ? 0 : 1;
+  var idType = $scope.idType ? $scope.idType : 'QID' ;
+  loading.show();
+  xhrService.call({
+      url: 'order/validateid',
+      method: 'POST',
+      data:{"Key":idType,"Value":id,"ServiceType":serviceType}
+  }, true).then(function(data){
+    if (data.Code == 0) {
+      if (data.Accounts) {
+        $scope.accounts = data.Accounts;
+        $scope.accounts.push({AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit});
+      } else {
+          $scope.$parent.client.account = {AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit};
+      }
+      $scope.$parent.client.firstName = data.Customer.FirstName;
+      $scope.$parent.client.lastName = data.Customer.LastName;
+      $scope.$parent.client.middleName = data.Customer.MiddleName;
+      $scope.$parent.client.birthdate = data.Customer.DateOfBirth;
+      $scope.$parent.client.customerRef = data.Customer.DateOfBirth;
+      $scope.$parent.client.nationality = data.Customer.Nationality;
+      $scope.$parent.client.poBox = data.Customer.PoBox;
+      $scope.$parent.client.email = data.Customer.Email;
+    }
+    loading.hide();
 
+  }).catch(function(err){
+    loading.hide();
+
+  });
+};
 $scope.next = function () {
-  if ($scope.$parent.client.entity === 'postpaid') {
-    $scope.modal.show();
-  }
-  if ($scope.$parent.client.entity === 'prepaid') {
-    $state.go('master.scan-number');
-  }
-  else if ($scope.$parent.client.entity === 'hala-go') {
-    $state.go('master.hala-go');
+  if ($scope.$parent.client.customerRef && $scope.$parent.client.frontQID && $scope.$parent.client.backQID) {
+    if ($scope.$parent.client.entity === 'postpaid') {
+      $scope.modal.show();
+    }
+    if ($scope.$parent.client.entity === 'prepaid') {
+      $state.go('master.scan-number');
+    }
+    else if ($scope.$parent.client.entity === 'hala-go') {
+      $state.go('master.hala-go');
 
+    }
+  } else {
+    alertService.alert('error','Please , fill all required Data');
   }
-
 };
 
 });

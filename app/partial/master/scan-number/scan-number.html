@@ -14,14 +14,14 @@
              <div class="col-60">
                <label class="item  item-input item-stacked-label">
                  <span class="input-label">{{"SCAN_NUMBER.SIM_No" | translate}}</span>
-                 <input class="custom-input" type="text" >
+                 <input class="custom-input" ng-model="$parent.client.simNumber" ng-change="validateSim($parent.client.simNumber)" ng-model-options="{ debounce: 500 }" type="text" >
                </label>
              </div>
            </div>
          </div>
        </div>
        <div class="col-40">
-         <cart-directive cart="$parent.client.cart"></cart-directive>
+         <cart-directive available-credit-limit="$parent.client.account.Acl" credit-limit="$parent.client.account.CreditLimit" cart="$parent.client.cart"></cart-directive>
        </div>
      </div>
      </ion-content

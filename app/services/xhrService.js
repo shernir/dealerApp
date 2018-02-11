@@ -1,4 +1,4 @@
-angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,$cookies) {
+angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,$cookies,alertService) {
 
     var xhrService = {};
     var token = $cookies.get('token');
@@ -63,20 +63,8 @@ angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$wi
                 console.log('%cIncoming | Service: ' + getServiceUrl(options) + ' | Response: ', 'color: green', response.data);
                 return accept(response.data);
             }
-            else if (response.data.Success === false) {
-                //Business Response Rejection
-
-                console.error(rejection, '| Service:', getServiceUrl(options), '| Response:', response.data);
-                // TODO: handle generic error messages
-            }
-            else if (response.data.access_token) {
-                 // specail login service handling
-                return accept(response.data);
-            }
-            else {
-                //Empty Response Rejection
-                console.error(rejection, '| Service:', getServiceUrl(options), '| Response:', response.data);
-                // TODO: handle generic error messages
+            if (response.data.Code != 0) {
+                alertService.alert(response.data.Message)
             }
 
             return reject(rejection, response.data, overwriteDefaultError);
