@@ -1,5 +1,6 @@
 angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility,xhrService,alertService,loading){
   $scope.idType = $stateParams.idType;
+  var customerIdValid;
   console.log($scope.$parent.client);
   $scope.alert = function () {
     alert("next");
@@ -59,32 +60,41 @@ $scope.validateId = function (id) {
       data:{"Key":idType,"Value":id,"ServiceType":serviceType}
   }, true).then(function(data){
     if (data.Code == 0) {
+      customerIdValid = true;
       if (data.Accounts) {
         $scope.accounts = data.Accounts;
         $scope.accounts.push({AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit});
       } else {
+        if ($scope.$parent.client.entity === 'prepaid') {
           $scope.$parent.client.account = {AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit};
+        }
       }
       $scope.$parent.client.firstName = data.Customer.FirstName;
       $scope.$parent.client.lastName = data.Customer.LastName;
       $scope.$parent.client.middleName = data.Customer.MiddleName;
       $scope.$parent.client.birthdate = data.Customer.DateOfBirth;
-      $scope.$parent.client.customerRef = data.Customer.DateOfBirth;
+      $scope.$parent.client.customerRef = data.Customer.CustomerRef;
       $scope.$parent.client.nationality = data.Customer.Nationality;
       $scope.$parent.client.poBox = data.Customer.PoBox;
       $scope.$parent.client.email = data.Customer.Email;
+    } else {
+      customerIdValid = false;
     }
     loading.hide();
 
   }).catch(function(err){
     loading.hide();
-
+    customerIdValid = false;
   });
 };
 $scope.next = function () {
-  if ($scope.$parent.client.customerRef && $scope.$parent.client.frontQID && $scope.$parent.client.backQID) {
+  if (customerIdValid && $scope.$parent.client.frontQID && $scope.$parent.client.backQID) {
     if ($scope.$parent.client.entity === 'postpaid') {
-      $scope.modal.show();
+        if ($scope.accounts.length > 0) {
+          $scope.modal.show();
+        } else {
+          $state.go('master.postpaid-type');
+        }
     }
     if ($scope.$parent.client.entity === 'prepaid') {
       $state.go('master.scan-number');

@@ -10,7 +10,7 @@
               <div class="col-33">
                 <label class="item  item-input item-stacked-label" style="padding-left:0;">
                   <span class="input-label">{{'HALA_GO.CUSTOMER_ID' | translate}}</span>
-                  <input class="custom-input"  type="text" >
+                  <input ng-disabled="true" ng-model="$parent.client.customerRef" class="custom-input"  type="text" >
                 </label>
               </div>
             </div>
@@ -18,7 +18,7 @@
               <div class="col-33">
                 <label class="item  item-input item-stacked-label" style="padding-left:0;">
                   <span class="input-label">{{"HALA_GO.ENTER_CUSTOMER_NUMBER" | translate}}</span>
-                  <input class="custom-input"  type="text" >
+                  <input ng-model="$parent.client.halaGoNumber" class="custom-input"  type="text" >
                 </label>
               </div>
             </div>

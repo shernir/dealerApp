@@ -97,6 +97,8 @@
     "PLEASE_ENTER_CUSTOMER_MOBILE":"Please enter the customer mobile number in the field below:",
     "CUSTOMER_ID":"Customer ID",
     "ENTER_CUSTOMER_NUMBER":"Enter Customer Mobile Number"
-
+  },
+  "CONFIGURATION":{
+    "ADD_LOCATION":"Add Location"
   }
 }

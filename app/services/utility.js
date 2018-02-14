@@ -15,6 +15,28 @@ angular.module('retailer').factory('utility',function($q,$timeout) {
 
       return deferred.promise;
     };
+    utility.resetClient = function () {
+      return {
+        frontQID:"s",
+        backQID:"a",
+        QID:"",
+        entity:"",
+        entityType:"",
+        nationality:"",
+        birthdate:"",
+        firstName:"",
+        middleName:"",
+        lastName:"",
+        poBox:"",
+        email:"",
+        simNumber:"",
+        altNumber:"",
+        account:{},
+        customerRef:"",
+        cart:[]
+
+      };
+    };
     utility.getListOfCategory = function (array) {
       var categories = [];
       for (var i = 0; i < array.length; i++) {

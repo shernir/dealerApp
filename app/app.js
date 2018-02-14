@@ -1,4 +1,4 @@
-angular.module('retailer', ['ui.router','ngAnimate','ngCookies','ionic','ngSanitize','pascalprecht.translate','ksSwiper']);
+angular.module('retailer', ['ui.router','ngAnimate','ngCookies','ionic','ngSanitize','pascalprecht.translate','ksSwiper','ui.select']);
 
 angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$translateProvider) {
 
@@ -63,8 +63,12 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
         url: '/hala-go',
         templateUrl: 'partial/master/hala-go/hala-go.html'
     });
+    $stateProvider.state('master.configuration', {
+        url: '/configuration',
+        templateUrl: 'partial/master/configuration/configuration.html'
+    });
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/configuration');
 
 });
 

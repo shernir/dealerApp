@@ -16,6 +16,7 @@ angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,$i
     altNumber:"",
     account:{},
     customerRef:"",
+    halaGoNumber:"",
     cart:[]
 
   };

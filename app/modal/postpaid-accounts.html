@@ -7,6 +7,6 @@
          <ion-checkbox ng-repeat="account in accounts" ng-class="{'active1':account.checked}" ng-model="account.checked" ng-click="updateSelection($index, accounts, account)">{{account.AccountNumber}}</ion-checkbox>
       </content>
       <div class="bar bar-footer flex center">
-        <button ui-sref="master.postpaid-type" ng-click="modal.hide()"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>
+        <button ui-sref="master.postpaid-type" ng-disabled="!$parent.client.account.AccountNumber" ng-click="modal.hide()"  class="button  button-assertive activated">{{"CLIENT_DETAILS.OK" | translate}}</button>
       </div>
   </div>

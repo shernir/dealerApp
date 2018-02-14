@@ -34,6 +34,12 @@
     },
     "cordova-plugin-statusbar": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "cordova-wheel-selector-plugin": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "cordova-plugin-listpicker": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     }
   },
   "dependent_plugins": {}

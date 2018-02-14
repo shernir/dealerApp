@@ -18,5 +18,8 @@ angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootSco
 
     }
   };
-
+  $scope.$on('$ionicView.enter', function() {
+    //$scope.$parent.client = utility.resetClient();
+    console.log($scope.$parent.client);
+  });
 });

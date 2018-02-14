@@ -70,5 +70,21 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-wheel-selector-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-wheel-selector-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-listpicker": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

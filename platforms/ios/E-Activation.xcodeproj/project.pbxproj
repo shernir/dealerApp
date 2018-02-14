@@ -52,6 +52,8 @@
 		CCD7EE9D9DEB4284815AE55C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6154FFBB594773B1F3A5EF /* CoreImage.framework */; };
 		3C2E67FE473047619138B7F1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AABF65C16940D398EC932C /* AudioToolbox.framework */; };
 		4FE15411F39041DB8325B7FE /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E539B661D0848E89A637CDD /* CDVStatusBar.m */; };
+		F1950B3DC2454087884150D3 /* SelectorCordovaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABAC0AB353F4384B8456F7C /* SelectorCordovaPlugin.m */; };
+		0D73B84908604A08A4732F58 /* ListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C03ACCB35741C6AB4B4D27 /* ListPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +169,10 @@
 		59AABF65C16940D398EC932C /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		9E539B661D0848E89A637CDD /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		DE3FAC8036AD4CB6B878032D /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		8ABAC0AB353F4384B8456F7C /* SelectorCordovaPlugin.m */ = {isa = PBXFileReference; name = "SelectorCordovaPlugin.m"; path = "cordova-wheel-selector-plugin/SelectorCordovaPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		31978BC641034AF59EABA297 /* SelectorCordovaPlugin.h */ = {isa = PBXFileReference; name = "SelectorCordovaPlugin.h"; path = "cordova-wheel-selector-plugin/SelectorCordovaPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B2C03ACCB35741C6AB4B4D27 /* ListPicker.m */ = {isa = PBXFileReference; name = "ListPicker.m"; path = "cordova-plugin-listpicker/ListPicker.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F534163CEBAE46B69C2F8A47 /* ListPicker.h */ = {isa = PBXFileReference; name = "ListPicker.h"; path = "cordova-plugin-listpicker/ListPicker.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +355,10 @@
 				926F2C4B9F6647859634BFBC /* zxing-all-in-one.h */,
 				9E539B661D0848E89A637CDD /* CDVStatusBar.m */,
 				DE3FAC8036AD4CB6B878032D /* CDVStatusBar.h */,
+				8ABAC0AB353F4384B8456F7C /* SelectorCordovaPlugin.m */,
+				31978BC641034AF59EABA297 /* SelectorCordovaPlugin.h */,
+				B2C03ACCB35741C6AB4B4D27 /* ListPicker.m */,
+				F534163CEBAE46B69C2F8A47 /* ListPicker.h */,
 			);
 			name = Plugins;
 			path = "E-Activation/Plugins";
@@ -506,6 +516,8 @@
 				058FDA4E1FAF4208AB1A7420 /* CDVBarcodeScanner.mm in Resources */,
 				26ABCDD453F64BEB9CFEB981 /* zxing-all-in-one.cpp in Resources */,
 				4FE15411F39041DB8325B7FE /* CDVStatusBar.m in Sources */,
+				F1950B3DC2454087884150D3 /* SelectorCordovaPlugin.m in Sources */,
+				0D73B84908604A08A4732F58 /* ListPicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

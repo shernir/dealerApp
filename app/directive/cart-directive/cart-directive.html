@@ -1,8 +1,8 @@
 <div class="cart-container " style="position:relative">
   <div class="white-title white-bg">
     <b>{{'CART.YOUR_ORDER' | translate}}</b>
-    <p class="row space-between" style="margin-top:5px;"><span class="red-color">{{'CART.CREDIT_LIMIT' | translate}}</span> <span class="dark-grey">QR {{creditLimit}}</span></p>
-    <p class="row space-between no-margin"><span class="red-color">{{'CART.AVAILABLE_ACCOUNT_CREDIT' | translate}}</span> <span class="dark-grey">QR {{availableCreditLimit}}</span></p>
+    <p class="row space-between" style="margin-top:5px;" ng-if="creditLimit"><span class="red-color">{{'CART.CREDIT_LIMIT' | translate}}</span> <span class="dark-grey">QR {{creditLimit}}</span></p>
+    <p class="row space-between no-margin" ng-if="availableCreditLimit"><span class="red-color" >{{'CART.AVAILABLE_ACCOUNT_CREDIT' | translate}}</span> <span class="dark-grey">QR {{availableCreditLimit}}</span></p>
 
   </div>
   <ion-content class="item-container">

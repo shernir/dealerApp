@@ -1,0 +1,32 @@
+<ion-pane class="landing login configuration" ng-controller="ConfigurationCtrl" >
+    <ion-content>
+      <div class="row full-height no-padd">
+          <div  class="full-height row vertical-align horizontal-align grey-bg">
+            <div  class=" col col-80 main-landing-container no-padd card-shadow " >
+              <div class="row full-height no-padd ">
+                <div class="col col-50 left-section-login grey-bg  full-height">
+                  <img src="img/app-logo.svg" />
+                  <h2>E-Activation APP</h2>
+                </div>
+                <div style="position:relative" class="col col-50 full-height white-bg flex vertical-align horizontal-align">
+                  <!-- <div class="refresh-btn red-color" ng-if="isFail" ng-click="init()">
+                    <i class="ion-ios-refresh-empty"></i>
+                  </div> -->
+                  <div style="width:100%" >
+                    <h4 class="text-center">{{store.location || 'Location'}}</h4>
+                    <div class="row coulmn">
+                      <button class="button" ng-click="openDropDown('Select Dealer','dealer')">{{selectedDealer.Name || 'Select Dealer' }}</button>
+                      <button class="button" ng-disabled="!selectedDealer.Name" ng-click="openDropDown('Select Location','location')">{{selectedLocation.Name || 'Select Location' }}</button>
+                    </div>
+
+                    <div class="padding row center" style="margin-top:10px;">
+                    <button ng-click="addLocation()" ng-disabled="!selectedDealer && !selectedLocation" class="button  button-assertive activated">{{"CONFIGURATION.ADD_LOCATION" | translate}}</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </ion-content>
+  </ion-pane>

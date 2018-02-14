@@ -1,0 +1,64 @@
+{
+  "_from": "git+https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git",
+  "_id": "cordova-plugin-listpicker@2.2.2",
+  "_inBundle": false,
+  "_integrity": "sha1-JUn0QsimLsqaxJB4CxDUEpA+fxg=",
+  "_location": "/cordova-plugin-listpicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git",
+    "rawSpec": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git",
+    "saveSpec": "git+https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git",
+    "fetchSpec": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git#24f697d917bc2cb657251301281e59319662107a",
+  "_spec": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git",
+  "_where": "/Users/sherif/Desktop/Ooredoo/retailer",
+  "author": {
+    "name": "Robert Hovhannisyan"
+  },
+  "bugs": {
+    "url": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-listpicker",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "PhoneGap plugin to display a list picker dialog for Android and iOS.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker#readme",
+  "keywords": [
+    "phonegap",
+    "android",
+    "ios",
+    "list",
+    "picker",
+    "dialog",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-listpicker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git"
+  },
+  "version": "2.2.2"
+}

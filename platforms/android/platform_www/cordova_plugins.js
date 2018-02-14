@@ -80,6 +80,23 @@ module.exports = [
     "clobbers": [
       "window.StatusBar"
     ]
+  },
+  {
+    "id": "cordova-wheel-selector-plugin.plugin",
+    "file": "plugins/cordova-wheel-selector-plugin/www/selectorplugin.js",
+    "pluginId": "cordova-wheel-selector-plugin",
+    "clobbers": [
+      "SelectorCordovaPlugin"
+    ],
+    "runs": true
+  },
+  {
+    "id": "cordova-plugin-listpicker.ListPicker",
+    "file": "plugins/cordova-plugin-listpicker/www/ListPicker.js",
+    "pluginId": "cordova-plugin-listpicker",
+    "clobbers": [
+      "window.plugins.listpicker"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -93,7 +110,9 @@ module.exports.metadata =
   "cordova-plugin-device-name": "1.3.2",
   "cordova-plugin-camera": "4.0.2",
   "phonegap-plugin-barcodescanner": "7.0.2",
-  "cordova-plugin-statusbar": "2.4.1"
+  "cordova-plugin-statusbar": "2.4.1",
+  "cordova-wheel-selector-plugin": "1.0.0",
+  "cordova-plugin-listpicker": "2.2.2"
 };
 // BOTTOM OF METADATA
 });

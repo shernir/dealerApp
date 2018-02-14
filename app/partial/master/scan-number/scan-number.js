@@ -19,7 +19,8 @@ $scope.validateSim = function (id) {
       data:{"SimNumber":id,"ServiceType":serviceType}
   }, true).then(function(data){
     if (data.Code == 0) {
-      var entity = {Name:"Sim Fees" , Price:data.OneTimeCharge , Detail:"One time charge"}
+      var entity = {Name:"Sim Fees" , Price:data.OneTimeCharge , Detail:"One time charge"};
+      var creditLimit = serviceType === 1 ? $scope.$parent.client.account.Acl : 1000 ;
       //cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
       cart.add($scope.$parent.client.cart,entity,1000);
 

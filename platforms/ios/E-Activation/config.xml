@@ -46,6 +46,12 @@
         <param name="ios-package" value="CDVStatusBar" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SelectorCordovaPlugin">
+        <param name="ios-package" onload="true" value="SelectorCordovaPlugin" />
+    </feature>
+    <feature name="ListPicker">
+        <param name="ios-package" value="ListPicker" />
+    </feature>
     <name>E-Activation</name>
     <description>Retail App</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
