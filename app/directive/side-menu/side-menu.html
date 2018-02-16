@@ -2,14 +2,14 @@
   <div ng-if="!isMaster" class="landing-side-menu flex   full-height vertical-align horizontal-align">
     <img src="img/logo.svg"  />
     <h2>Ooredoo B2C</h2>
-    <p>
+    <p class="text-center">
       {{$root.location}}
     </p>
   </div>
   <div ng-if="isMaster" class="flex coulmn master-side-menu full-height">
     <div class="logo-container">
       <img src="img/logo.svg"  />
-      <p>{{$root.location}}</p>
+      <p class="text-center">{{$root.location}}</p>
     </div>
     <a  style="margin-top:100px;" class="active" id="home" ng-click="active('home')" href="#/home">
       <img src="img/new-activation.svg" />

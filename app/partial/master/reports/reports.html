@@ -19,13 +19,13 @@
         <div class="col"><span translate>REPORTS.STATUS</span></div>
 
       </div>
-      <div class="row" ng-repeat='report in reports' >
-        <div class="col">{{report.Id}}</div>
-        <div class="col">{{report.CustomerName}}</div>
-        <div class="col">{{report.MSISDNNo}}</div>
-        <div class="col">{{report.ProductType}}</div>
-        <div class="col">{{report.SalesManNo}}</div>
-        <div class="col">{{report.Status}}</div>
+      <div class="row" ng-repeat='report in reports track by $index' >
+        <div class="col">{{::report.Id}}</div>
+        <div class="col">{{::report.CustomerName}}</div>
+        <div class="col">{{::report.MSISDNNo}}</div>
+        <div class="col">{{::report.ProductType}}</div>
+        <div class="col">{{::report.SalesManNo}}</div>
+        <div class="col">{{::report.Status}}</div>
 
       </div>
    </div>
@@ -41,14 +41,14 @@
 
 
       </div>
-      <div class="row" ng-repeat='report in reports' >
-        <div class="col">{{report.CustomerName}}</div>
-        <div class="col">{{report.MSISDNNo}}</div>
-        <div class="col">{{report.ProductType}}</div>
-        <div class="col">{{report.SalesManNo}}</div>
-        <div class="col">{{report.FailedErrorMessg}}</div>
-        <div class="col">{{report.FailedEvent}}</div>
-        <div class="col">{{report.Status}}</div>
+      <div class="row" ng-repeat='report in reports track by $index' >
+        <div class="col">{{::report.CustomerName}}</div>
+        <div class="col">{{::report.MSISDNNo}}</div>
+        <div class="col">{{::report.ProductType}}</div>
+        <div class="col">{{::report.SalesManNo}}</div>
+        <div class="col">{{::report.FailedErrorMessg}}</div>
+        <div class="col">{{::report.FailedEvent}}</div>
+        <div class="col">{{::report.Status}}</div>
 
 
       </div>

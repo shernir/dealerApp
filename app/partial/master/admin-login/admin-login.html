@@ -1,4 +1,4 @@
-<ion-pane class="landing login" ng-controller="LoginCtrl" ng-class="{'rtl':$root.lang.id =='ar'}">
+<ion-pane class="landing login" ng-controller="AdminLoginCtrl" ng-class="{'rtl':$root.lang.id =='ar'}">
     <ion-content>
       <div class="row full-height no-padd">
           <div  class="full-height row vertical-align horizontal-align grey-bg">
@@ -13,17 +13,13 @@
                     <i class="ion-ios-refresh-empty"></i>
                   </div> -->
                   <div style="width:100%" >
-                    <h4 class="text-center">{{$root.location || 'Location'}}</h4>
-                    <label class="item item-input item-stacked-label">
-                      <span class="input-label">{{"LANDING.USERNAME" | translate}}</span>
-                      <input type="text" ng-model="user.username" placeholder="John Smith">
-                    </label>
+
                     <label class="item item-input item-stacked-label">
                       <span class="input-label">{{"LANDING.PASSWORD" | translate}}</span>
                       <input type="password" ng-model="user.password" placeholder="*********">
                     </label>
                     <div class="padding row center">
-                    <button ng-click="login(user.username,user.password)" ng-disabled="!$root.location || !user.password || !user.username" class="button  button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
+                    <button ng-click="login(user.password)" ng-disabled="!user.password" class="button  button-assertive activated">{{"LANDING.LOGIN" | translate}}</button>
                   </div>
                   </div>
                 </div>

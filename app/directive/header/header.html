@@ -1,4 +1,8 @@
 <div class="common-header">
+  <button  class="button config-btn" ng-click="goToConfiguration()" ng-show="!$root.user"> 
+    <i class="ion-android-settings"></i>
+    {{'HEADER.CONFIGURATION' | translate}}
+  </button>
   <div class="dropdown" ng-show="$root.user">
   <button  class="user-crtl  dropbtn-el">
       <img class="dropbtn-el" ng-src="img/user-avatar.svg"  />

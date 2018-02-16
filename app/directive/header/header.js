@@ -7,7 +7,13 @@ angular.module('retailer').directive('headerDirective', function($rootScope,$tra
         },
         templateUrl: 'directive/header/header.html',
         link: function(scope, element, attrs, fn) {
-
+          scope.goToConfiguration = function () {
+              if (!localStorage.getItem('device')) {
+                $state.go('master.admin-login');
+              }else {
+                $state.go('master.configuration');
+              }
+          };
           scope.logout = function () {
             $rootScope.user = null ;
             $state.go('master.login')

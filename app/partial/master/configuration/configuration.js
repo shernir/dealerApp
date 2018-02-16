@@ -1,4 +1,4 @@
-angular.module('retailer').controller('ConfigurationCtrl',function($scope,xhrService,loading){
+angular.module('retailer').controller('ConfigurationCtrl',function($scope,$state,xhrService,loading){
   loading.show();
   var dealers;
   var locations;
@@ -14,13 +14,13 @@ angular.module('retailer').controller('ConfigurationCtrl',function($scope,xhrSer
 };
 
 xhrService.call({
-    url: 'getDealers',
-    method: 'GET',
+    url: 'order/DealerLocations',
+    method: 'POST',
     headers: { "Content-Type": "application/json" },
     contentType: 'application/json',
 }, true).then(function(data){
   dealers = data.Dealers;
-  locations= data.Location;
+  locations= data.Locations;
 
   loading.hide();
 
@@ -32,21 +32,21 @@ xhrService.call({
   config.title = title;
   if (type === 'dealer') {
 
-    config.items = constructDropdown(dealers);
+    config.items = constructDropdown(dealers,'dealer');
   } else {
 
-    config.items = constructDropdown(tempLocations);
+    config.items = constructDropdown(tempLocations,'location');
   }
   window.plugins.listpicker.showPicker(config,
       function(item) {
         if (type === 'dealer') {
-          var index = _.findIndex(dealers, function(o) { return o.Id == item; });
+          var index = _.findIndex(dealers, function(o) { return o.Code == item; });
           $scope.selectedDealer = dealers[index];
           console.log($scope.selectedDealer);
           $scope.selectedLocation = "";
           tempLocations.length = 0;
           for (var i = 0; i < locations.length; i++) {
-            if (locations[i].DealerId == $scope.selectedDealer.Id ) {
+            if (locations[i].DealerCode == $scope.selectedDealer.Code ) {
               tempLocations.push(locations[i]);
             }
           }
@@ -58,22 +58,33 @@ xhrService.call({
         $scope.$apply();
       },
       function() {
-          alert("You have cancelled");
       }
   );
 };
   $scope.addLocation = function () {
     localStorage.setItem('device',JSON.stringify($scope.selectedLocation));
+    $state.go('master.login')
   }
-  function constructDropdown(array) {
+  function constructDropdown(array,type) {
       var arr = [];
-      for (var i = 0; i < array.length; i++) {
-        arr.push({
-          text:  array[i].Name,
-          value:array[i].Id,
-        })
+      if (type == 'location'){
+        for (var i = 0; i < array.length; i++) {
+          arr.push({
+            text:  array[i].Name,
+            value:array[i].Id,
+          })
 
+        }
+      } else {
+        for (var i = 0; i < array.length; i++) {
+          arr.push({
+            text:  array[i].Name,
+            value:array[i].Code,
+          })
+
+        }
       }
+
     return arr;
   }
 });

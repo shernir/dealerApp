@@ -1,4 +1,6 @@
 angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state,xhrService,$rootScope,$cookies,alertService){
+  $scope.device = JSON.parse(localStorage.getItem('device'));
+  $rootScope.location = $scope.device.Name;
   $scope.store = {
     location:"",
     dealerName :"",
@@ -8,23 +10,23 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
     usernmae:"",
     password:"",
   };
-  $scope.init = function  () {
-  //TODO: static init service parameter
-   xhrService.call({
-       url: 'device/validate',
-       method: 'POST',
-       headers: { "Content-Type": "application/json" },
-       contentType: 'application/json',
-       data:{"DeviceId":"77360bc7-efb9-47f1-9e6f-65adb465f4cd","DeviceName":"IITC-WS-WP10"}
-   }, true).then(function(data){
-       $scope.store.location = data.LocationName;
-       $scope.store.dealerName = data.DealerName;
-       $rootScope.location =data.LocationName;
-
-   }).catch(function(err){
-     $scope.isFail = true;
-   });
- };
+ //  $scope.init = function  () {
+ //  //TODO: static init service parameter
+ //   xhrService.call({
+ //       url: 'device/validate',
+ //       method: 'POST',
+ //       headers: { "Content-Type": "application/json" },
+ //       contentType: 'application/json',
+ //       data:{"DeviceId":"77360bc7-efb9-47f1-9e6f-65adb465f4cd","DeviceName":"IITC-WS-WP10"}
+ //   }, true).then(function(data){
+ //       $scope.store.location = data.LocationName;
+ //       $scope.store.dealerName = data.DealerName;
+ //       $rootScope.location =data.LocationName;
+ //
+ //   }).catch(function(err){
+ //     $scope.isFail = true;
+ //   });
+ // };
 
   $scope.login = function (user,password) {
     //TODO: static login  parameter
@@ -62,5 +64,5 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
 
   };
 
-  $scope.init();
+  //$scope.init();
 });

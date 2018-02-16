@@ -6,7 +6,8 @@
   },
   "HEADER":{
     "LOGOUT":"Logout",
-    "HELLO":"Hello"
+    "HELLO":"Hello",
+    "CONFIGURATION":"Configuration"
   },
   "MASTER":{
     "NEW_ACTIVAION":"New activation",

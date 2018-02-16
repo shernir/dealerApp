@@ -1,5 +1,6 @@
 angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility,xhrService,alertService,loading){
   $scope.idType = $stateParams.idType;
+  $scope.$parent.client.idType = $stateParams.idType;
   var customerIdValid;
   console.log($scope.$parent.client);
   $scope.alert = function () {

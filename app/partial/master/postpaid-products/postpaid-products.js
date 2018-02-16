@@ -11,6 +11,7 @@ $scope.addToCart = function (entity,isMultiple,canDelete,type) {
   //cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
   cart.add($scope.$parent.client.cart,entity,1000);
 };
+
 $scope.getProducts = function () {
   var entityType ;
   if ($scope.$parent.client.entityType === 'without-pormotion') {
