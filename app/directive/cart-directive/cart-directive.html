@@ -5,7 +5,7 @@
     <p class="row space-between no-margin" ng-if="availableCreditLimit"><span class="red-color" >{{'CART.AVAILABLE_ACCOUNT_CREDIT' | translate}}</span> <span class="dark-grey">QR {{availableCreditLimit}}</span></p>
 
   </div>
-  <ion-content class="item-container">
+  <ion-content class="item-container" ng-style="!availableCreditLimit && {'margin-top':'50px','height':'500px'}">
     <div class="cart-item" ng-repeat="cartItem in cart track by $index" ng-init="getTotal()">
       <div class="">
         <p class="row "><span class="red-color">{{cartItem.Name}}</span> <span class="dark-grey">{{'CART.QR' | translate}} {{cartItem.Price}}</span></p>

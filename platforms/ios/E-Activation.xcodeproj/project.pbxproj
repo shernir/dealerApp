@@ -54,6 +54,8 @@
 		4FE15411F39041DB8325B7FE /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E539B661D0848E89A637CDD /* CDVStatusBar.m */; };
 		F1950B3DC2454087884150D3 /* SelectorCordovaPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABAC0AB353F4384B8456F7C /* SelectorCordovaPlugin.m */; };
 		0D73B84908604A08A4732F58 /* ListPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = B2C03ACCB35741C6AB4B4D27 /* ListPicker.m */; };
+		4E18560E8C104879B8F0EDA5 /* NativePageTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 13302218333A4563864AA184 /* NativePageTransitions.m */; };
+		1607DE769BB34586B9A8C583 /* AppDelegate+nativepagetransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3DAC4B16DF40DC8EF8EBFB /* AppDelegate+nativepagetransitions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,10 @@
 		31978BC641034AF59EABA297 /* SelectorCordovaPlugin.h */ = {isa = PBXFileReference; name = "SelectorCordovaPlugin.h"; path = "cordova-wheel-selector-plugin/SelectorCordovaPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		B2C03ACCB35741C6AB4B4D27 /* ListPicker.m */ = {isa = PBXFileReference; name = "ListPicker.m"; path = "cordova-plugin-listpicker/ListPicker.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		F534163CEBAE46B69C2F8A47 /* ListPicker.h */ = {isa = PBXFileReference; name = "ListPicker.h"; path = "cordova-plugin-listpicker/ListPicker.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		13302218333A4563864AA184 /* NativePageTransitions.m */ = {isa = PBXFileReference; name = "NativePageTransitions.m"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4F3DAC4B16DF40DC8EF8EBFB /* AppDelegate+nativepagetransitions.m */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.m"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		EA6613F5A2384DF3B13CE17C /* NativePageTransitions.h */ = {isa = PBXFileReference; name = "NativePageTransitions.h"; path = "com.telerik.plugins.nativepagetransitions/NativePageTransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		571CF77A956F4DFB88964043 /* AppDelegate+nativepagetransitions.h */ = {isa = PBXFileReference; name = "AppDelegate+nativepagetransitions.h"; path = "com.telerik.plugins.nativepagetransitions/AppDelegate+nativepagetransitions.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +365,10 @@
 				31978BC641034AF59EABA297 /* SelectorCordovaPlugin.h */,
 				B2C03ACCB35741C6AB4B4D27 /* ListPicker.m */,
 				F534163CEBAE46B69C2F8A47 /* ListPicker.h */,
+				13302218333A4563864AA184 /* NativePageTransitions.m */,
+				4F3DAC4B16DF40DC8EF8EBFB /* AppDelegate+nativepagetransitions.m */,
+				EA6613F5A2384DF3B13CE17C /* NativePageTransitions.h */,
+				571CF77A956F4DFB88964043 /* AppDelegate+nativepagetransitions.h */,
 			);
 			name = Plugins;
 			path = "E-Activation/Plugins";
@@ -518,6 +528,8 @@
 				4FE15411F39041DB8325B7FE /* CDVStatusBar.m in Sources */,
 				F1950B3DC2454087884150D3 /* SelectorCordovaPlugin.m in Sources */,
 				0D73B84908604A08A4732F58 /* ListPicker.m in Sources */,
+				4E18560E8C104879B8F0EDA5 /* NativePageTransitions.m in Sources */,
+				1607DE769BB34586B9A8C583 /* AppDelegate+nativepagetransitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

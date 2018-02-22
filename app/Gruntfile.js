@@ -121,6 +121,7 @@ module.exports = function (grunt) {
             {selector:'body',html:'<script src="app.full.min.js"></script>'},
             {selector:'body',html:'<script src="cordova.js"></script>'},
             {selector:'head',html:'<link rel="stylesheet" href="app.full.min.css">'},
+            {selector:'head',html:'<script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>'},
             {selector:'head',html:'<link rel="stylesheet" href="bower_components/ionicons-2.0.1/css/ionicons.min.css">'}
           ]
         },

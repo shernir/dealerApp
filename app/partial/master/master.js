@@ -1,4 +1,4 @@
-angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,$ionicModal){
+angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,utility){
   $scope.client = {
     frontQID:"s",
     backQID:"a",
@@ -17,18 +17,17 @@ angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,$i
     account:{},
     customerRef:"",
     halaGoNumber:"",
-    cart:[]
+    cart:[],
+    mainTranstype:"",
 
   };
-  $ionicModal.fromTemplateUrl('modal/alert-modal.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-
-  });
-  $scope.alertMsg = function (msg) {
-    $scope.msg = msg;
-    $scope.modal.show();
-  };
+  $scope.resetClient = function () {
+  $scope.client =  utility.resetClient();
+};
+  $rootScope.$on('$stateChangeSuccess',
+function(event, toState, toParams, fromState, fromParams){
+  if(toState.name === 'master.home'){
+    $scope.client =  utility.resetClient();
+  }
+});
 });

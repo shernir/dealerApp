@@ -1,7 +1,7 @@
 angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,cart,$state,loading,$ionicModal,utility,xhrService){
   // $scope.array = [1,2,3,4,5,6];
   $scope.array1=[1,2];
-  $scope.selectedCategory = "Shahry Super";
+  //$scope.selectedCategory = "Shahry Super";
   $scope.tarrifDetails = {};
 $scope.addToCart = function (entity,isMultiple,canDelete,type) {
   entity.isMultiple = isMultiple;
@@ -16,12 +16,14 @@ $scope.getProducts = function () {
   var entityType ;
   if ($scope.$parent.client.entityType === 'without-pormotion') {
     entityType = 0;
+
   }else if ($scope.$parent.client.entityType === 'with-pormotion') {
     entityType = 1;
 
   }else if ($scope.$parent.client.entityType === 'mbb'){
     entityType = 2;
   }
+  $scope.$parent.client.mainTranstype = entityType;
   loading.show();
   xhrService.call({
       url: 'order/getProducts',
@@ -30,6 +32,7 @@ $scope.getProducts = function () {
   }, true).then(function(data){
     $scope.tarrifs = utility.getListOfCategory(data.Tariffs);
     $scope.addons = utility.getListOfCategory(data.AddOns);
+    $scope.selectedCategory = $scope.tarrifs[0].CategoryName;
     console.log($scope.addons);
     loading.hide();
 
@@ -79,5 +82,8 @@ $scope.next = function () {
     $scope.tarrifDetails = tarrif;
     $scope.Detailsmodal.show();
   }
-  $scope.getProducts();
+  $scope.$on('$ionicView.enter', function(){
+    $scope.getProducts();
+
+  });
 });

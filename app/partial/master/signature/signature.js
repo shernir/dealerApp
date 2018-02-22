@@ -1,4 +1,4 @@
-angular.module('retailer').controller('SignatureCtrl',function($scope,$state,loading,xhrService,$ionicModal){
+angular.module('retailer').controller('SignatureCtrl',function($scope,$state,utility,loading,xhrService,$ionicModal,$ionicHistory){
 
   var signaturePad;
   $ionicModal.fromTemplateUrl('modal/confirmation-modal.html', {
@@ -41,19 +41,21 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,loa
         }
       }
       var order = {
-        ServiceType:$scope.$parent.client.entity === 'postpaid' ? 1 : 0,
-        IdType:$scope.$parent.client.idType ? $scope.$parent.client.idType : 'QID',
-        IdValue:$scope.$parent.client.QID,
-        CustomerRef:$scope.$parent.client.customerRef,
-        AccountNumber:$scope.$parent.client.account.AccountNumber ? $scope.$parent.client.account.AccountNumber : null,
-        FirstName:$scope.$parent.client.firstName,
-        MiddleName:$scope.$parent.client.middleName,
-        LastName:$scope.$parent.client.lastName,
-        PoBox:$scope.$parent.client.poBox,
-        Email:$scope.$parent.client.email,
-        AlternateNumber:$scope.$parent.client.altNumber,
-        DateOfBirth:$scope.$parent.client.birthdate,
-        Nationality:$scope.$parent.client.nationality,
+        ServiceType:$scope.$parent.client.entity === 'prepaid' ? 0 : 1,
+        customer:{
+          IdType:$scope.$parent.client.idType ? $scope.$parent.client.idType : 'QID',
+          IdValue:$scope.$parent.client.QID,
+          FirstName:$scope.$parent.client.firstName,
+          MiddleName:$scope.$parent.client.middleName,
+          LastName:$scope.$parent.client.lastName,
+          PoBox:$scope.$parent.client.poBox,
+          Email:$scope.$parent.client.email,
+          AlternateNumber:$scope.$parent.client.altNumber,
+          DateOfBirth:$scope.$parent.client.birthdate,
+          Nationality:$scope.$parent.client.nationality,
+          CustomerRef:$scope.$parent.client.customerRef,
+        },
+        AccountNumber:$scope.$parent.client.account.AccountNumber != "NEW ACCOUNT" ? $scope.$parent.client.account.AccountNumber : null,
         SimNumber:$scope.$parent.client.simNumber,
         SalesManNo:"",
         TariffId:tarrif ? tarrif.Id : null,
@@ -64,7 +66,9 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,loa
         AddOns:addons,
         Signature:encodeURIComponent(signature),
         FrontQid:encodeURIComponent($scope.$parent.client.frontQID),
-        BackQid:encodeURIComponent($scope.$parent.client.backQID)
+        BackQid:encodeURIComponent($scope.$parent.client.backQID),
+        HalaGoMobileNO:$scope.$parent.client.halaGoNumber,
+        MainTranstype:$scope.$parent.client.mainTranstype
 
       }
       xhrService.call({
@@ -73,6 +77,14 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,loa
           data:order
       }, true).then(function(data){
         loading.hide();
+        // $ionicHistory.clearCache();
+        // $ionicHistory.clearHistory();
+        if(data.Code == 0){
+          $scope.$parent.resetClient();
+            $state.go('master.confirmation',{order:data});
+
+        }
+
       }).catch(function(err){
 
       });

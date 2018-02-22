@@ -52,6 +52,9 @@
     <feature name="ListPicker">
         <param name="ios-package" value="ListPicker" />
     </feature>
+    <feature name="NativePageTransitions">
+        <param name="ios-package" value="NativePageTransitions" />
+    </feature>
     <name>E-Activation</name>
     <description>Retail App</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>

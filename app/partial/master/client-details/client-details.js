@@ -1,7 +1,7 @@
 angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility,xhrService,alertService,loading){
   $scope.idType = $stateParams.idType;
   $scope.$parent.client.idType = $stateParams.idType;
-  var customerIdValid;
+  $scope.customerIdValid = false;
   console.log($scope.$parent.client);
   $scope.alert = function () {
     alert("next");
@@ -61,7 +61,7 @@ $scope.validateId = function (id) {
       data:{"Key":idType,"Value":id,"ServiceType":serviceType}
   }, true).then(function(data){
     if (data.Code == 0) {
-      customerIdValid = true;
+      $scope.customerIdValid = true;
       if (data.Accounts) {
         $scope.accounts = data.Accounts;
         $scope.accounts.push({AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit});
@@ -79,17 +79,17 @@ $scope.validateId = function (id) {
       $scope.$parent.client.poBox = data.Customer.PoBox;
       $scope.$parent.client.email = data.Customer.Email;
     } else {
-      customerIdValid = false;
+      $scope.customerIdValid = false;
     }
     loading.hide();
 
   }).catch(function(err){
     loading.hide();
-    customerIdValid = false;
+    $scope.customerIdValid = false;
   });
 };
 $scope.next = function () {
-  if (customerIdValid && $scope.$parent.client.frontQID && $scope.$parent.client.backQID) {
+  if ($scope.customerIdValid && $scope.$parent.client.frontQID && $scope.$parent.client.backQID) {
     if ($scope.$parent.client.entity === 'postpaid') {
         if ($scope.accounts.length > 0) {
           $scope.modal.show();

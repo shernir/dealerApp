@@ -1,4 +1,4 @@
-angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,$cookies,alertService) {
+angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,$cookies,alertService,$state) {
 
     var xhrService = {};
     var token = $cookies.get('token');
@@ -60,12 +60,14 @@ angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$wi
             var rejection;
             if (response.data) {
                 //Accept Data - Resolve Expected Behavior
+                if (response.data.Code != 0) {
+                    alertService.alert('Error !',response.data.Message)
+                }
                 console.log('%cIncoming | Service: ' + getServiceUrl(options) + ' | Response: ', 'color: green', response.data);
                 return accept(response.data);
+
             }
-            if (response.data.Code != 0) {
-                alertService.alert(response.data.Message)
-            }
+
 
             return reject(rejection, response.data, overwriteDefaultError);
 
@@ -75,6 +77,7 @@ angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$wi
                 console.error('| Service:', getServiceUrl(options), '| Response:', response);
             } else if (response.status === 0 || response.status === -1) { // '500', '0'
                 //Technical Rejection
+                $state.go('master.login');
                 console.error('| Service:', getServiceUrl(options), '| Response:', response);
             } else if (response.status === 400 && response.data && response.data.error === 'invalid_grant') {
                 //special case when user login with invalid username or password

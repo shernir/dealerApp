@@ -8,14 +8,37 @@
  */
 angular.module('retailer').constant('CONFIG', {
     DEFAULT_LANG: 'en',
-    DEFAULT_LOGIN_STATE: 'landing.login',
-    DEFAULT_HOME_STATE: 'master.projects',
+    DEFAULT_LOGIN_STATE: 'master.login',
+    FIREBASE_CONFIG:{
+      apiKey: "AIzaSyAXX3sZlqsUpq8MJoJDoYQ8pI9XXx6m3ww",
+      authDomain: "dealers-app-ooredoo.firebaseapp.com",
+      databaseURL: "https://dealers-app-ooredoo.firebaseio.com",
+      projectId: "dealers-app-ooredoo",
+      storageBucket: "dealers-app-ooredoo.appspot.com",
+      messagingSenderId: "654908761167"
+    },
     //all date formats provided below should follow momentjs formats
     DATE_FORMAT: 'MMMM D, YYYY',
     DATE_TIME_FORMAT: 'MMMM D, YYYY hh:mm a',
     LONG_DATE_FORMAT: 'dddd, MMMM D, YYYY',
     LONG_DATE_TIME_FORMAT: 'dddd, MMMM D, YYYY hh:mm a',
-    LANG_LIST: ['en', 'ar'], //Used in localeService
+    LANG_LIST: [
+      {
+        name:"English",
+        id:"en",
+        flag:"img/en.svg"
+      },
+      {
+        name:"العربية",
+        id:"ar",
+        flag:"img/ar.svg"
+      },
+      {
+        name:"हिन्दी",
+        id:"in",
+        flag:"img/in.svg"
+      }
+    ], //Used in localeService
     APP_VERSION: '0.0.1',
     ENVIRONMENTS : {
         'dev': { name: 'Development', backendUrl: 'http://simple-mock-example.getsandbox.com/api/' },

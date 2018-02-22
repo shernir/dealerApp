@@ -105,6 +105,7 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <plugin name="cordova-wheel-selector-plugin" spec="^1.0.9" />
     <plugin name="cordova-plugin-listpicker" spec="https://github.com/roberthovhannisyan/PhoneGap-Plugin-ListPicker.git" />
+    <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
     <engine name="android" spec="7.0.0" />
     <engine name="ios" spec="^4.5.4" />
 </widget>

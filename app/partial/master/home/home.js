@@ -1,8 +1,7 @@
 angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootScope,utility,loading,$timeout,$cookies){
 
-  $rootScope.user = {name:"sherif"};
   //TODO: Set view persmissions
-  if($cookies.get('persmissions')) {
+  if($cookies.get('permissions')) {
     $scope.persmissions = JSON.parse($cookies.get('permissions'));
   }
   $scope.goToEntity = function (entity) {
@@ -18,8 +17,8 @@ angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootSco
 
     }
   };
-  $scope.$on('$ionicView.enter', function() {
-    //$scope.$parent.client = utility.resetClient();
-    console.log($scope.$parent.client);
-  });
+  // $scope.$on('$ionicView.enter', function() {
+  //   $scope.$parent.client = angular.copy(utility.resetClient()) ;
+  //   console.log($scope.$parent.client);
+  // });
 });

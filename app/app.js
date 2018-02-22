@@ -1,6 +1,7 @@
 angular.module('retailer', ['ui.router','ngAnimate','ngCookies','ionic','ngSanitize','pascalprecht.translate','ksSwiper','ui.select']);
 
-angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$translateProvider) {
+angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$translateProvider,CONFIG) {
+//  $ionicConfigProvider.views.transition('none');
 
   //setup localization settings
   $translateProvider.useStaticFilesLoader({
@@ -8,7 +9,7 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     suffix: '.json'
   });
 
-  $translateProvider.preferredLanguage('en');
+  $translateProvider.preferredLanguage(CONFIG.DEFAULT_LANG);
     $stateProvider.state('master', {
         abstract: true,
         templateUrl: 'partial/master/master.html',
@@ -54,6 +55,9 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     });
     $stateProvider.state('master.confirmation', {
         url: '/confirmation',
+        params: {
+          order:""
+        },
         templateUrl: 'partial/master/confirmation/confirmation.html'
     });
     $stateProvider.state('master.postpaid-products', {
@@ -84,31 +88,32 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
 
 });
 
-angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies) {
-
-  $rootScope.lang = {
-      name:"English",
-      id:"en",
-      flag:"img/en.svg"
-    };
-    $rootScope.availableLangs = [
-      {
-        name:"English",
-        id:"en",
-        flag:"img/en.svg"
-      },
-      {
-        name:"العربية",
-        id:"ar",
-        flag:"img/ar.svg"
-      },
-      {
-        name:"हिन्दी",
-        id:"in",
-        flag:"img/in.svg"
-      }
-    ];
-
+angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies,CONFIG) {
+  function fireBaseInit() {
+    firebase.initializeApp(CONFIG.FIREBASE_CONFIG);
+  }
+  var langIndex = _.findIndex(CONFIG.LANG_LIST, { 'id': CONFIG.DEFAULT_LANG});
+  $rootScope.lang = CONFIG.LANG_LIST[langIndex];
+  $rootScope.availableLangs = CONFIG.LANG_LIST;
+//     var options = {
+//   "direction"        : "left", // 'left|right|up|down', default 'left' (which is like 'next')
+//   "duration"         :  300, // in milliseconds (ms), default 400
+//   "slowdownfactor"   :    -1, // overlap views (higher number is more) or no overlap (1). -1 doesn't slide at all. Default 4
+// //  "iosdelay"         :  60, // ms to wait for the iOS webview to update before animation kicks in, default 60
+//   "androiddelay"     :  150, // same as above but for Android, default 70
+//   "winphonedelay"    :  250, // same as above but for Windows Phone, default 200,
+//   "fixedPixelsTop"   :    0, // the number of pixels of your fixed header, default 0 (iOS and Android)
+//   "fixedPixelsBottom":   0  // the number of pixels of your fixed footer (f.i. a tab bar), default 0 (iOS and Android)
+// };
+//
+// $rootScope.$on('$stateChangeSuccess',
+// function(event, toState, toParams, fromState, fromParams){
+//   window.plugins.nativepagetransitions.slide(
+//     options,
+//     function (msg) {console.log("success: " + msg)},
+//     function (msg) {alert("error: " + msg)}
+//   );
+// })
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -135,82 +140,5 @@ angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies) {
             this.$apply(fn);
         }
     };
-
+    fireBaseInit();
 });
-var debugWatchers = function(selector, showExp) {
-    var target, i, checkInsideFn, jq, items,
-        nb_watchers = 0,
-        nb_scopes = 0,
-        scopes_id = {};
-
-    if(typeof jQuery == 'undefined') {
-        jq = document.createElement('script');
-        jq.type = 'text/javascript';
-        jq.src = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js';
-        jq.onload = function() { debugWatchers(selector, showExp); }
-        document.getElementsByTagName('head')[0].appendChild(jq);
-        console.info('loading jQuery..');
-    } else {
-        switch(true) {
-            case (selector instanceof jQuery):
-                if(selector.length > 1) {
-                    console.error('Your selector target', selector.length, ' elements instead of only one. Please work on your selector, nth-child() is your friend!');
-                    console.log($(selector));
-                    return;
-                } else if(selector.length == 0) {
-                    console.error('Your selector target no element..');
-                    return;
-                }
-                target = selector.get(0);
-                break;
-            case (typeof selector == 'object'):
-                if(selector.nodeName) {
-                    target = selector;
-                } else {
-                    console.error('Your selector is invalid..');
-                    return;
-                }
-                break;
-            case (typeof selector == 'string'):
-                if($(selector).length > 1) {
-                    console.error('Your selector target', $(selector).length, ' elements instead of only one. Please work on your selector, nth-child() is your friend!');
-                    console.log($(selector));
-                    return;
-                } else if($(selector).length == 0) {
-                    console.error('Your selector target no element..');
-                    return;
-                }
-                target = document.querySelector(selector);
-                break;
-            default:
-                selector = 'html';
-                target = document.querySelector(selector);
-                break;
-        }
-
-        checkInsideFn = function(elem) {
-            var data = elem.data();
-            if (data.hasOwnProperty('$scope') && data.$scope.$$watchers) {
-                var scope = data.$scope;
-                if(!scopes_id[scope.$id]) {
-                    scopes_id[scope.$id] = true;
-                    nb_watchers += scope.$$watchers.length;
-                    nb_scopes++;
-                    console.warn(nb_scopes, ' --> element: ', elem, ' - scope_id = ', scope.$id, ' - total watchers = ', scope.$$watchers.length);
-                    if(showExp) {
-                        angular.forEach(scope.$$watchers, function(elem) {
-                            if(typeof elem.exp == 'function') console.info('expr = ', elem.exp.exp);
-                            else console.info('expr = ', elem.exp);
-                        });
-                    }
-                }
-            }
-        };
-
-        console.info('Target blocked: ', target);
-        checkInsideFn( angular.element(target) );
-        items = target.getElementsByTagName("*");
-        for(i = items.length; i--;) checkInsideFn( angular.element(items[i]) );
-        console.info('Found', nb_scopes, ' scopes with ', nb_watchers, ' watchers');
-    }
-}

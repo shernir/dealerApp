@@ -67,6 +67,10 @@
             {
               "xml": "<feature name=\"ListPicker\"><param name=\"ios-package\" value=\"ListPicker\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"NativePageTransitions\"><param name=\"ios-package\" value=\"NativePageTransitions\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -80,7 +84,7 @@
             },
             {
               "xml": "<string />",
-              "count": 27
+              "count": 36
             },
             {
               "xml": "<string> </string>",
@@ -90,19 +94,19 @@
           "NSMicrophoneUsageDescription": [
             {
               "xml": "<string>$MICROPHONE_USAGE_DESCRIPTION</string>",
-              "count": 28
+              "count": 37
             }
           ],
           "NSPhotoLibraryAddUsageDescription": [
             {
               "xml": "<string>$PHOTOLIBRARY_ADD_USAGE_DESCRIPTION</string>",
-              "count": 28
+              "count": 37
             }
           ],
           "NSPhotoLibraryUsageDescription": [
             {
               "xml": "<string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>",
-              "count": 28
+              "count": 37
             }
           ]
         }
@@ -142,6 +146,9 @@
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     },
     "cordova-plugin-listpicker": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     }
   },
@@ -252,6 +259,14 @@
       "clobbers": [
         "window.plugins.listpicker"
       ]
+    },
+    {
+      "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+      "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+      "pluginId": "com.telerik.plugins.nativepagetransitions",
+      "clobbers": [
+        "window.plugins.nativepagetransitions"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -265,6 +280,7 @@
     "phonegap-plugin-barcodescanner": "7.0.2",
     "cordova-plugin-statusbar": "2.4.1",
     "cordova-wheel-selector-plugin": "1.0.0",
-    "cordova-plugin-listpicker": "2.2.2"
+    "cordova-plugin-listpicker": "2.2.2",
+    "com.telerik.plugins.nativepagetransitions": "0.6.5"
   }
 }

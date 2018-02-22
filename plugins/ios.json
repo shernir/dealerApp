@@ -40,6 +40,9 @@
     },
     "cordova-plugin-listpicker": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     }
   },
   "dependent_plugins": {}

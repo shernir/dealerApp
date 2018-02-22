@@ -97,6 +97,14 @@ module.exports = [
     "clobbers": [
       "window.plugins.listpicker"
     ]
+  },
+  {
+    "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+    "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+    "pluginId": "com.telerik.plugins.nativepagetransitions",
+    "clobbers": [
+      "window.plugins.nativepagetransitions"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -112,7 +120,8 @@ module.exports.metadata =
   "phonegap-plugin-barcodescanner": "7.0.2",
   "cordova-plugin-statusbar": "2.4.1",
   "cordova-wheel-selector-plugin": "1.0.0",
-  "cordova-plugin-listpicker": "2.2.2"
+  "cordova-plugin-listpicker": "2.2.2",
+  "com.telerik.plugins.nativepagetransitions": "0.6.5"
 };
 // BOTTOM OF METADATA
 });

@@ -6,13 +6,13 @@
       </ion-header-bar>
       <ion-content class="has-footer">
         <div ng-if="isMultiple == 0">
-          <ion-checkbox  ng-repeat="product in ::addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,0,true,product.CategoryName)">
+          <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,0,true,product.CategoryName)">
             {{product.Name}}
             <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
           </ion-checkbox>
         </div>
         <div ng-if="isMultiple == 1" >
-          <ion-checkbox  ng-repeat="product in ::addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,1,true,product.CategoryName)">
+          <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,1,true,product.CategoryName)">
             {{product.Name}}
             <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
           </ion-checkbox>

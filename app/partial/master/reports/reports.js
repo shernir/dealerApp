@@ -1,5 +1,5 @@
 angular.module('retailer').controller('ReportsCtrl',function($scope,xhrService,loading){
-  $scope.reports = [];
+  //$scope.reports = [];
   $scope.type = 1;
   $scope.toggleView = function () {
     if($scope.type === 1) {

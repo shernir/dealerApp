@@ -32,30 +32,32 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
     //TODO: static login  parameter
     //$state.go('master.home');
     loading.show();
-
+    //var deviceName = cordova.plugins.deviceName.name;
     xhrService.call({
         url: 'device/login',
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         contentType: 'application/json',
         data:{
-          "DealerCode":"1",
-          "DealerName":"Qatar Telecom",
-          "Location":"Airport HQ2",
-          "DeviceId":"77360bc7-efb9-47f1-9e6f-65adb465f4cd",
+          "DealerCode":$scope.device.DealerCode,
+          "DealerName":$scope.device.DealerName,
+          "Location":$scope.device.Name,
+          "LocationId":$scope.device.Id,
+          "IPadName":"af19da30-Web",
           "UserName":user,
           "Password":password,
         }
     }, true).then(function(data){
       loading.hide();
       if (data.Code === 0) {
+        $rootScope.user = {name:user};
         $state.go('master.home');
         localStorage.setItem('token',data.Token);
         console.log(data.Token);
-        $cookies.put('persmissions',JSON.stringify(data.Permissions));
+        $cookies.put('permissions',JSON.stringify(data.Permissions));
 
       }else {
-        alertService.alert('error',data.Message);
+        //alertService.alert('error',data.Message);
       }
     }).catch(function(err){
       loading.hide();
