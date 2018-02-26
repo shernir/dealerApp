@@ -21,6 +21,8 @@ angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,ut
     mainTranstype:"",
 
   };
+  $rootScope.permissions = JSON.parse(localStorage.getItem('permissions'));
+//  console.log($scope.permissions);
   $scope.resetClient = function () {
   $scope.client =  utility.resetClient();
 };

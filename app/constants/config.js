@@ -39,7 +39,7 @@ angular.module('retailer').constant('CONFIG', {
         flag:"img/in.svg"
       }
     ], //Used in localeService
-    APP_VERSION: '0.0.1',
+    APP_VERSION: '2.0.0',
     ENVIRONMENTS : {
         'dev': { name: 'Development', backendUrl: 'http://simple-mock-example.getsandbox.com/api/' },
         'staging': { name: 'Staging & QA', backendUrl: 'http://172.16.225.182:8005/api/' },

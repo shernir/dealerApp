@@ -4,7 +4,7 @@
      <h4>{{'HOME.SELECT_ONE_OF_THE_BELOW' | translate}}</h4>
      <h4>{{'HOME.OPTION_FOR_NEW_SUPSCRIPTION' | translate}}</h4>
      <div class="row margin-top-lg center">
-       <a ng-click="goToEntity('postpaid')" class="col-20">
+       <a ng-click="goToEntity('postpaid')" class="col-20" ng-if="$root.permissions.Postpaid">
 
             <img class="img-responsive" src="img/postpaid.svg" />
             <p>
@@ -12,11 +12,11 @@
             </p>
 
         </a>
-        <a ng-click="goToEntity('prepaid')" class="col-20">
+        <a ng-click="goToEntity('prepaid')" class="col-20" ng-if="$root.permissions.Prepaid">
             <img class="img-responsive" src="img/prepaid.svg" />
               {{'HOME.PREPAID' | translate}}
         </a>
-        <a ng-click="goToEntity('hala-go')" class="col-20">
+        <a ng-click="goToEntity('hala-go')" class="col-20" ng-if="$root.permissions.HalaGo">
             <img class="img-responsive" src="img/hala-go.svg" />
               {{'HOME.HALA_GO_MIGRATION' | translate}}
         </a>

@@ -1,5 +1,5 @@
 <ion-pane class="landing login" ng-controller="LoginCtrl" ng-class="{'rtl':$root.lang.id =='ar'}">
-    <ion-content>
+    <ion-content style="height: auto !important">
       <div class="row full-height no-padd">
           <div  class="full-height row vertical-align horizontal-align grey-bg">
             <div  class=" col col-80 main-landing-container no-padd card-shadow " >
@@ -8,10 +8,7 @@
                   <img src="img/app-logo.svg" />
                   <h2>E-Activation APP</h2>
                 </div>
-                <div style="position:relative" class="col col-50 full-height white-bg flex vertical-align horizontal-align">
-                  <!-- <div class="refresh-btn red-color" ng-if="isFail" ng-click="init()">
-                    <i class="ion-ios-refresh-empty"></i>
-                  </div> -->
+                <div  class="col col-50 full-height white-bg flex vertical-align horizontal-align">
                   <div style="width:100%" >
                     <h4 class="text-center">{{$root.location || 'Location'}}</h4>
                     <label class="item item-input item-stacked-label">

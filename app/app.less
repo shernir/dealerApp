@@ -5,7 +5,6 @@
 @dark-grey:#666;
 /* Component LESS */
 @import "partial/master/master.less";
-@import "partial/landing/landing.less";
 @import "partial/master/home/home.less";
 @import "partial/master/reports/reports.less";
 @import "directive/header/header.less";
@@ -42,6 +41,7 @@
 .end {
   justify-content: flex-end;
 }
+
 html , body {
   h4,h3,h2,.input-label{
     color:#666 !important;
@@ -51,6 +51,13 @@ html , body {
 }
 h4 {
   font-weight: 400 !important;
+}
+.version-no {
+  position: absolute;
+  z-index: 999;
+  bottom: 15px;
+  left: 15px;
+  font-size: 20px;
 }
 .white-title {
   padding: 10px;

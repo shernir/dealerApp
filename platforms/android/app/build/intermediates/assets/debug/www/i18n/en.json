@@ -1,0 +1,105 @@
+{
+  "LANDING":{
+    "USERNAME":"Username",
+    "PASSWORD":"Password",
+    "LOGIN":"Login"
+  },
+  "HEADER":{
+    "LOGOUT":"Logout",
+    "HELLO":"Hello",
+    "CONFIGURATION":"AAA"
+  },
+  "MASTER":{
+    "NEW_ACTIVAION":"New activation",
+    "REPORT":"Reports"
+  },
+  "HOME":{
+    "SELECT_ONE_OF_THE_BELOW":"Select one of the below",
+    "OPTION_FOR_NEW_SUPSCRIPTION":"options for the New Activation",
+    "POSTPAID_PRODUCTS":"Postpaid Products",
+    "POSTPAID":"Postpaid",
+    "PREPAID":"Prepaid",
+    "HALA_GO_MIGRATION":"Hala GO Migration"
+  },
+  "HALA_TYPE":{
+    "SELECT_ONE_OF_THE_BELOW":"Select one of the below",
+    "ID_TYPE":"ID types",
+    "QID":"QID",
+    "PASSPORT":"Passport",
+    "GCC":"GCC"
+  },
+  "CLIENT_DETAILS":{
+    "QID":"Qatar ID",
+    "BIRTH_DATE":"Birth Date",
+    "FIRST_NAME":"First Name",
+    "MIDDLE_NAME":"Middle Name",
+    "LAST_NAME":"Last Name",
+    "FRONT_ID":"ID Front",
+    "BACK_ID":"ID Back",
+    "SCAN_PASSPORT":"Scan Passport",
+    "SCAN_GCC":"Scan GCC ID",
+    "SCAN_QID":"Scan QID",
+    "ID_NUMBER":"ID Number",
+    "EMAIL_OPTIONAL":"Email (optional)",
+    "ALTERNATIVE_NUMBER_OPTIONAL":"Alternative Number (Optional)",
+    "NATIONALITY":"Nationality",
+    "PO_BOX_OPTIONAL":"PO Box (Optional)",
+    "OK":"Ok",
+    "CUSTOMER_ACCOUNTS":"Customer Accounts"
+  },
+  "SCAN_NUMBER":{
+    "FREE_NUMBER":"Free Number",
+    "SIM_No":"SIM No.",
+    "NUMBER":"Number",
+    "SCAN_SIM":"Scan SIM"
+  },
+  "CART":{
+    "YOUR_ORDER":"Your Order",
+    "TOTAL":"Total",
+    "QR":"QR",
+    "CREDIT_LIMIT":"Credit Limit",
+    "AVAILABLE_ACCOUNT_CREDIT":"Available Account Credit",
+    "DISCOUNT":"Discount"
+  },
+  "SIGNATURE":{
+    "TERMS_CONDITION_1":"I have accepted to",
+    "TERMS_CONDITION_2":" in subscribing to Ooredoo services.",
+    "TERMS_AND_CONDITIONS":" Terms and Conditions",
+    "SIGN_AGAIN":"Sign Again",
+    "PREVIEW_FORM":"Preview Form"
+  },
+  "CONFIRMATION":{
+    "CONGRATULATIONS":"Congratulations!",
+    "YOU_HAVE_SUCCESSFULLY_COMPELETED_YOUR_REGISTRATION":"You Have Successfully Completed Your Registration",
+    "YOUR_ACCOUNT_NO_IS":"Your Account No. is:",
+    "YOUR_NUMBER_IS":"Your Number is:",
+    "EMAIL_RECEIPT_TO_CUSTOMER":"Email receipt to customer (Optional)",
+    "SEND":"SEND"
+
+  },
+  "REPORTS":{
+    "NUMBER_OF_SUCCESSFUL_ORDERS":"Number of Successful Orders:",
+    "NUMBER_OF_FAILED_ORDERS":"Number of Failed Orders:",
+    "CUSTOMER_NAME":"Customer Name",
+    "MOBILE_NO":"Mobile No.",
+    "PRODUCT_TYPE":"Product Type",
+    "SALESMAN_NO":"Salesman's No.",
+    "ERROR_MESSAGE":"Error Message",
+    "FAILED_REASEON":"Failed Reaseon",
+    "STATUS":"Status",
+    "ORDER_ID":"Order ID",
+    "SUCCESSFUL_ORDER":"Successful Order",
+    "FAILED_ORDER":"Failed Order",
+    "ERROR_MESSAGE":"Error Message",
+    "FAILED_REASEON":"Failed Reason",
+    "STATUS":"Status"
+  },
+  "HALA_GO":{
+    "PLEASE_ENTER_CUSTOMER_MOBILE":"Please enter the customer mobile number in the field below:",
+    "CUSTOMER_ID":"Customer ID",
+    "ENTER_CUSTOMER_NUMBER":"Enter Customer Mobile Number"
+  },
+  "CONFIGURATION":{
+    "ADD_LOCATION":"Add Location"
+  }
+}

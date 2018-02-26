@@ -1,0 +1,351 @@
+{
+    "Tariffs": [{
+            "Name": "Shahry Super",
+            "Id": "110",
+            "Price": 90,
+            "CategoryName": "Shahry Super",
+            "CategoryId": "1",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry Super",
+            "Id": "111",
+            "Price": 90,
+            "CategoryName": "Shahry Super",
+            "CategoryId": "1",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry Super",
+            "Id": "112",
+            "Price": 90,
+            "CategoryName": "Shahry Super",
+            "CategoryId": "1",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        },
+
+        {
+            "Name": "Shahry Super",
+            "Id": "113",
+            "Price": 120,
+            "CategoryName": "Shahry Super",
+            "CategoryId": "1",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "114",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "115",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "116",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "117",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "118",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "119",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "120",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 60",
+            "Id": "121",
+            "Price": 60,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }, {
+            "Name": "Shahry 120",
+            "Id": "122",
+            "Price": 120,
+            "CategoryName": "Shahry Standard",
+            "CategoryId": "2",
+            "PormotionName": null,
+            "PromotionId": null,
+            "PromotionDiscount": 0,
+            "Details": [
+                "Unlimited Units",
+                "Unlimited Mobile Internet",
+                "Unlimited calls to landlines",
+                "XX Roaming (Receiving Minutes)",
+                "Unlimited Local calls free Number",
+                "XX International Minutes"
+            ]
+        }
+    ],
+    "AddOns": [{
+            "Name": "Data Pack 20",
+            "CategoryId": "1",
+            "Id":"1",
+            "Detail": "250 MB",
+            "Price": 20,
+            "CategoryName": "MIP",
+            "IsMultiple": 0
+        }, {
+            "Name": "Data Pack 70",
+            "CategoryId": "1",
+            "Id":"2",
+            "Detail": "6 GB",
+            "Price": 70,
+            "CategoryName": "MIP",
+            "IsMultiple": 0
+        }, {
+            "Name": "Data Pack 110",
+            "CategoryId": "1",
+            "Id":"3",
+            "Detail": "10 GB",
+            "Price": 110,
+            "CategoryName": "MIP",
+            "IsMultiple": 0
+        }, {
+            "Name": "Data Pack 150",
+            "CategoryId": "1",
+            "Detail": "14 GB",
+            "Id":"4",
+            "Price": 150,
+            "CategoryName": "MIP",
+            "IsMultiple": 0
+        }, {
+            "Name": "Data Pack 200",
+            "CategoryId": "1",
+            "Detail": "20 GB",
+            "Id":"5",
+            "Price": 200,
+            "CategoryName": "MIP",
+            "IsMultiple": 0
+        }, {
+            "Name": "Data Pack 250",
+            "CategoryId": "1",
+            "Detail": "250 MB",
+            "Id":"6",
+            "Price": 250,
+            "CategoryName": "MIP",
+            "IsMultiple": 0
+        }, {
+            "Name": "Bangladesh",
+            "CategoryId": "2",
+            "Detail": "700 mins ",
+            "Price": 35,
+            "Id":"7",
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        }, {
+            "Name": "Egypt",
+            "CategoryId": "2",
+            "Detail": "220 mins",
+            "Price": 35,
+            "Id":"8",
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        }, {
+            "Name": "India",
+            "CategoryId": "2",
+            "Detail": "1200 mins",
+            "Price": 35,
+            "Id":"9",
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        }, {
+            "Name": "Nepal",
+            "CategoryId": "2",
+            "Detail": "475 mins",
+            "Price": 35,
+            "Id":"10",
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        }, {
+            "Name": "Pakistan",
+            "CategoryId": "2",
+            "Detail": "475 mins",
+            "Price": 35,
+            "Id":"11",
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        }, {
+            "Name": "Philippines",
+            "CategoryId": "2",
+            "Id":"12",
+            "Detail": "160 mins",
+            "Price": 35,
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        }, {
+            "Name": "Sri Lanka",
+            "CategoryId": "2",
+            "Id":"13",
+            "Detail": "160 mins",
+            "Price": 35,
+            "CategoryName": "IPACK",
+            "IsMultiple": 1
+        },
+        {
+           "Name": "Sri ",
+           "CategoryId": "2",
+           "Id":"14",
+           "Detail": "160 mins",
+           "Price": 35,
+           "CategoryName": "IPACK",
+           "IsMultiple": 1
+       },
+       {
+          "Name": "Follow",
+          "CategoryId": "2",
+          "Id":"17",
+          "Detail": "160 mins",
+          "Price": 35,
+          "CategoryName": "IPACK",
+          "IsMultiple": 1
+      }
+      ]
+}

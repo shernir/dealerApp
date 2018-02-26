@@ -1,17 +1,17 @@
 
         <ion-modal-view class="modal confirm-modal custom-dealer-modal postpaid-accounts">
             <ion-header-bar>
-              <h1 class="title">CONFIRMATION</h1>
+              <h1 class="title">{{'HOME.CONFIRMATION' | translate}}</h1>
               <div class="button button-clear" ng-click="modal.hide()"><span class="icon ion-close"></span></div>
             </ion-header-bar>
             <ion-content class="has-footer">
 
               <p style="padding:15px; margin-top:15px;">
-                By clicking confirm you have reviewed and completed all forms please note that this is the final step before you submit.
+                {{'HOME.CONFIRMATION_TEXT' | translate}}
               </p>
             </ion-content>
             <div class="bar bar-footer flex center">
-              <button  ng-click="next()"  class="button  button-assertive activated">CONFIRM</button>
+              <button  ng-click="next()"  class="button  button-assertive activated"> {{'HOME.CONFIRM' | translate}}</button>
             </div>
           </div>
         </ion-modal-view>

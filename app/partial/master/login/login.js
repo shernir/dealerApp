@@ -1,5 +1,11 @@
-angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state,xhrService,$rootScope,$cookies,alertService){
+angular.module('retailer').controller('LoginCtrl',function($scope,$translate,loading,$state,xhrService,$rootScope,alertService){
   $scope.device = JSON.parse(localStorage.getItem('device'));
+  $scope.device = {
+        "Id": "422",
+        "Name": "Airport HQ2",
+        "DealerCode": "1",
+        "DealerName": "Qatar Telecom"
+    };
   $rootScope.location = $scope.device.Name;
   $scope.store = {
     location:"",
@@ -54,10 +60,11 @@ angular.module('retailer').controller('LoginCtrl',function($scope,loading,$state
         $state.go('master.home');
         localStorage.setItem('token',data.Token);
         console.log(data.Token);
-        $cookies.put('permissions',JSON.stringify(data.Permissions));
+        localStorage.setItem('permissions',JSON.stringify(data.Permissions));
+        $rootScope.permissions = data.Permissions;
 
       }else {
-        //alertService.alert('error',data.Message);
+        alertService.alert($translate.instant('CONFIRMATION.ERROR'),data.Message);
       }
     }).catch(function(err){
       loading.hide();

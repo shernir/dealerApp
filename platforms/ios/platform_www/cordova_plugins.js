@@ -1,47 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-device.device",
-    "file": "plugins/cordova-plugin-device/www/device.js",
-    "pluginId": "cordova-plugin-device",
-    "clobbers": [
-      "device"
-    ]
-  },
-  {
-    "id": "cordova-plugin-ionic-webview.ios-wkwebview-exec",
-    "file": "plugins/cordova-plugin-ionic-webview/src/www/ios/ios-wkwebview-exec.js",
-    "pluginId": "cordova-plugin-ionic-webview",
-    "clobbers": [
-      "cordova.exec"
-    ]
-  },
-  {
-    "id": "cordova-plugin-splashscreen.SplashScreen",
-    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-    "pluginId": "cordova-plugin-splashscreen",
-    "clobbers": [
-      "navigator.splashscreen"
-    ]
-  },
-  {
-    "id": "ionic-plugin-keyboard.keyboard",
-    "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
-    "pluginId": "ionic-plugin-keyboard",
-    "clobbers": [
-      "cordova.plugins.Keyboard"
-    ],
-    "runs": true
-  },
-  {
-    "id": "cordova-plugin-device-name.DeviceName",
-    "file": "plugins/cordova-plugin-device-name/www/device-name.js",
-    "pluginId": "cordova-plugin-device-name",
-    "clobbers": [
-      "cordova.plugins.deviceName"
-    ]
-  },
-  {
     "id": "cordova-plugin-camera.Camera",
     "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
     "pluginId": "cordova-plugin-camera",
@@ -74,11 +33,43 @@ module.exports = [
     ]
   },
   {
-    "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
-    "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
-    "pluginId": "phonegap-plugin-barcodescanner",
+    "id": "cordova-plugin-device.device",
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "pluginId": "cordova-plugin-device",
     "clobbers": [
-      "cordova.plugins.barcodeScanner"
+      "device"
+    ]
+  },
+  {
+    "id": "cordova-plugin-device-name.DeviceName",
+    "file": "plugins/cordova-plugin-device-name/www/device-name.js",
+    "pluginId": "cordova-plugin-device-name",
+    "clobbers": [
+      "cordova.plugins.deviceName"
+    ]
+  },
+  {
+    "id": "cordova-plugin-ionic-webview.ios-wkwebview-exec",
+    "file": "plugins/cordova-plugin-ionic-webview/src/www/ios/ios-wkwebview-exec.js",
+    "pluginId": "cordova-plugin-ionic-webview",
+    "clobbers": [
+      "cordova.exec"
+    ]
+  },
+  {
+    "id": "cordova-plugin-listpicker.ListPicker",
+    "file": "plugins/cordova-plugin-listpicker/www/ListPicker.js",
+    "pluginId": "cordova-plugin-listpicker",
+    "clobbers": [
+      "window.plugins.listpicker"
+    ]
+  },
+  {
+    "id": "cordova-plugin-splashscreen.SplashScreen",
+    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+    "pluginId": "cordova-plugin-splashscreen",
+    "clobbers": [
+      "navigator.splashscreen"
     ]
   },
   {
@@ -90,46 +81,36 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-wheel-selector-plugin.plugin",
-    "file": "plugins/cordova-wheel-selector-plugin/www/selectorplugin.js",
-    "pluginId": "cordova-wheel-selector-plugin",
+    "id": "ionic-plugin-keyboard.keyboard",
+    "file": "plugins/ionic-plugin-keyboard/www/ios/keyboard.js",
+    "pluginId": "ionic-plugin-keyboard",
     "clobbers": [
-      "SelectorCordovaPlugin"
+      "cordova.plugins.Keyboard"
     ],
     "runs": true
   },
   {
-    "id": "cordova-plugin-listpicker.ListPicker",
-    "file": "plugins/cordova-plugin-listpicker/www/ListPicker.js",
-    "pluginId": "cordova-plugin-listpicker",
+    "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+    "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+    "pluginId": "phonegap-plugin-barcodescanner",
     "clobbers": [
-      "window.plugins.listpicker"
-    ]
-  },
-  {
-    "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
-    "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
-    "pluginId": "com.telerik.plugins.nativepagetransitions",
-    "clobbers": [
-      "window.plugins.nativepagetransitions"
+      "cordova.plugins.barcodeScanner"
     ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+  "cordova-plugin-camera": "4.0.2",
   "cordova-plugin-device": "1.1.4",
+  "cordova-plugin-device-name": "1.3.2",
   "cordova-plugin-ionic-webview": "1.1.16",
+  "cordova-plugin-listpicker": "2.2.2",
   "cordova-plugin-splashscreen": "4.0.3",
+  "cordova-plugin-statusbar": "2.4.1",
   "cordova-plugin-whitelist": "1.3.1",
   "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-device-name": "1.3.2",
-  "cordova-plugin-camera": "4.0.2",
-  "phonegap-plugin-barcodescanner": "7.0.2",
-  "cordova-plugin-statusbar": "2.4.1",
-  "cordova-wheel-selector-plugin": "1.0.0",
-  "cordova-plugin-listpicker": "2.2.2",
-  "com.telerik.plugins.nativepagetransitions": "0.6.5"
+  "phonegap-plugin-barcodescanner": "7.0.2"
 };
 // BOTTOM OF METADATA
 });

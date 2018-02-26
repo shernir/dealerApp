@@ -1,13 +1,52 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "ionic-plugin-keyboard.keyboard",
-    "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
-    "pluginId": "ionic-plugin-keyboard",
+    "id": "com.telerik.plugins.nativepagetransitions.NativePageTransitions",
+    "file": "plugins/com.telerik.plugins.nativepagetransitions/www/NativePageTransitions.js",
+    "pluginId": "com.telerik.plugins.nativepagetransitions",
     "clobbers": [
-      "cordova.plugins.Keyboard"
-    ],
-    "runs": true
+      "window.plugins.nativepagetransitions"
+    ]
+  },
+  {
+    "id": "cordova-hot-code-push-plugin.chcp",
+    "file": "plugins/cordova-hot-code-push-plugin/www/chcp.js",
+    "pluginId": "cordova-hot-code-push-plugin",
+    "clobbers": [
+      "chcp"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.Camera",
+    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "Camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverOptions",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverOptions"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.camera",
+    "file": "plugins/cordova-plugin-camera/www/Camera.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "navigator.camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverHandle",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverHandle"
+    ]
   },
   {
     "id": "cordova-plugin-device.device",
@@ -18,22 +57,80 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-device-name.DeviceName",
+    "file": "plugins/cordova-plugin-device-name/www/device-name.js",
+    "pluginId": "cordova-plugin-device-name",
+    "clobbers": [
+      "cordova.plugins.deviceName"
+    ]
+  },
+  {
+    "id": "cordova-plugin-listpicker.ListPicker",
+    "file": "plugins/cordova-plugin-listpicker/www/ListPicker.js",
+    "pluginId": "cordova-plugin-listpicker",
+    "clobbers": [
+      "window.plugins.listpicker"
+    ]
+  },
+  {
     "id": "cordova-plugin-splashscreen.SplashScreen",
     "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
     "pluginId": "cordova-plugin-splashscreen",
     "clobbers": [
       "navigator.splashscreen"
     ]
+  },
+  {
+    "id": "cordova-plugin-statusbar.statusbar",
+    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+    "pluginId": "cordova-plugin-statusbar",
+    "clobbers": [
+      "window.StatusBar"
+    ]
+  },
+  {
+    "id": "cordova-wheel-selector-plugin.plugin",
+    "file": "plugins/cordova-wheel-selector-plugin/www/selectorplugin.js",
+    "pluginId": "cordova-wheel-selector-plugin",
+    "clobbers": [
+      "SelectorCordovaPlugin"
+    ],
+    "runs": true
+  },
+  {
+    "id": "ionic-plugin-keyboard.keyboard",
+    "file": "plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+    "pluginId": "ionic-plugin-keyboard",
+    "clobbers": [
+      "cordova.plugins.Keyboard"
+    ],
+    "runs": true
+  },
+  {
+    "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+    "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+    "pluginId": "phonegap-plugin-barcodescanner",
+    "clobbers": [
+      "cordova.plugins.barcodeScanner"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-whitelist": "1.3.1",
+  "com.telerik.plugins.nativepagetransitions": "0.6.5",
+  "cordova-hot-code-push-plugin": "1.5.3",
+  "cordova-plugin-camera": "4.0.2",
   "cordova-plugin-device": "1.1.4",
+  "cordova-plugin-device-name": "1.3.2",
+  "cordova-plugin-ionic-webview": "1.1.16",
+  "cordova-plugin-listpicker": "2.2.2",
   "cordova-plugin-splashscreen": "4.0.3",
-  "cordova-plugin-ionic-webview": "1.1.16"
+  "cordova-plugin-statusbar": "2.4.1",
+  "cordova-plugin-whitelist": "1.3.1",
+  "cordova-wheel-selector-plugin": "1.0.0",
+  "ionic-plugin-keyboard": "2.2.1",
+  "phonegap-plugin-barcodescanner": "7.0.2"
 };
 // BOTTOM OF METADATA
 });

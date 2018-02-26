@@ -1,5 +1,5 @@
-angular.module('retailer').controller('SignatureCtrl',function($scope,$state,utility,loading,xhrService,$ionicModal,$ionicHistory){
-
+angular.module('retailer').controller('SignatureCtrl',function($scope,$state,utility,loading,xhrService,$ionicModal,$rootScope){
+  var oneTimeCharge;
   var signaturePad;
   $ionicModal.fromTemplateUrl('modal/confirmation-modal.html', {
     scope: $scope,
@@ -38,6 +38,8 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,uti
             Category:$scope.$parent.client.cart[i].CategoryName,
             Price:$scope.$parent.client.cart[i].Price
           })
+        } else if (!$scope.$parent.client.cart[i].CategoryName) {
+         oneTimeCharge =$scope.$parent.client.cart[i].Price;
         }
       }
       var order = {
@@ -68,7 +70,9 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,uti
         FrontQid:encodeURIComponent($scope.$parent.client.frontQID),
         BackQid:encodeURIComponent($scope.$parent.client.backQID),
         HalaGoMobileNO:$scope.$parent.client.halaGoNumber,
-        MainTranstype:$scope.$parent.client.mainTranstype
+        MainTranstype:$scope.$parent.client.mainTranstype,
+        SimPrice:oneTimeCharge,
+        TotalPrice:$rootScope.total
 
       }
       xhrService.call({

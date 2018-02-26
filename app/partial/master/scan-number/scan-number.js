@@ -6,6 +6,7 @@ angular.module('retailer').controller('ScanNumberCtrl',function($scope,$state,ut
   $scope.scan = function () {
     utility.getCode().then(function(data){
       $scope.$parent.client.simNumber = data.text;
+      $scope.validateSim($scope.$parent.client.simNumber);
     }).catch(function(data){
 
     });

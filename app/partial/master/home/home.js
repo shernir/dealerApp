@@ -1,9 +1,6 @@
-angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootScope,utility,loading,$timeout,$cookies){
+angular.module('retailer').controller('HomeCtrl',function($scope,$state,$rootScope,utility,loading,$timeout){
 
-  //TODO: Set view persmissions
-  if($cookies.get('permissions')) {
-    $scope.persmissions = JSON.parse($cookies.get('permissions'));
-  }
+
   $scope.goToEntity = function (entity) {
     $scope.$parent.client.entity = entity;
     if(entity === "postpaid"){

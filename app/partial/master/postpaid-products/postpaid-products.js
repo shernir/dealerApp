@@ -8,8 +8,8 @@ $scope.addToCart = function (entity,isMultiple,canDelete,type) {
   entity.canDelete = canDelete;
   entity.type = type;
   //TODO add actual ACL
-  //cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
-  cart.add($scope.$parent.client.cart,entity,1000);
+  cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
+  //cart.add($scope.$parent.client.cart,entity,1000);
 };
 
 $scope.getProducts = function () {
@@ -83,6 +83,7 @@ $scope.next = function () {
     $scope.Detailsmodal.show();
   }
   $scope.$on('$ionicView.enter', function(){
+    $scope.addons = null;
     $scope.getProducts();
 
   });

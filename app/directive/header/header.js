@@ -8,7 +8,8 @@ angular.module('retailer').directive('headerDirective', function($rootScope,$tra
         templateUrl: 'directive/header/header.html',
         link: function(scope, element, attrs, fn) {
           scope.goToConfiguration = function () {
-              if (!localStorage.getItem('device')) {
+            var device = localStorage.getItem('device');
+              if (device) {
                 $state.go('master.admin-login');
               }else {
                 $state.go('master.configuration');

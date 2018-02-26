@@ -1,0 +1,8 @@
+{
+  "name": "E-Activation",
+  "ios_identifier": "com.ooredoo.cdcpPublish",
+  "android_identifier": "",
+  "update": "now",
+  "content_url": "http://192.168.43.113:8080",
+  "release": "2018.02.23-14.20.44"
+}

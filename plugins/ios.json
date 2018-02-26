@@ -7,41 +7,35 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPuplish"
-    },
-    "cordova-plugin-ionic-webview": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPuplish"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPuplish"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPuplish"
-    },
-    "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPuplish"
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     },
     "cordova-plugin-device-name": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
-    },
-    "phonegap-plugin-barcodescanner": {
-      "CAMERA_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
-    },
-    "cordova-wheel-selector-plugin": {
+    "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     },
     "cordova-plugin-listpicker": {
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     },
-    "com.telerik.plugins.nativepagetransitions": {
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "com.ooredoo.cdcpPublish"
     }
   },

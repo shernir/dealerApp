@@ -74,12 +74,12 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     });
     $stateProvider.state('master.configuration', {
         url: '/configuration',
-        cache: false,
+        cache:false,
         templateUrl: 'partial/master/configuration/configuration.html'
     });
     /* Add New States Above */
     if (!localStorage.getItem('device')) {
-      $urlRouterProvider.otherwise('/configuration');
+      $urlRouterProvider.otherwise('/login');
 
     } else {
       $urlRouterProvider.otherwise('/login');

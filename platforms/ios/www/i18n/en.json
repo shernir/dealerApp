@@ -19,7 +19,19 @@
     "POSTPAID_PRODUCTS":"Postpaid Products",
     "POSTPAID":"Postpaid",
     "PREPAID":"Prepaid",
-    "HALA_GO_MIGRATION":"Hala GO Migration"
+    "HALA_GO_MIGRATION":"Hala GO Migration",
+    "WITHOUT_PORMOTION":"Without Promotions",
+    "WITH_PORMOTION":"With Promotions",
+    "MBB":"EIP Standalone",
+    "MORE_DETAILS":"More Details",
+    "SELECT":"Select",
+    "NEXT":"Next",
+    "BACK":"Back",
+    "CLEAR":"Clear",
+    "CONFIRMATION":"Confirmation",
+    "CONFIRM":"CONFIRM",
+    "CONFIRMATION_TEXT":"By clicking confirm you have reviewed and completed all forms please note that this is the final step before you submit."
+
   },
   "HALA_TYPE":{
     "SELECT_ONE_OF_THE_BELOW":"Select one of the below",
@@ -32,6 +44,8 @@
     "QID":"Qatar ID",
     "BIRTH_DATE":"Birth Date",
     "FIRST_NAME":"First Name",
+    "ID_Number":"ID Number",
+    "PLEASE_FILL_ALL_DATA":"Please , fill all required Data",
     "MIDDLE_NAME":"Middle Name",
     "LAST_NAME":"Last Name",
     "FRONT_ID":"ID Front",
@@ -59,7 +73,8 @@
     "QR":"QR",
     "CREDIT_LIMIT":"Credit Limit",
     "AVAILABLE_ACCOUNT_CREDIT":"Available Account Credit",
-    "DISCOUNT":"Discount"
+    "DISCOUNT":"Discount",
+    "NOT_ENOUGH_CREDIT":"Not enough credit"
   },
   "SIGNATURE":{
     "TERMS_CONDITION_1":"I have accepted to",
@@ -74,7 +89,9 @@
     "YOUR_ACCOUNT_NO_IS":"Your Account No. is:",
     "YOUR_NUMBER_IS":"Your Number is:",
     "EMAIL_RECEIPT_TO_CUSTOMER":"Email receipt to customer (Optional)",
-    "SEND":"SEND"
+    "SEND":"SEND",
+    "WRONG_PASSWORD_PLEASE_TRY_AGAIN":"Wrong password please try again",
+    "ERROR":"Error !"
 
   },
   "REPORTS":{

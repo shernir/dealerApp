@@ -1,7 +1,6 @@
-angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,$cookies,alertService,$state) {
+angular.module('retailer').factory('xhrService', function (CONFIG, $q, $http,$window,alertService,$state) {
 
     var xhrService = {};
-    var token = $cookies.get('token');
     // Default options of any HTTP request
     function getDefaultOptions() {
         return {

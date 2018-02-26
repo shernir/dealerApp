@@ -16,23 +16,26 @@
                   <div class="info-ribbon">
                     <i class="ion-information"></i>
                   </div>
-                  <h4 class="text-center">
-                    {{::entity.Name}}<br />
-                  </h4>
-                  <div class="benfits-container">
-                    <p class="text-center" ng-repeat="benfit in ::entity.Details | limitTo:3">
-                    {{::benfit}}
-                    </p>
+                  <div ng-click="addToCart(entity,0,true,'shahryTarrif')" >
+                    <h4 class="text-center">
+                      {{::entity.Name}}<br />
+                    </h4>
+                    <div class="benfits-container">
+                      <p class="text-center" ng-repeat="benfit in ::entity.Details | limitTo:3">
+                      {{::benfit}}
+                      </p>
+                    </div>
                   </div>
+
                   <p class="text-center" ng-click="showDeatils(entity)">
-                    <a class="red-color " > More Details</a>
+                    <a class="red-color " > {{'HOME.MORE_DETAILS' | translate}} </a>
                   </p>
                   <div ng-click="addToCart(entity,0,true,'shahryTarrif')" class="select-indicator-container text-center">
                     <span class="custom-radio">
                       <i></i>
                     </span>
                     <p>
-                      Select
+                      {{'HOME.SELECT' | translate}}
                     </p>
                   </div>
                 </ks-swiper-slide>

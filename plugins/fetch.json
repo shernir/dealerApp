@@ -71,14 +71,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-wheel-selector-plugin": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-wheel-selector-plugin"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-listpicker": {
     "source": {
       "type": "registry",
@@ -87,10 +79,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "com.telerik.plugins.nativepagetransitions": {
+  "cordova-hot-code-push-local-dev-addon": {
     "source": {
       "type": "registry",
-      "id": "com.telerik.plugins.nativepagetransitions"
+      "id": "cordova-hot-code-push-local-dev-addon@^0.4.2"
     },
     "is_top_level": true,
     "variables": {}

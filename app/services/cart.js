@@ -1,4 +1,4 @@
-angular.module('retailer').factory('cart',function($rootScope) {
+angular.module('retailer').factory('cart',function($rootScope,$translate) {
 
     var cart = {};
 
@@ -27,7 +27,8 @@ angular.module('retailer').factory('cart',function($rootScope) {
           cart.push(item);
           $rootScope.total = this.getTotalCart(cart);
         } else {
-          window.alert("Not enough credit");
+          alertService.alert($translate.instant('CONFIRMATION.ERROR'),$translate.instant('CART.NOT_ENOUGH_CREDIT'));
+
         }
       } else {
         this.remove(cart,alreadyExist);

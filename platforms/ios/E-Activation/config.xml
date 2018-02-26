@@ -19,41 +19,35 @@
         <param name="ios-package" value="CDVGestureHandler" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="DeviceName">
+        <param name="ios-package" value="CDVDeviceName" />
     </feature>
     <allow-navigation href="http://localhost:8080/*" />
     <feature name="CDVWKWebViewEngine">
         <param name="ios-package" value="CDVWKWebViewEngine" />
     </feature>
+    <feature name="ListPicker">
+        <param name="ios-package" value="ListPicker" />
+    </feature>
     <feature name="SplashScreen">
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
-    </feature>
-    <feature name="Keyboard">
-        <param name="ios-package" onload="true" value="IonicKeyboard" />
-    </feature>
-    <feature name="DeviceName">
-        <param name="ios-package" value="CDVDeviceName" />
-    </feature>
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
-    </feature>
-    <feature name="BarcodeScanner">
-        <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" />
         <param name="onload" value="true" />
     </feature>
-    <feature name="SelectorCordovaPlugin">
-        <param name="ios-package" onload="true" value="SelectorCordovaPlugin" />
+    <feature name="Keyboard">
+        <param name="ios-package" onload="true" value="IonicKeyboard" />
     </feature>
-    <feature name="ListPicker">
-        <param name="ios-package" value="ListPicker" />
-    </feature>
-    <feature name="NativePageTransitions">
-        <param name="ios-package" value="NativePageTransitions" />
+    <feature name="BarcodeScanner">
+        <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
     <name>E-Activation</name>
     <description>Retail App</description>
@@ -66,6 +60,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <chcp>
+        <config-file url="http://192.168.43.113:8080/chcp.json" />
+    </chcp>
+    <allow-navigation href="http://192.168.43.113:8080" />
     <preference default="This app needs camera access" name="CAMERA_USAGE_DESCRIPTION" />
     <config-file parent="NSCameraUsageDescription" target="*-Info.plist">
         <string />
@@ -129,8 +127,8 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
-    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="CameraUsesGeolocation" value="false" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="ScrollEnabled" value="false" />

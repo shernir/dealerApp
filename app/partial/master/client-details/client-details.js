@@ -1,4 +1,4 @@
-angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility,xhrService,alertService,loading){
+angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state,$stateParams,$ionicModal,$timeout,utility,xhrService,alertService,loading,$translate){
   $scope.idType = $stateParams.idType;
   $scope.$parent.client.idType = $stateParams.idType;
   $scope.customerIdValid = false;
@@ -30,6 +30,7 @@ $scope.scan = function () {
   utility.getCode().then(function(data){
     console.log(data);
     $scope.$parent.client.QID = data.text;
+    $scope.validateId($scope.$parent.client.QID);
   }).catch(function(data){
     console.log(data);
 
@@ -105,7 +106,9 @@ $scope.next = function () {
 
     }
   } else {
-    alertService.alert('error','Please , fill all required Data');
+    var title = $translate.instant('CONFIRMATION.ERROR');
+    var body = $translate.instant('CLIENT_DETAILS.PLEASE_FILL_ALL_DATA');
+    alertService.alert(title,body);
   }
 };
 

@@ -1,8 +1,8 @@
 <div class="main-container reports" ng-controller="ReportsCtrl">
  <div class="text-center full-height  white-bg column title-without-margin" >
    <div class="row report-header-control">
-     <h4 ng-if="type==1">{{'REPORTS.NUMBER_OF_SUCCESSFUL_ORDERS' | translate}} {{reports.length}}</h2>
-     <h4 ng-if="type==4">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} {{reports.length}}</h2>
+     <h4 ng-if="type==1">{{'REPORTS.NUMBER_OF_SUCCESSFUL_ORDERS' | translate}} {{reports.length}}</h4>
+     <h4 ng-if="type==4">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} {{reports.length}}</h4>
 
      <button class="button  button-assertive activated" ng-click="toggleView()">
        <span ng-if="type==1">{{'REPORTS.SUCCESSFUL_ORDER' | translate}}</span>
