@@ -65,7 +65,8 @@
     "FREE_NUMBER":"Free Number",
     "SIM_No":"SIM No.",
     "NUMBER":"Number",
-    "SCAN_SIM":"Scan SIM"
+    "SCAN_SIM":"Scan SIM",
+    "PLEASE_SCAN_NUMBER_TO_CONTINUE":"Please scan number to continue"
   },
   "CART":{
     "YOUR_ORDER":"Your Order",

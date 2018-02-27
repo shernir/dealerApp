@@ -11,7 +11,7 @@
             <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
           </ion-checkbox>
         </div>
-        <div ng-if="isMultiple == 1" >
+        <div ng-if="isMultiple == 1" class="multiple-checkbox" >
           <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,1,true,product.CategoryName)">
             {{product.Name}}
             <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>

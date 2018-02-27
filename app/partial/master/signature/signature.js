@@ -31,14 +31,14 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,uti
       var tarrif = $scope.$parent.client.cart[tarrifIndex];
       var addons = [] ;
       for (var i = 0; i < $scope.$parent.client.cart.length; i++) {
-        if ($scope.$parent.client.cart[i].type && $scope.$parent.client.cart[i].type != 'shahryTarrif' ) {
+        if ($scope.$parent.client.cart[i].type && $scope.$parent.client.cart[i].type != 'shahryTarrif' && $scope.$parent.client.cart[i].type != 'simCard' ) {
           addons.push({
             Id:$scope.$parent.client.cart[i].Id,
             Name:$scope.$parent.client.cart[i].Name,
-            Category:$scope.$parent.client.cart[i].CategoryName,
+            CategoryName:$scope.$parent.client.cart[i].CategoryName,
             Price:$scope.$parent.client.cart[i].Price
           })
-        } else if (!$scope.$parent.client.cart[i].CategoryName) {
+        } else if ($scope.$parent.client.cart[i].type && $scope.$parent.client.cart[i].type == 'simCard') {
          oneTimeCharge =$scope.$parent.client.cart[i].Price;
         }
       }
@@ -67,8 +67,8 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,uti
         PromoName:tarrif ? tarrif.PormotionName : null,
         AddOns:addons,
         Signature:encodeURIComponent(signature),
-        FrontQid:encodeURIComponent($scope.$parent.client.frontQID),
-        BackQid:encodeURIComponent($scope.$parent.client.backQID),
+        FrontQid: "",//encodeURIComponent($scope.$parent.client.frontQID),
+        BackQid:"",//encodeURIComponent($scope.$parent.client.backQID),
         HalaGoMobileNO:$scope.$parent.client.halaGoNumber,
         MainTranstype:$scope.$parent.client.mainTranstype,
         SimPrice:oneTimeCharge,

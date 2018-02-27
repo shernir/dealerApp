@@ -5193,6 +5193,7 @@ ionic.views.Scroll = ionic.views.View.inherit({
             // D - A or B - A if D > B       D - A             max(0, D - B)
             scrollViewOffsetHeight = scrollViewOffsetHeight - keyboardOffset;
             container.style.height = scrollViewOffsetHeight + "px";
+            //container.style.height = 290 + "px";
             container.style.overflow = "visible";
 
             //update scroll view

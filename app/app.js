@@ -1,7 +1,7 @@
 angular.module('retailer', ['ui.router','ngAnimate','ngCookies','ionic','ngSanitize','pascalprecht.translate','ksSwiper','ui.select']);
 
 angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$ionicConfigProvider,$translateProvider,CONFIG) {
-//  $ionicConfigProvider.views.transition('none');
+// $ionicConfigProvider.views.transition('none');
 
   //setup localization settings
   $translateProvider.useStaticFilesLoader({
@@ -15,11 +15,6 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
         templateUrl: 'partial/master/master.html',
         controller:"MasterCtrl"
     });
-    $stateProvider.state('landing', {
-        url: '/landing',
-        templateUrl: 'partial/landing/landing.html',
-        controller:"LandingCtrl"
-    });
     $stateProvider.state('master.home', {
         url: '/home',
         templateUrl: 'partial/master/home/home.html'
@@ -30,7 +25,7 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     });
     $stateProvider.state('master.admin-login', {
         url: '/admin-login',
-        cache: false,
+
         templateUrl: 'partial/master/admin-login/admin-login.html'
     });
     $stateProvider.state('master.client-details', {
@@ -74,12 +69,11 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     });
     $stateProvider.state('master.configuration', {
         url: '/configuration',
-        cache:false,
         templateUrl: 'partial/master/configuration/configuration.html'
     });
     /* Add New States Above */
     if (!localStorage.getItem('device')) {
-      $urlRouterProvider.otherwise('/login');
+      $urlRouterProvider.otherwise('/configuration');
 
     } else {
       $urlRouterProvider.otherwise('/login');
@@ -126,7 +120,7 @@ angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies,CONFI
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
-      StatusBar.overlaysWebView(false);
+      // StatusBar.overlaysWebView(false);
       StatusBar.styleDefault();
     }
   });

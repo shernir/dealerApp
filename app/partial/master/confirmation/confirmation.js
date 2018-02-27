@@ -8,7 +8,7 @@ $scope.sendEmail = function (email) {
   xhrService.call({
       url: 'order/sendEmail',
       method: 'POST',
-      data:{OrderNumber:$scope.order.OrderNumber,Email:email}
+      data:{OrderNumber:$scope.order.OrderNumber,EmailId:email}
   }, true).then(function(data){
     loading.hide();
     // $ionicHistory.clearCache();
