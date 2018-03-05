@@ -35,6 +35,7 @@ angular.module('retailer').controller('LoginCtrl',function($scope,$translate,loa
     //$state.go('master.home');
     loading.show();
     //var deviceName = cordova.plugins.deviceName.name;
+    var deviceName = "af19da30-Web";
     xhrService.call({
         url: 'device/login',
         method: 'POST',
@@ -45,7 +46,7 @@ angular.module('retailer').controller('LoginCtrl',function($scope,$translate,loa
           "DealerName":$scope.device.DealerName,
           "Location":$scope.device.Name,
           "LocationId":$scope.device.Id,
-          "IPadName":"af19da30-Web",
+          "IPadName":deviceName,
           "UserName":user,
           "Password":password,
         }

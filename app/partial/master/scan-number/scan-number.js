@@ -26,8 +26,8 @@ $scope.validateSim = function (id) {
   }, true).then(function(data){
     if (data.Code == 0) {
       var entity = {Name:"Sim Fees" , Price:data.OneTimeCharge , Detail:"One time charge" , isMultiple:0 , type:"simCard"};
-      var creditLimit = serviceType === 1 ? $scope.$parent.client.account.Acl : 1000 ;
-      $scope.isValid = cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
+      var creditLimit = $scope.$parent.client.entity === 'postpaid'  ? $scope.$parent.client.account.Acl : 1000 ;
+      $scope.isValid = cart.add($scope.$parent.client.cart,entity,creditLimit);
       //cart.add($scope.$parent.client.cart,entity,1000);
 
     }

@@ -2,6 +2,10 @@ angular.module('retailer').controller('ClientDetailsCtrl',function($scope,$state
   $scope.idType = $stateParams.idType;
   $scope.$parent.client.idType = $stateParams.idType;
   $scope.customerIdValid = false;
+  // $scope.$parent.client.frontQID = "ar";
+  // $scope.$parent.client.backQID = "ar";
+
+
   console.log($scope.$parent.client);
   $scope.alert = function () {
     alert("next");
@@ -67,7 +71,8 @@ $scope.validateId = function (id) {
         $scope.accounts = data.Accounts;
         $scope.accounts.push({AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit});
       } else {
-        if ($scope.$parent.client.entity === 'prepaid') {
+        // $scope.$parent.client.entity === 'prepaid'
+        if (true) {
           $scope.$parent.client.account = {AccountNumber:"NEW ACCOUNT" , CreditLimit:data.Customer.NewAccountCreditLimit , Acl:data.Customer.NewAccountCreditLimit};
         }
       }

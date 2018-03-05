@@ -19,7 +19,7 @@ angular.module('retailer').controller('ReportsCtrl',function($scope,xhrService,l
 
     }, true).then(function(data){
       loading.hide();
-      $scope.reports = data;
+      $scope.reports = data.HalaReportList;
     }).catch(function(err){
 
     });

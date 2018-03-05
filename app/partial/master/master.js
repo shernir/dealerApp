@@ -1,6 +1,6 @@
 angular.module('retailer').controller('MasterCtrl',function($scope,$rootScope,utility){
   $scope.client = {
-    frontQID:"s",
+    frontQID:"a",
     backQID:"a",
     QID:"",
     entity:"",

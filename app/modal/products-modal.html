@@ -6,16 +6,38 @@
       </ion-header-bar>
       <ion-content class="has-footer">
         <div ng-if="isMultiple == 0">
-          <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,0,true,product.CategoryName)">
+          <!-- <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,0,true,product.CategoryName)">
             {{product.Name}}
             <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
-          </ion-checkbox>
+          </ion-checkbox> -->
+          <button class="item flex check-item" ng-repeat="product in addOnsProducts" ng-class="{'active' : activeEntity(product)}" ng-click="addToCart(product,0,true,product.CategoryName)">
+            <div class="product-name flex">
+              <span class="custom-checkbox-icon">
+                <i class="ion-checkmark"></i>
+              </span>
+                {{product.Name}}
+            </div>
+            <div class="">
+            {{product.Detail}} /{{product.Price}}
+            </div>
+          </button>
         </div>
         <div ng-if="isMultiple == 1" class="multiple-checkbox" >
-          <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,1,true,product.CategoryName)">
+          <!-- <ion-checkbox  ng-repeat="product in addOnsProducts" ng-checked="activeEntity(product)" ng-click="addToCart(product,1,true,product.CategoryName)">
             {{product.Name}}
             <span class="product-price-end">{{product.Detail}} /{{product.Price}}</span>
-          </ion-checkbox>
+          </ion-checkbox> -->
+          <button class="item flex check-item" ng-repeat="product in addOnsProducts" ng-class="{'active' : activeEntity(product)}" ng-click="addToCart(product,1,true,product.CategoryName)">
+            <div class="product-name flex">
+              <span class="custom-checkbox-icon">
+                <i class="ion-checkmark"></i>
+              </span>
+                {{product.Name}}
+            </div>
+            <div class="">
+            {{product.Detail}} /{{product.Price}}
+            </div>
+          </button>
         </div>
 
       </ion-content>

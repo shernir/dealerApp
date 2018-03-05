@@ -10,7 +10,7 @@
           "NSCameraUsageDescription": [
             {
               "xml": "<string />",
-              "count": 97
+              "count": 109
             },
             {
               "xml": "<string> </string>",
@@ -20,19 +20,19 @@
           "NSMicrophoneUsageDescription": [
             {
               "xml": "<string>$MICROPHONE_USAGE_DESCRIPTION</string>",
-              "count": 97
+              "count": 109
             }
           ],
           "NSPhotoLibraryAddUsageDescription": [
             {
               "xml": "<string>$PHOTOLIBRARY_ADD_USAGE_DESCRIPTION</string>",
-              "count": 97
+              "count": 109
             }
           ],
           "NSPhotoLibraryUsageDescription": [
             {
               "xml": "<string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>",
-              "count": 97
+              "count": 109
             }
           ]
         }

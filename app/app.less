@@ -52,6 +52,43 @@ html , body {
 h4 {
   font-weight: 400 !important;
 }
+.check-item {
+  justify-content: space-between;
+  .custom-checkbox-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    color:#fff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .product-name {
+    display: flex;
+    align-items: center;
+  }
+}
+.check-item.active {
+  .custom-checkbox-icon {
+    background-color: @primary-color;
+  }
+}
+.check-item.active  {
+  background-color: #fff !important;
+}
+.multiple-checkbox {
+  .custom-checkbox-icon {
+    border-radius: 0;
+  }
+}
+.rtl .custom-checkbox-icon {
+  margin-right: 0;
+  margin-left: 10px;
+}
 .version-no {
   position: absolute;
   z-index: 999;

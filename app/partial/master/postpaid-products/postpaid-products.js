@@ -3,12 +3,15 @@ angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,car
   $scope.array1=[1,2];
   //$scope.selectedCategory = "Shahry Super";
   $scope.tarrifDetails = {};
+
 $scope.addToCart = function (entity,isMultiple,canDelete,type) {
   entity.isMultiple = isMultiple;
   entity.canDelete = canDelete;
   entity.type = type;
+
   //TODO add actual ACL
   cart.add($scope.$parent.client.cart,entity,$scope.$parent.client.account.Acl);
+
   //cart.add($scope.$parent.client.cart,entity,1000);
 };
 
@@ -42,6 +45,7 @@ $scope.getProducts = function () {
 };
 $scope.changeTab = function (category) {
   $scope.selectedCategory = category;
+
 };
 
 console.log($scope.$parent.client);
@@ -75,6 +79,7 @@ $scope.next = function () {
     $scope.Detailsmodal = modal;
   });
   $scope.activeEntity = function (item) {
+
     var index = _.findIndex($scope.$parent.client.cart,{ 'Id': item.Id, 'CategoryId': item.CategoryId });
     return index === -1 ? false : true;
   };

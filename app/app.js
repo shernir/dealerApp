@@ -50,6 +50,7 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     });
     $stateProvider.state('master.confirmation', {
         url: '/confirmation',
+        cache: false,
         params: {
           order:""
         },
@@ -134,5 +135,5 @@ angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies,CONFI
             this.$apply(fn);
         }
     };
-    fireBaseInit();
+  //  fireBaseInit();
 });

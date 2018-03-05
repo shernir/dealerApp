@@ -16,10 +16,10 @@ angular.module('retailer').controller('HalaGoCtrl',function($scope,$state,xhrSer
           data:{"ServiceIdentifier":$scope.$parent.client.halaGoNumber,"CustomerRef":$scope.$parent.client.customerRef}
       }, true).then(function(data){
         if (data.Code == 0) {
-          $state.go('master.scan-number');
+          $state.go('master.signature');
 
         } else {
-          alertService.alert('Error!',data.Message);
+          //alertService.alert('Error!',data.Message);
 
         }
         loading.hide();

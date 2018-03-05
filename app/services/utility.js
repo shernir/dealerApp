@@ -17,7 +17,7 @@ angular.module('retailer').factory('utility',function($q,$timeout) {
     };
     utility.resetClient = function () {
       return {
-        frontQID:"s",
+        frontQID:"a",
         backQID:"a",
         QID:"",
         entity:"",

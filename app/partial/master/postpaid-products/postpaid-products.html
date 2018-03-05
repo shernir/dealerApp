@@ -4,15 +4,16 @@
      <div class="row" style="padding-top:10px;">
        <div class="col-60 ">
          <div class="white-title white-bg row tab-container">
-           <div ng-repeat="tarrif in ::tarrifs track by $index" ng-class="{'active':tarrif.CategoryName == selectedCategory}" ng-click="changeTab(tarrif.CategoryName)" class="tab col-33 text-center">
+           <div ng-repeat="tarrif in tarrifs track by $index" ng-class="{'active':tarrif.CategoryName == selectedCategory}" ng-click="changeTab(tarrif.CategoryName)" class="tab col-33 text-center">
              {{::tarrif.CategoryName}}
            </div>
          </div>
          <div class="products-container ">
            <div class="pack-container">
-             <ks-swiper-container ng-repeat="tarrif in ::tarrifs track by $index" ng-if="tarrif.CategoryName == selectedCategory" initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
-                <ks-swiper-slide class="product-card "  ng-repeat="entity in ::tarrif.tarrifs track by $index" ng-class="{'active' : activeEntity(entity)}" >
+             <ks-swiper-container ng-repeat="tarrif in tarrifs track by $index" ng-if="tarrif.CategoryName == selectedCategory" initial-slide="0" dir="{{$root.dir}}"  slides-per-view="2.5" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
+                <ks-swiper-slide class="product-card "  ng-repeat="entity in tarrif.tarrifs track by $index"  >
                   <i class="ion-information info-icon"></i>
+
                   <div class="info-ribbon">
                     <i class="ion-information"></i>
                   </div>
@@ -30,17 +31,22 @@
                   <p class="text-center" ng-click="showDeatils(entity)">
                     <a class="red-color " > {{'HOME.MORE_DETAILS' | translate}} </a>
                   </p>
-                  <div ng-click="addToCart(entity,0,true,'shahryTarrif')" class="select-indicator-container text-center">
-                    <span class="custom-radio">
-                      <i></i>
-                    </span>
-                    <p>
-                      {{'HOME.SELECT' | translate}}
-                    </p>
+                  <div ng-class="{'active' : activeEntity(entity)}" >
+
+                    <div ng-click="addToCart(entity,0,true,'shahryTarrif')" class="select-indicator-container text-center">
+                      <span class="custom-radio">
+                        <i></i>
+                      </span>
+                      <p>
+                        {{'HOME.SELECT' | translate}}
+                      </p>
+                    </div>
                   </div>
+
                 </ks-swiper-slide>
             </ks-swiper-container>
            </div>
+
            <div class="add-ons-container">
              <ks-swiper-container ng-if="addons"  initial-slide="0" dir="{{$root.dir}}" slides-per-view="2" loop="false" show-nav-buttons="false"  space-between="15" pagination-clickable="false">
                 <ks-swiper-slide class="add-ons-card flex middle center coulmn" ng-repeat="addon in addons" ng-click="showProductModal(addon.IsMultiple,addon.CategoryName,addon.tarrifs)">
