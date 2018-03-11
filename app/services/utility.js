@@ -11,6 +11,7 @@ angular.module('retailer').factory('utility',function($q,$timeout) {
       },
       {
         destinationType: Camera.DestinationType.DATA_URL,
+
       });
 
       return deferred.promise;

@@ -1,7 +1,7 @@
 <div class="main-container signature" ng-controller="SignatureCtrl">
  <div class="full-height  white-bg column title-without-margin" >
    <navigation next="modal.show()" back="alerta()" is-back="true" is-next="true"></navigation>
-   <div class="preview-link flex middle" >
+   <div class="preview-link flex middle" ng-click="openPreview()">
 
       <i class="ion-ios-list-outline"></i>
        <p>{{'SIGNATURE.PREVIEW_FORM' | translate}}</p>

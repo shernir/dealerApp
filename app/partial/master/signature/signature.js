@@ -19,6 +19,18 @@ angular.module('retailer').controller('SignatureCtrl',function($scope,$state,uti
   $scope.openTC = function () {
     $scope.TCmodal.show();
   }
+  $ionicModal.fromTemplateUrl('modal/preview-form.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.previewModal = modal;
+  });
+  $scope.signAgain = function (){
+    signaturePad.clear();
+  };
+  $scope.openPreview = function () {
+    $scope.previewModal.show();
+  }
   // $scope.confirm = function (){
   //     //$scope.modal.show();
   // };

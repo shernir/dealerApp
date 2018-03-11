@@ -1,0 +1,48 @@
+  <ion-modal-view class="modal preview-form custom-dealer-modal postpaid-accounts">
+            <ion-header-bar>
+              <h1 class="title">{{'CART.YOUR_ORDER' | translate}}</h1>
+              <div class="button button-clear" ng-click="previewModal.hide()"><span class="icon ion-close"></span></div>
+            </ion-header-bar>
+            <ion-content class="has-footer" style="padding:20px">
+              <div class="preview-head">
+                <div class="flex space-between">
+                  <span><b>{{"CLIENT_DETAILS.ID_Number" | translate}}</b></span>
+                  <span><b>{{'REPORTS.CUSTOMER_NAME' | translate}}</b></span>
+                </div>
+                <div class="flex space-between">
+                  <span>{{$parent.client.QID}}</span>
+                  <span>{{$parent.client.firstName+' '+$parent.client.middleName}}</span>
+                </div>
+              </div>
+              <div class="preview-body" ng-if="$parent.client.entity == 'postpaid'">
+                <div class="flex space-between" style="padding-bottom:15px;">
+                  <span><b>{{'SIGNATURE.ITEM' | translate}}</b></span>
+                  <span><b>{{'SIGNATURE.PRICE' | translate}}</b></span>
+                </div>
+
+                <div class="flex space-between preview-body-item" ng-repeat="item in $parent.client.cart">
+                  <span>{{item.Name}}</span>
+                  <span>{{'CART.QR' | translate}}  {{item.Price}}</span>
+                </div>
+
+                <div class="flex end preview-form-footer-total"  >
+                  <p>
+                    {{'CART.TOTAL' | translate}}<br />
+                    <b>{{'CART.QR' | translate}} {{$root.total}}</b>
+                  </p>
+                </div>
+              </div>
+              <div class="" ng-if="$parent.client.entity == 'prepaid'" style="padding-top:20px">
+                {{"SIGNATURE.ONE_TIME_CHARGE_QR" | translate}} {{$parent.client.cart[0].Price}} {{"SIGNATURE.FOR_HALA_SIM_FEES" | translate}}
+
+              </div>
+              <div class="" ng-if="$parent.client.entity == 'hala-go'" style="padding-top:20px">
+                {{"SIGNATURE.YOU_HAVE_REQUESTED_TO_MIGRATE_YOUR_MOBILE_NUMBER" | translate}} {{$parent.client.halaGoNumber}} {{"SIGNATURE.FROM_HALA_TO_HALA_GO" | translate}}
+              </div>
+
+            </ion-content>
+            <div class="bar bar-footer flex center">
+              <button  ng-click="previewModal.hide()"  class="button  button-assertive activated"> {{'CLIENT_DETAILS.OK' | translate}}</button>
+            </div>
+          </div>
+    </ion-modal-view>
