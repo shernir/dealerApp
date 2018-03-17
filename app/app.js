@@ -8,8 +8,9 @@ angular.module('retailer').config(function($stateProvider, $urlRouterProvider,$i
     prefix: 'i18n/',
     suffix: '.json'
   });
+  var langId = localStorage.getItem('langId') ? localStorage.getItem('langId') : CONFIG.DEFAULT_LANG
 
-  $translateProvider.preferredLanguage(CONFIG.DEFAULT_LANG);
+  $translateProvider.preferredLanguage(langId);
     $stateProvider.state('master', {
         abstract: true,
         templateUrl: 'partial/master/master.html',
@@ -87,7 +88,8 @@ angular.module('retailer').run(function($rootScope,$ionicPlatform,$cookies,CONFI
   function fireBaseInit() {
     firebase.initializeApp(CONFIG.FIREBASE_CONFIG);
   }
-  var langIndex = _.findIndex(CONFIG.LANG_LIST, { 'id': CONFIG.DEFAULT_LANG});
+  var langId = localStorage.getItem('langId') ? localStorage.getItem('langId') : CONFIG.DEFAULT_LANG
+  var langIndex = _.findIndex(CONFIG.LANG_LIST, { 'id': langId});
   $rootScope.lang = CONFIG.LANG_LIST[langIndex];
   $rootScope.availableLangs = CONFIG.LANG_LIST;
 //     var options = {

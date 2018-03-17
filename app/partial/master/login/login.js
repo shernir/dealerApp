@@ -29,7 +29,6 @@ angular.module('retailer').controller('LoginCtrl',function($scope,$translate,loa
  //     $scope.isFail = true;
  //   });
  // };
-
   $scope.login = function (user,password) {
     //TODO: static login  parameter
     //$state.go('master.home');

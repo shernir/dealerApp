@@ -28,6 +28,8 @@ angular.module('retailer').directive('headerDirective', function($rootScope,$tra
 
             $rootScope.lang = lang;
             $translate.use(lang.id);
+            localStorage.setItem('langId',lang.id);
+
           };
 
           $('.dropbtn , .dropbtn *').click(function(){
