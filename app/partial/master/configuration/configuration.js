@@ -3,8 +3,8 @@ angular.module('retailer').controller('ConfigurationCtrl',function($scope,$state
   var dealers;
   var locations;
   var tempLocations =[];
-  $scope.selectedDealer = {};
-  $scope.selectedLocation = {};
+  $scope.selectedDealer = "";
+  $scope.selectedLocation = "";
   var config = {
     title: "",
     items:[],
@@ -62,8 +62,11 @@ xhrService.call({
   );
 };
   $scope.addLocation = function () {
-    localStorage.setItem('device',JSON.stringify($scope.selectedLocation));
-    $state.go('master.login')
+    //if ($scope.selectedLocation) {
+      localStorage.setItem('device',JSON.stringify($scope.selectedLocation));
+      $state.go('master.login')
+    //}
+
   }
   function constructDropdown(array,type) {
       var arr = [];

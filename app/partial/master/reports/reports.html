@@ -5,8 +5,8 @@
      <h4 ng-if="type==4">{{'REPORTS.NUMBER_OF_FAILED_ORDERS' | translate}} {{reports.length}}</h4>
 
      <button class="button  button-assertive activated" ng-click="toggleView()">
-       <span ng-if="type==1">{{'REPORTS.SUCCESSFUL_ORDER' | translate}}</span>
-       <span ng-if="type==4">{{'REPORTS.FAILED_ORDER' | translate}}</span>
+       <span ng-if="type==1">{{'REPORTS.FAILED_ORDER' | translate}}</span>
+       <span ng-if="type==4">{{'REPORTS.SUCCESSFUL_ORDER' | translate}}</span>
      </button>
    </div>
    <div class="table successful" ng-if="type==1" >

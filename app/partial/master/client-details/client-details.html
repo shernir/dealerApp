@@ -38,7 +38,7 @@
              <span ng-if="idType" class="input-label">
                {{"CLIENT_DETAILS.ID_Number" | translate}}
              </span>
-             <input class="custom-input"  ng-model="$parent.client.QID" ng-change="validateId($parent.client.QID)" ng-model-options="{ debounce: 500 }" type="text" >
+             <input class="custom-input"  ng-model="$parent.client.QID" ng-change="validateId($parent.client.QID)" ng-model-options="{ debounce: 1500 }" type="text" >
            </label>
          </div>
          <div class="col-33 form-item">

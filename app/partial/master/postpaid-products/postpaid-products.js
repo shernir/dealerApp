@@ -1,6 +1,6 @@
 angular.module('retailer').controller('PostpaidProductsCtrl',function($scope,cart,$state,loading,$ionicModal,utility,xhrService){
   // $scope.array = [1,2,3,4,5,6];
-  $scope.array1=[1,2];
+  //$scope.array1=[1,2];
   //$scope.selectedCategory = "Shahry Super";
   $scope.tarrifDetails = {};
 

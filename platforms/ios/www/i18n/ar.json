@@ -1,7 +1,123 @@
 {
   "LANDING":{
     "USERNAME":"اسم المستخدم",
-    "PASSWORD":"كلمة المرور ",
-    "LOGIN":"تسجيل الدخول "
+    "PASSWORD":"كلمة المرور",
+    "LOGIN":"تسجيل الدخول"
+  },
+  "HEADER":{
+    "LOGOUT":"تسجيل الخروج",
+    "HELLO":"مرحباً",
+    "CONFIGURATION":"تهيئة"
+  },
+  "MASTER":{
+    "NEW_ACTIVAION":"تفعيل جديد",
+    "REPORT":"تقارير"
+  },
+  "HOME":{
+    "SELECT_ONE_OF_THE_BELOW":"اختر أحد الخيارات أدناه",
+    "OPTION_FOR_NEW_SUPSCRIPTION":"خيارات التفعيل الجديد",
+    "POSTPAID_PRODUCTS":"المنتجات آجلة الدفع",
+    "POSTPAID":"آجلة الدفع",
+    "PREPAID":"مسبقة الدفع",
+    "HALA_GO_MIGRATION":"الانتقال إلى هلا GO",
+    "WITHOUT_PORMOTION":"بدون عروض",
+    "WITH_PORMOTION":"مع عروض",
+    "MBB":"باقة الإنترنت بلا حدود المنفصلة",
+    "MORE_DETAILS":"المزيد من التفاصيل",
+    "SELECT":"اختيار",
+    "NEXT":"التالي",
+    "BACK":"رجوع",
+    "CLEAR":"حذف",
+    "CONFIRMATION":"تأكيد",
+    "CONFIRM":"تأكيد",
+    "CONFIRMATION_TEXT":"باختيار تأكيد تكون قد أكدت بأنك قمت بمراجعة وتعبئة جميع النماذج، يرجى الملاحظة أن هذه هي الخطوة الأخيرة قبل تقديم الطلب."
+
+  },
+  "HALA_TYPE":{
+    "SELECT_ONE_OF_THE_BELOW":"اختر أحد الخيارات أدناه",
+    "ID_TYPE":"نوع وثيقة التعريف الشخصية",
+    "QID":"بطاقة شخصية قطرية",
+    "PASSPORT":"جواز سفر",
+    "GCC":"مجلس التعاون لدول الخليج"
+  },
+  "CLIENT_DETAILS":{
+    "QID":"البطاقة الشخصية القطرية",
+    "BIRTH_DATE":"تاريخ الميلاد",
+    "FIRST_NAME":"الاسم الأول",
+    "ID_Number":"رقم البطاقة الشخصية",
+    "PLEASE_FILL_ALL_DATA":"يرجى تعبئة كافة المعلومات المطلوبة",
+    "MIDDLE_NAME":"الاسم الأوسط",
+    "LAST_NAME":"الاسم الأخير",
+    "FRONT_ID":"الجهة الأمامية للبطاقة الشخصية",
+    "BACK_ID":"الجهة الخلفية للبطاقة الشخصية",
+    "SCAN_PASSPORT":"قراءة جواز السفر ضوئياً (scan)",
+    "SCAN_GCC":"قراءة البطاقة الشخصية الخليجية ضوئياً (scan)",
+    "SCAN_QID":"راءة البطاقة الشخصية القطرية ضوئياً (scan)",
+    "ID_NUMBER":"رقم البطاقة الشخصية",
+    "EMAIL_OPTIONAL":"البريد الإلكتروني (اختياري)",
+    "ALTERNATIVE_NUMBER_OPTIONAL":"رقم هاتف بديل (اختياري)",
+    "NATIONALITY":"الجنسية",
+    "PO_BOX_OPTIONAL":"رقم صندوق البريد (اختياري)",
+    "OK":"موافق",
+    "CUSTOMER_ACCOUNTS":"Customer Accounts"
+  },
+  "SCAN_NUMBER":{
+    "FREE_NUMBER":"رقم مجاني",
+    "SIM_No":"رقم شريحة SIM",
+    "NUMBER":"الرقم",
+    "SCAN_SIM":"قراءة شريحة SIM ضوئياً (scan)",
+    "PLEASE_SCAN_NUMBER_TO_CONTINUE":"Please scan number to continue"
+  },
+  "CART":{
+    "YOUR_ORDER":"طلبك",
+    "TOTAL":"الإجمالي",
+    "QR":"ر.ق",
+    "CREDIT_LIMIT":"الحد الائتماني",
+    "AVAILABLE_ACCOUNT_CREDIT":"الرصيد المتوفر",
+    "DISCOUNT":"خصم",
+    "NOT_ENOUGH_CREDIT":"الرصيد المتوفر غير كاف"
+  },
+  "SIGNATURE":{
+    "TERMS_CONDITION_1":"أوافق على",
+    "TERMS_CONDITION_2":" الاشتراك بخدمات Ooredoo",
+    "TERMS_AND_CONDITIONS":" الشروط والأحكام",
+    "SIGN_AGAIN":"التوقيع مرة أخرى",
+    "PREVIEW_FORM":"نموذج المراجعة"
+  },
+  "CONFIRMATION":{
+    "CONGRATULATIONS":"تهانينا!",
+    "YOU_HAVE_SUCCESSFULLY_COMPELETED_YOUR_REGISTRATION":"تمت عملية التسجيل بنجاح",
+    "YOUR_ACCOUNT_NO_IS":"رقم حسابك هو:",
+    "YOUR_NUMBER_IS":"رقمك هو:",
+    "EMAIL_RECEIPT_TO_CUSTOMER":"إرسال الإيصال إلى العميل عبر البريد الالكتروني (اختياري)",
+    "SEND":"إرسال",
+    "WRONG_PASSWORD_PLEASE_TRY_AGAIN":"كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى",
+    "ERROR":"خطأ !"
+
+  },
+  "REPORTS":{
+    "NUMBER_OF_SUCCESSFUL_ORDERS":"عدد الطلبات الناجحة",
+    "NUMBER_OF_FAILED_ORDERS":"عدد الطلبات التي لم تتم بنجاح",
+    "CUSTOMER_NAME":"اسم العميل",
+    "MOBILE_NO":"رقم الجوال",
+    "PRODUCT_TYPE":"نوع المنتج",
+    "SALESMAN_NO":"رقم موظف المبيعات",
+    "ERROR_MESSAGE":"رسالة الخطأ",
+    "FAILED_REASEON":"سبب فشل الطلب",
+    "STATUS":"الحالة",
+    "ORDER_ID":"رقم الطلب",
+    "SUCCESSFUL_ORDER":"طلب ناجح",
+    "FAILED_ORDER":"طلب لم يتم بنجاح",
+    "ERROR_MESSAGE":"رسالة الخطأ",
+    "FAILED_REASEON":"سبب فشل الطلب",
+    "STATUS":"الحالة"
+  },
+  "HALA_GO":{
+    "PLEASE_ENTER_CUSTOMER_MOBILE":"يرجى تسجيل رقم جوال العميل في الخانات أدناه",
+    "CUSTOMER_ID":"البطاقة الشخصية للعميل",
+    "ENTER_CUSTOMER_NUMBER":"أدخل رقم جوال العميل"
+  },
+  "CONFIGURATION":{
+    "ADD_LOCATION":"أضف الموقع"
   }
 }

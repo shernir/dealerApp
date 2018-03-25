@@ -33,8 +33,8 @@ angular.module('retailer').controller('LoginCtrl',function($scope,$translate,loa
     //TODO: static login  parameter
     //$state.go('master.home');
     loading.show();
-    //var deviceName = cordova.plugins.deviceName.name;
-    var deviceName = "af19da30-Web";
+    var deviceName = cordova.plugins.deviceName.name;
+    //var deviceName = "af19da30-Web";
     xhrService.call({
         url: 'device/login',
         method: 'POST',

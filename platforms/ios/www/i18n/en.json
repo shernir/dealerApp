@@ -82,7 +82,13 @@
     "TERMS_CONDITION_2":" in subscribing to Ooredoo services.",
     "TERMS_AND_CONDITIONS":" Terms and Conditions",
     "SIGN_AGAIN":"Sign Again",
-    "PREVIEW_FORM":"Preview Form"
+    "ONE_TIME_CHARGE_QR":"One time charge QR",
+    "FOR_HALA_SIM_FEES":"for hala sim fees",
+    "FROM_HALA_TO_HALA_GO":"for hala to hala go",
+    "YOU_HAVE_REQUESTED_TO_MIGRATE_YOUR_MOBILE_NUMBER":"You have requested to migrate your mobile number",
+    "PREVIEW_FORM":"Preview Form",
+    "PRICE":"Price",
+    "ITEM":"Item"
   },
   "CONFIRMATION":{
     "CONGRATULATIONS":"Congratulations!",
